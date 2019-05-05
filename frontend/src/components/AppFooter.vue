@@ -1,6 +1,5 @@
 <template>
 <div id="appFooter">
-  sad
 </div>
 </template>
 

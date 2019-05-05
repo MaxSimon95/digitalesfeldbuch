@@ -5,21 +5,36 @@
         <span class="bm-burger-bars line-style help-burger" style="top: 40%"></span>
         <span class="bm-burger-bars line-style help-burger" style="top: 80%"></span>
       </div>
+      <h1>
+        {{ $route.meta.title }}
+      </h1>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
 }
 </script>
 
 <style scoped>
 
+  h1{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
   div#headerDiv{
     height: 64px;
     background-color: #594743;
-    color: #f5f2f2
+    color: #f5f2f2;
+    position: sticky;
+    z-index: 40;
+    left: 0;
+    top: 0;
   }
 
   .bm-burger-button.help-burger {

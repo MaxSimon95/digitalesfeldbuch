@@ -1,13 +1,13 @@
 <template>
-
+<div id="navWrapper">
       <Push>
         <router-link to="/">Startseite</router-link>
         <router-link to="/userprofile">Profil</router-link>
-        <router-link to="/tbd">Platzhalter</router-link>
+        <router-link to="/campaigns">Kampagnen</router-link>
         <router-link to="/tbd">Platzhalter</router-link>
         <router-link to="/tbd">Platzhalter</router-link>
       </Push>
-
+</div>
 </template>
 
 <script>
@@ -25,9 +25,24 @@ export default {
 </script>
 
 <style>
+
+  div#navWrapper{
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index:45;
+  }
+
   .bm-menu a{
     color: #594743;
   }
+
+  a.router-link-exact-active{
+    color: white;
+    background-color: #594743;
+  }
+
+
   .bm-burger-button {
 
     width: 36px;
@@ -35,7 +50,8 @@ export default {
     left: 18px;
     top: 18px;
     cursor: pointer;
-    z-index: 100
+    z-index: 100;
+    position: sticky;
   }
   .bm-burger-bars {
     background-color: #f5f2f2;
@@ -82,7 +98,8 @@ export default {
   }
   .bm-item-list {
     color: #b8b7ad;
-    margin-left: 10%;
+    /*margin-left: 10%;*/
+    margin-left: 0;
     font-size: 20px;
   }
 
@@ -90,6 +107,7 @@ export default {
     display: flex;
     text-decoration: none;
     padding: 0.7em;
+    padding-left: 30px;
   }
 
   .bm-item-list > * > span {

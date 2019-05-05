@@ -39,6 +39,10 @@ export default {
 
   body {
     background-color: #e8e4d9;
+    position: static;
+    max-height: none;
+    height: auto;
+    overflow: auto;
   }
 
 </style>
