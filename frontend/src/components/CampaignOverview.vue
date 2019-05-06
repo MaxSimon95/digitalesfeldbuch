@@ -2,13 +2,13 @@
     <div>
       <!-- List of Text Items -->
       <ion-list>
-
-        <ion-item v-for="item in campaigns" v-bind:key="item.id" @click="selectCampaign()" lines="inset" detail="true">
+        <ion-item color="light" v-for="item in campaigns" v-bind:key="item.id" @click="selectCampaign()" lines="inset" detail="true">
           <ion-label> {{item.name}}</ion-label>
+          <!-- <ion-label color="secondary"> {{item.description}}</ion-label> -->
         </ion-item>
       </ion-list>
 
-      <ion-button expand="block" color="favorite" @click="createCampaign()">Neue Kampagne</ion-button>
+      <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
 
     </div>
 </template>
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style scoped>
-
+/*
   .ion-color-favorite {
     --ion-color-base: #8b4b63;
     --ion-color-base-rgb: 105,187,123;
@@ -65,4 +65,5 @@ export default {
     --ion-color-shade: #784156;
     --ion-color-tint: #9b546f;
   }
+*/
 </style>

@@ -38,10 +38,9 @@ export default {
   }
 
   a.router-link-exact-active{
-    color: white;
-    background-color: #594743;
+    color:  var(--ion-color-primary-contrast);
+    background-color:  var(--ion-color-primary);
   }
-
 
   .bm-burger-button {
 
@@ -54,7 +53,7 @@ export default {
     position: sticky;
   }
   .bm-burger-bars {
-    background-color: #f5f2f2;
+    background-color: var(--ion-color-primary-contrast);
     z-index: 100;
     border-radius: 2px;
   }
@@ -84,20 +83,20 @@ export default {
     z-index: 1000; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #e8e4d9 ; /* Black*/
+    background-color: var(--ion-color-light) ; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
-    -webkit-box-shadow: 0px 0px 16px 0px rgba(46,74,117,1);
-    -moz-box-shadow: 0px 0px 16px 0px rgba(46,74,117,1);
-    box-shadow: 0px 0px 16px 0px rgba(46,74,117,1);
+    -webkit-box-shadow: 0px 0px 16px 0px var(--ion-color-light-contrast);
+    -moz-box-shadow: 0px 0px 16px 0px var(--ion-color-light-contrast);
+    box-shadow: 0px 0px 16px 0px var(--ion-color-light-contrast);
   }
 
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
   .bm-item-list {
-    color: #b8b7ad;
+    color: var(--ion-color-light);
     /*margin-left: 10%;*/
     margin-left: 0;
     font-size: 20px;

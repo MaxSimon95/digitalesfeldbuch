@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'AppHeader',
+  name: 'AppHeader'
 }
 </script>
 
@@ -29,8 +29,8 @@ export default {
 
   div#headerDiv{
     height: 64px;
-    background-color: #594743;
-    color: #f5f2f2;
+    background-color: var(--ion-color-primary);
+    color: var(--ion-color-primary-contrast);
     position: sticky;
     z-index: 40;
     left: 0;
