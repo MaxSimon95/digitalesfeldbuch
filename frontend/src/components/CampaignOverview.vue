@@ -2,14 +2,28 @@
     <div>
       <!-- List of Text Items -->
       <ion-list>
-        <ion-item color="light" v-for="item in campaigns" v-bind:key="item.id" @click="selectCampaign()" lines="inset" detail="true">
-          <ion-label> {{item.name}}</ion-label>
-          <!-- <ion-label color="secondary"> {{item.description}}</ion-label> -->
-        </ion-item>
+        <ion-item-sliding v-for="item in campaigns" v-bind:key="item.id" lines="inset">
+
+          <ion-item-options side="start">
+            <ion-item-option @click="selectCampaign(item)">Öffnen</ion-item-option>
+          </ion-item-options>
+
+            <ion-item detail="true" @click="selectCampaign(item)" >
+              <ion-label>
+                <h2> {{item.name}} </h2>
+                <p> {{item.description}} </p>
+              </ion-label>
+            </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option @click="changeCampaign(item)">Bearbeiten</ion-item-option>
+            <ion-item-option color="danger" @click="deleteCampaign(item)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-list>
-
-      <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
-
+          <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
     </div>
 </template>
 
@@ -17,8 +31,22 @@
 export default {
   name: 'CampaignOverview',
   methods: {
-    selectCampaign: function () { alert('TODO: Kampagne auswählen') }, // TODO: Select Campaign
-    createCampaign: function () { alert('TODO: Kampagne anlegen') } // TODO: Select Campaign
+    selectCampaign: function (item) {
+      alert('TODO: Kampagne auswählen: ' + item.id + ' ' + item.name)
+    }, // TODO: Select Campaign
+
+    createCampaign: function () {
+      // eslint-disable-next-line standard/object-curly-even-spacing
+      this.$router.push({ name: 'CreateCampaign'})
+    }, // TODO: create Campaign
+
+    changeCampaign: function (item) {
+      alert('TODO: Kampagne bearbeiten')
+      // eslint-disable-next-line standard/object-curly-even-spacing
+      this.$router.push({ name: 'ModifyCampaign', params: { id: item.id }})
+    }, // TODO: change campaign
+
+    deleteCampaign: function (item) { alert('TODO: Kampagne löschen') } // TODO: change campaign
   },
   data: function () {
     return {
@@ -41,7 +69,7 @@ export default {
         {
           'id': 3,
           'name': 'Diamond is Unbreakable',
-          'description': 'Oyoyoyoyoyoyoy'
+          'description': 'No Dignity'
         },
         {
           'id': 4,
@@ -56,14 +84,4 @@ export default {
 </script>
 
 <style scoped>
-/*
-  .ion-color-favorite {
-    --ion-color-base: #8b4b63;
-    --ion-color-base-rgb: 105,187,123;
-    --ion-color-contrast: #ffffff;
-    --ion-color-contrast-rgb: 255,255,255;
-    --ion-color-shade: #784156;
-    --ion-color-tint: #9b546f;
-  }
-*/
 </style>
