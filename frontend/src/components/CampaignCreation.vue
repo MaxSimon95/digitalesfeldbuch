@@ -21,6 +21,22 @@
 <script>
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('campaigns_database') // creates new database or opens existing one
+var remoteDB = new PouchDB('http://localhost:5984/campaings')
+
+localDB.sync(remoteDB, {
+  live: true,
+  retry: true
+}).on('change', function (change) {
+  // yo, something changed!
+}).on('paused', function (info) {
+  // replication was paused, usually because of a lost connection
+}).on('active', function (info) {
+  // replication was resumed
+}).on('error', function (err) {
+  // totally unhandled error (shouldn't happen)
+});
+
+
 export default {
   name: 'CampaignCreation',
   data: function () {
