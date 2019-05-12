@@ -3,15 +3,15 @@
   <form @submit="logForm()">
   <ion-item>
     <ion-label position="floating">Name der Kampagne</ion-label>
-    <ion-input placeholder="Geben Sie den Namen der Kampagne ein"></ion-input>
+    <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie den Namen der Kampagne ein" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Kurzbeschreibung</ion-label>
-    <ion-textarea rows="14" placeholder="Geben Sie hier eine kurze Beschreibung der Kampagne ein"></ion-textarea>
+    <ion-textarea v-on:ionInput="description=$event.target.value" rows="14" placeholder="Geben Sie hier eine kurze Beschreibung der Kampagne ein"></ion-textarea>
   </ion-item>
 
-  <ion-button type="submit" color="secondary"> Speichern </ion-button>
+  <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
 
@@ -19,13 +19,37 @@
 </template>
 
 <script>
+var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
+var db = new PouchDB('campaigns_database') // creates new database or opens existing one
 export default {
   name: 'CampaignCreation',
+  data: function () {
+    return {
+      title: '',
+      description: ''
+    }
+  },
   methods: {
     logForm: function () {
       alert('Form')
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'CampaignOverview'})
+      let campaign = {
+        _id: this.title + new Date().toISOString(),
+        title: this.title,
+        description: this.description
+      }
+      db.put(campaign, function callback (err, result) {
+        if (!err) {
+          console.log('Successfully posted a todo!')
+        }
+      })
+      console.log(
+        db.allDocs({
+          include_docs: true
+        }
+        )
+      )
+      // this.$router.push({ name: 'CampaignOverview'})
     },
     goBack: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing

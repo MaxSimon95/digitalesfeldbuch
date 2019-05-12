@@ -17,6 +17,7 @@
     "@ionic/core": "^4.3.0",
     "@ionic/vue": "0.0.4",
     "cordova-android": "^8.0.0",
+    "pouchdb-browser": "^7.0.0",
     "vue": "^2.5.2",
     "vue-burger-menu": "^2.0.1",
     "vue-router": "^3.0.6"
