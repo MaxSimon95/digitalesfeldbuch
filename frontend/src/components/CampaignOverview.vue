@@ -10,7 +10,7 @@
 
             <ion-item detail="true" @click="selectCampaign(item)" >
               <ion-label>
-                <h2> {{item.name}} </h2>
+                <h2> {{item.title}} </h2>
                 <p> {{item.description}} </p>
               </ion-label>
             </ion-item>
@@ -28,12 +28,25 @@
 </template>
 
 <script>
-var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('campaigns_database') // creates new database or opens existing one
-this.campaigns = db.allDocs()
+
 export default {
   name: 'CampaignOverview',
   methods: {
+    getCampaigns: function () {
+      var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
+      var db = new PouchDB('campaigns_database')
+      var context = this; // to enable accessing the campaigns variable inside submethods
+      db.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for  (let item of result.rows){
+          context.campaigns.push(item.doc)
+        }
+      }).catch(function (err) {
+        console.log(err);
+      })
+    },
     selectCampaign: function (item) {
       alert('TODO: Kampagne auswählen: ' + item.id + ' ' + item.name)
     }, // TODO: Select Campaign
@@ -41,7 +54,7 @@ export default {
     createCampaign: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'CreateCampaign'})
-    }, // TODO: create Campaign
+    },
 
     changeCampaign: function (item) {
       alert('TODO: Kampagne bearbeiten')
@@ -51,36 +64,12 @@ export default {
 
     deleteCampaign: function (item) { alert('TODO: Kampagne löschen') } // TODO: change campaign
   },
+  beforeMount(){
+    this.getCampaigns()
+  },
   data: function () {
     return {
-      campaigns: [ // TODO: replace Dummy JSON with proper campaign data once possible
-        {
-          'id': 0,
-          'name': 'Phantom Blood',
-          'description': 'Kono dio da!'
-        },
-        {
-          'id': 1,
-          'name': 'Battle Tendency',
-          'description': 'Caesar!'
-        },
-        {
-          'id': 2,
-          'name': 'Stardust Crusaders',
-          'description': 'No one can deflect the emeraldo splash!'
-        },
-        {
-          'id': 3,
-          'name': 'Diamond is Unbreakable',
-          'description': 'No Dignity'
-        },
-        {
-          'id': 4,
-          'name': 'Vento Aureo',
-          'description': 'Buccellati: The enemy stand users will try to blend in'
-        }
-      ]
-      // campaigns: this.campaigns
+      campaigns: [],
     }
   }
 }

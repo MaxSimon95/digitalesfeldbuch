@@ -40,7 +40,7 @@ export default {
       }
       db.put(campaign, function callback (err, result) {
         if (!err) {
-          console.log('Successfully posted a todo!')
+          console.log('Successfully posted a campaign!')
         }
       })
       console.log(
