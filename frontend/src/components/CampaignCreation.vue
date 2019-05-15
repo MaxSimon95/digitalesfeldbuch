@@ -23,7 +23,7 @@ var PouchDB = require('pouchdb-browser').default // doesn'T work without '.defau
 var db = new PouchDB('campaigns_database') // creates new database or opens existing one
 var remoteDB = new PouchDB('http://localhost:5984/campaings')
 
-localDB.sync(remoteDB, {
+db.sync(remoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -32,10 +32,10 @@ localDB.sync(remoteDB, {
   // replication was paused, usually because of a lost connection
 }).on('active', function (info) {
   // replication was resumed
+// eslint-disable-next-line handle-callback-err
 }).on('error', function (err) {
   // totally unhandled error (shouldn't happen)
-});
-
+})
 
 export default {
   name: 'CampaignCreation',
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     logForm: function () {
-      alert('Form')
+      let router = this.$router // the correct 'this' is not reachable inside the dp.put call back, so it gets put into a variable.
       // eslint-disable-next-line standard/object-curly-even-spacing
       let campaign = {
         _id: this.title + new Date().toISOString(),
@@ -56,16 +56,11 @@ export default {
       }
       db.put(campaign, function callback (err, result) {
         if (!err) {
-          console.log('Successfully posted a campaign!')
+          console.log('Successfully posted a campaign! STANDO POWER!')
+          // eslint-disable-next-line standard/object-curly-even-spacing
+          router.push({ name: 'CampaignOverview'})
         }
       })
-      console.log(
-        db.allDocs({
-          include_docs: true
-        }
-        )
-      )
-      // this.$router.push({ name: 'CampaignOverview'})
     },
     goBack: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
