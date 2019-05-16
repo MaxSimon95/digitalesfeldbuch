@@ -21,13 +21,13 @@ module.exports = {
   // add your custom rules here
   rules: {
     // allow async-await
-    'generator-star-spacing': 'off',
+    //'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    //'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // disable intendation "error"s
-    'vue/html-indent': 'off',
-    'vue/script-indent': 'off',
-    'unexpected-null-character': 'off',
-    "vue/no-parsing-error": 'off'
+    //'vue/html-indent': 'off',
+    //'vue/script-indent': 'off',
+    //'unexpected-null-character': 'off',
+    //"vue/no-parsing-error": 'off'
   }
 }

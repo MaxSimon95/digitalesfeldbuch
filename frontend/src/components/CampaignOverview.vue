@@ -35,16 +35,16 @@ export default {
     getCampaigns: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
       var db = new PouchDB('campaigns_database')
-      var context = this; // to enable accessing the campaigns variable inside submethods
+      var context = this // to enable accessing the campaigns variable inside submethods
       db.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {
-        for  (let item of result.rows){
+        for (let item of result.rows) {
           context.campaigns.push(item.doc)
         }
       }).catch(function (err) {
-        console.log(err);
+        console.log(err)
       })
     },
     selectCampaign: function (item) {
@@ -64,12 +64,12 @@ export default {
 
     deleteCampaign: function (item) { alert('TODO: Kampagne löschen') } // TODO: change campaign
   },
-  beforeMount(){
+  beforeMount () {
     this.getCampaigns()
   },
   data: function () {
     return {
-      campaigns: [],
+      campaigns: []
     }
   }
 }

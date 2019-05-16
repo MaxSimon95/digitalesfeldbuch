@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5377c25-2a38-42d7-9485-04e2f7b1931b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/www/dist/static/css/app.090dbbdad7f4c88ee1f6c815f3395ee0.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/app.38b57741d186988854d6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/app.38b57741d186988854d6.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.515fd24213a58f3e5856.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.515fd24213a58f3e5856.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.582ae13594e32d04a96b777e088b2388.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/css/app.090dbbdad7f4c88ee1f6c815f3395ee0.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.582ae13594e32d04a96b777e088b2388.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.0865e663997fcfa2fa4f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.0865e663997fcfa2fa4f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.05e7abaa12a3a01434f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.05e7abaa12a3a01434f8.js.map" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,29 +37,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+            <state relative-caret-position="214">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -59,8 +64,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="3" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="374">
+              <caret line="83" column="11" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/.eslintignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/.eslintrc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -80,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -131,14 +154,16 @@
         <option value="$PROJECT_DIR$/frontend/src/components/UserProfile.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/AppFooter.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/AppHeader.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Navigation.vue" />
         <option value="$PROJECT_DIR$/frontend/src/App.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/CreateCampaign.vue" />
         <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/CampaignModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/main.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Navigation.vue" />
+        <option value="$PROJECT_DIR$/frontend/.eslintignore" />
+        <option value="$PROJECT_DIR$/frontend/.eslintrc.js" />
       </list>
     </option>
   </component>
@@ -233,7 +258,7 @@
       <workItem from="1557168200196" duration="10154000" />
       <workItem from="1557564365788" duration="29839000" />
       <workItem from="1557668306720" duration="7902000" />
-      <workItem from="1557929371317" duration="3415000" />
+      <workItem from="1557929371317" duration="5665000" />
     </task>
     <task id="LOCAL-00001" summary="Made Campaign Selection shiny, added frontend implementation of campaign creation">
       <created>1557618675778</created>
@@ -242,11 +267,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557618675778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed campaign creation">
+      <created>1557941930423</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557941930423</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65317000" />
+    <option name="totallyTimeSpent" value="67567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -297,7 +329,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made Campaign Selection shiny, added frontend implementation of campaign creation" />
     <MESSAGE value="Done: Integrated PouchDB for CampaignCreation, work in progress: Integrating PouchDB for CampaignOverview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done: Integrated PouchDB for CampaignCreation, work in progress: Integrating PouchDB for CampaignOverview" />
+    <MESSAGE value="fixed campaign creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed campaign creation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/node_modules/@ionic/core/css/core.css">
@@ -337,29 +370,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -385,13 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="3" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -404,8 +413,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="83" column="11" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>

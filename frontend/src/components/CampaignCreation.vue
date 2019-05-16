@@ -35,6 +35,8 @@ db.sync(remoteDB, {
 // eslint-disable-next-line handle-callback-err
 }).on('error', function (err) {
   // totally unhandled error (shouldn't happen)
+  console.log('whyyy')
+  console.log(err)
 })
 
 export default {

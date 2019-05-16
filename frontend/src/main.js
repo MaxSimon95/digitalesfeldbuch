@@ -9,9 +9,9 @@ import router from './router'
 Vue.config.productionTip = false
 Vue.use(IonicVue)
 
-var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
+// var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 // eslint-disable-next-line no-unused-vars
-var db = new PouchDB('digitales_feldbuch_database') // creates new database or opens existing one
+// var db = new PouchDB('digitales_feldbuch_database') // creates new database or opens existing one
 
 // In the following lines: Dynamic Page Title adjustment (rather irrelevant for cordova apps, therefore commented out)
 
