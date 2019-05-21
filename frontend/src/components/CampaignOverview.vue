@@ -2,7 +2,7 @@
     <div>
       <!-- List of Text Items -->
       <ion-list>
-        <ion-item-sliding v-for="item in campaigns" v-bind:key="item.id" lines="inset">
+        <ion-item-sliding v-for="item in campaigns" v-bind:key="item._id" lines="inset">
 
           <ion-item-options side="start">
             <ion-item-option @click="selectCampaign(item)">Öffnen</ion-item-option>
@@ -35,7 +35,7 @@ export default {
     getCampaigns: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
       var db = new PouchDB('campaigns_database')
-      var context = this // to enable accessing the campaigns variable inside submethods
+      var context = this // to enable accessing the 'campaigns' variable inside submethods
       db.allDocs({
         include_docs: true,
         attachments: true
@@ -48,7 +48,7 @@ export default {
       })
     },
     selectCampaign: function (item) {
-      alert('TODO: Kampagne auswählen: ' + item.id + ' ' + item.name)
+      alert('TODO: Kampagne auswählen: ' + item._id + ' ' + item.title)
     }, // TODO: Select Campaign
 
     createCampaign: function () {
@@ -57,9 +57,9 @@ export default {
     },
 
     changeCampaign: function (item) {
-      alert('TODO: Kampagne bearbeiten')
+      alert(item._id)
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'ModifyCampaign', params: { id: item.id }})
+      this.$router.push({ name: 'ModifyCampaign', params: { _id: item._id }})
     }, // TODO: change campaign
 
     deleteCampaign: function (item) { alert('TODO: Kampagne löschen') } // TODO: change campaign

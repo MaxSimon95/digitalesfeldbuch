@@ -12,7 +12,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/helloworld',
+      path: '/helloworlds',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -30,7 +30,7 @@ export default new Router({
       }
     },
     {
-      path: '/newcampaign',
+      path: '/campaigns/new',
       name: 'CreateCampaign',
       component: CampaignCreation,
       meta: {
@@ -38,7 +38,7 @@ export default new Router({
       }
     },
     {
-      path: '/modifycampaign',
+      path: '/campaigns/modify/:_id',
       name: 'ModifyCampaign',
       component: CampaignModification,
       meta: {

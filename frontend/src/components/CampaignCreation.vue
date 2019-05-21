@@ -1,8 +1,8 @@
 <template>
 <div>
-  <form @submit="logForm()">
+  <form>
   <ion-item>
-    <ion-label position="floating">Name der Kampagne</ion-label>
+    <ion-label position="stacked">Name der Kampagne</ion-label>
     <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie den Namen der Kampagne ein" ></ion-input>
   </ion-item>
 
