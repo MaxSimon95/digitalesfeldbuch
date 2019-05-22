@@ -24,8 +24,8 @@ var db = new PouchDB('campaigns_database') // creates new database or opens exis
 var remoteDB = new PouchDB('http://localhost:5984/campaings')
 
 db.sync(remoteDB, {
-  live: true,
-  retry: true
+  live: false,
+  retry: false
 }).on('change', function (change) {
   // yo, something changed!
 }).on('paused', function (info) {

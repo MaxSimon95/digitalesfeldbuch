@@ -16,7 +16,7 @@
             </ion-item>
 
           <ion-item-options side="end">
-            <ion-item-option @click="changeCampaign(item)">Bearbeiten</ion-item-option>
+            <ion-item-option @click="modifyCampaign(item)">Bearbeiten</ion-item-option>
             <ion-item-option color="danger" @click="deleteCampaign(item)">
               <ion-icon slot="icon-only" name="trash"></ion-icon>
             </ion-item-option>
@@ -48,7 +48,6 @@ export default {
       })
     },
     selectCampaign: function (item) {
-      alert('TODO: Kampagne auswählen: ' + item._id + ' ' + item.title)
     }, // TODO: Select Campaign
 
     createCampaign: function () {
@@ -56,13 +55,12 @@ export default {
       this.$router.push({ name: 'CreateCampaign'})
     },
 
-    changeCampaign: function (item) {
-      alert(item._id)
+    modifyCampaign: function (item) {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'ModifyCampaign', params: { _id: item._id }})
     }, // TODO: change campaign
 
-    deleteCampaign: function (item) { alert('TODO: Kampagne löschen') } // TODO: change campaign
+    deleteCampaign: function (item) { } // TODO: change campaign
   },
   beforeMount () {
     this.getCampaigns()
