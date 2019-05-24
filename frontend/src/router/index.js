@@ -3,9 +3,10 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import UserProfile from '@/components/UserProfile'
 import Home from '@/components/Home'
-import CampaignOverview from '@/components/CampaignOverview'
+import CampaignsOverview from '@/components/CampaignsOverview'
 import CampaignCreation from '@/components/CampaignCreation'
 import CampaignModification from '@/components/CampaignModification'
+import CampaignOverview from '@/components/CampaignOverview'
 
 Vue.use(Router)
 
@@ -23,10 +24,10 @@ export default new Router({
     },
     {
       path: '/campaigns',
-      name: 'CampaignOverview', // name is optional
-      component: CampaignOverview,
+      name: 'CampaignsOverview', // name is optional
+      component: CampaignsOverview,
       meta: { // meta is optional
-        title: 'Kampagnen'
+        title: 'Alle Kampagnen'
       }
     },
     {
@@ -58,6 +59,14 @@ export default new Router({
       component: UserProfile,
       meta: {
         title: 'Profil'
+      }
+    },
+    {
+      path: '/campaigns/:_id',
+      name: 'CampaignOverview', // name is optional
+      component: CampaignOverview,
+      meta: { // meta is optional
+        title: 'Kampagne'
       }
     }
   ]

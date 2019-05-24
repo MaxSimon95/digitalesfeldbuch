@@ -48,7 +48,6 @@ export default {
     this.title = context.title
     this.description = context.description
     this._rev = context._rev
-    console.log(context.title + ' ' + context.description + ' ' + context._rev)
   },
   methods: {
     logForm: function () {
@@ -63,9 +62,10 @@ export default {
       }
       db.put(campaign, function callback (err, result) {
         if (!err) {
-          console.log('Successfully posted a campaign! STANDO POWER!')
+          console.log('Successfully posted a campaign! ')
           // eslint-disable-next-line standard/object-curly-even-spacing
-          router.push({ name: 'CampaignOverview'})
+          // router.push({ name: 'CampaignsOverview'})
+          router.go(-1) // dynamic and fun
         } else {
           console.log(err)
         }
@@ -73,7 +73,8 @@ export default {
     },
     goBack: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'CampaignOverview'})
+      // this.$router.push({ name: 'CampaignsOverview'}) // commented out because its static
+      this.$router.go(-1) // dynamic and fun
     }
   }
 }

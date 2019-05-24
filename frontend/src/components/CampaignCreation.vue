@@ -60,13 +60,13 @@ export default {
         if (!err) {
           console.log('Successfully posted a campaign! STANDO POWER!')
           // eslint-disable-next-line standard/object-curly-even-spacing
-          router.push({ name: 'CampaignOverview'})
+          router.push({ name: 'CampaignsOverview'})
         }
       })
     },
     goBack: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'CampaignOverview'})
+      this.$router.push({ name: 'CampaignsOverview'})
     }
   }
 }
