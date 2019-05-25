@@ -11,8 +11,9 @@
 
         <ion-item detail="true" @click="selectExcavation(item)" >
           <ion-label>
-            <h2> Titel-Lorem </h2>
-            <p> Deskription-Ipsum </p>
+            <h2> {{item.title}} </h2>
+            <p> Von: {{item.excavationStartDate}} </p>
+            <p> Bis: {{item.excavationEndDate}} </p>
           </ion-label>
         </ion-item>
 
@@ -43,6 +44,7 @@ export default {
       }).then(function (result) {
         for (let item of result.rows) {
           context.excavations.push(item.doc)
+          console.log(context.excavations)
         }
       }).catch(function (err) {
         console.log(err)
