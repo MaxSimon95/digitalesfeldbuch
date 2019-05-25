@@ -8,6 +8,7 @@ import CampaignCreation from '@/components/CampaignCreation'
 import CampaignModification from '@/components/CampaignModification'
 import CampaignOverview from '@/components/CampaignOverview'
 import ExcavationCreation from '@/components/ExcavationCreation'
+import ExcavationModification from '@/components/ExcavationModification'
 
 Vue.use(Router)
 
@@ -76,6 +77,14 @@ export default new Router({
       component: ExcavationCreation,
       meta: {
         title: 'Ausgrabung anlegen'
+      }
+    },
+    {
+      path: '/excavations/modify/:_id',
+      name: 'ModifyExcavation',
+      component: ExcavationModification,
+      meta: {
+        title: 'Ausgrabung bearbeiten'
       }
     }
   ]
