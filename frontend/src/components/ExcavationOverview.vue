@@ -1,24 +1,21 @@
 <template>
   <div>
     <h1> {{title}}</h1>
-    <p> {{description}}</p>
-    <ion-button @click="modifyCampaign()">Kampagne bearbeiten</ion-button>
+    TODO: Hier am Prototypen orientieren.
+    <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
     <hr>
     <!-- the list of excavations and correlating functionality comes from a nested component: -->
-    <ExcavationsOverview/>
   </div>
 </template>
 
 <script>
-import ExcavationsOverview from './ExcavationsOverview'
 import VueCookies from 'vue-cookies'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('campaigns_database') // creates new database or opens existing one
+var db = new PouchDB('excavations_database') // creates new database or opens existing one
 let context
 export default {
-  name: 'CampaignOverview',
-  components: {ExcavationsOverview},
+  name: 'ExcavationOverview',
   data: function () {
     return {
       title: '',
@@ -32,16 +29,16 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     // context._id = context.$route.params._id
-    context._id = VueCookies.get('currentCampaign')._id
+    context._id = VueCookies.get('currentExcavation')._id
     db.get(context._id).then(function (result) {
       context.title = result.title
       context.description = result.description
     })
   },
   methods: {
-    modifyCampaign: function () {
+    modifyExcavation: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'ModifyCampaign', params: { _id: context._id }})
+      this.$router.push({ name: 'ModifyExcavation', params: { _id: context._id }})
     }
   }
 }

@@ -15,6 +15,10 @@
 import Navigation from './components/Navigation.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import VueCookies from 'vue-cookies'
+
+VueCookies.set('beispielcooki', 'beispielwert')
+console.log(VueCookies.get('beispielcooki'))
 
 export default {
   name: 'App',

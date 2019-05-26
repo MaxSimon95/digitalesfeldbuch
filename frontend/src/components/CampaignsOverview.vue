@@ -28,7 +28,7 @@
 </template>
 
 <script>
-
+import VueCookies from 'vue-cookies'
 export default {
   name: 'CampaignsOverview',
   methods: {
@@ -48,6 +48,7 @@ export default {
       })
     },
     selectCampaign: function (item) {
+      VueCookies.set('currentCampaign', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'CampaignOverview', params: { _id: item._id }})
     },
