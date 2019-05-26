@@ -2,10 +2,10 @@
 <div id="navWrapper">
       <Push>
         <router-link to="/">Startseite</router-link>
-        <router-link to="/userprofile">Profil</router-link>
+        <router-link to="/userprofile">Account</router-link>
         <router-link to="/campaigns">Kampagnen</router-link>
-        <router-link to="/tbd">Platzhalter</router-link>
-        <router-link to="/tbd">Platzhalter</router-link>
+        <router-link to="/tbd">Befunde</router-link>
+        <router-link to="/tbd">Funde</router-link>
       </Push>
 </div>
 </template>
