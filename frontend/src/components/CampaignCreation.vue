@@ -21,7 +21,7 @@
 <script>
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('campaigns_database') // creates new database or opens existing one
-var remoteDB = new PouchDB('http://localhost:5984/campaings')
+var remoteDB = new PouchDB('http://localhost:5984/campaigns')
 
 db.sync(remoteDB, {
   live: false,
