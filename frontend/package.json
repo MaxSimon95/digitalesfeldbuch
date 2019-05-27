@@ -20,6 +20,7 @@
     "pouchdb-browser": "^7.0.0",
     "vue": "^2.5.2",
     "vue-burger-menu": "^2.0.1",
+    "vue-cookies": "^1.5.13",
     "vue-router": "^3.0.6"
   },
   "devDependencies": {
