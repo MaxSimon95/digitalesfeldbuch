@@ -100,7 +100,7 @@ export default {
     --ion-color-medium-shade: #86888f;
     --ion-color-medium-tint: #a2a4ab;
 
-    --ion-color-light: #e8e4d9; /*#e8e4d9;*/
+    --ion-color-light: white; /*#e8e4d9;*/
     --ion-color-light-rgb: 232,228,217;
     --ion-color-light-contrast: #594743;
     --ion-color-light-contrast-rgb: 255,255,255;

@@ -8,6 +8,11 @@
         </ion-item>
 
         <ion-item>
+          <ion-label position="stacked">Organisation</ion-label>
+          <ion-input v-on:ionInput="organisation=$event.target.value" :value=organisation></ion-input>
+        </ion-item>
+
+        <ion-item>
           <ion-label position="stacked">Auftraggeber</ion-label>
           <ion-input v-on:ionInput="customer=$event.target.value" :value=customer></ion-input>
         </ion-item>
