@@ -15,7 +15,6 @@ var PouchDB = require('pouchdb-browser').default // doesn'T work without '.defau
 var db = new PouchDB('excavations_database') // creates new database or opens existing one
 let context
 export default {
-  name: 'ExcavationOverview',
   data: function () {
     return {
       title: '',

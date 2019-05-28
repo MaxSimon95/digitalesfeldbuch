@@ -18,7 +18,9 @@
         </ion-item>
 
         <ion-item-options side="end">
-          <ion-item-option @click="modifyExcavation(item)">Bearbeiten</ion-item-option>
+          <ion-item-option @click="modifyExcavation(item)">
+            <ion-icon slot="icon-only" name="settings"></ion-icon>
+          </ion-item-option>
           <ion-item-option color="danger" @click="deleteExcavation(item)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-item-option>
@@ -43,8 +45,7 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          context.excavations.push(item.doc)
-          console.log(context.excavations)
+          if (item.doc.campaignId === VueCookies.get('currentCampaign')._id) context.excavations.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
