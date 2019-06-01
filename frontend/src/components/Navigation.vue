@@ -24,7 +24,7 @@ export default {
 
 </script>
 
-<style>
+<style >
 
   div#navWrapper{
     position: fixed !important;

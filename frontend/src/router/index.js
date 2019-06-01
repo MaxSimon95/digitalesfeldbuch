@@ -10,6 +10,7 @@ import CampaignOverview from '@/components/CampaignOverview'
 import ExcavationCreation from '@/components/ExcavationCreation'
 import ExcavationModification from '@/components/ExcavationModification'
 import ExcavationOverview from '@/components/ExcavationOverview'
+import FallbackComponent from '@/components/FallbackComponent'
 
 Vue.use(Router)
 
@@ -94,6 +95,14 @@ export default new Router({
       component: ExcavationOverview,
       meta: {
         title: 'Ausgrabung'
+      }
+    },
+    {
+      path: '*',
+      name: '404Page',
+      component: FallbackComponent,
+      meta: {
+        title: 'Noch im Bau'
       }
     }
   ]

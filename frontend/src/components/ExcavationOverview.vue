@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ExcavationHeader/>
     <h1> {{title}}</h1>
     TODO: Hier am Prototypen orientieren.
     <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
@@ -10,11 +11,14 @@
 
 <script>
 import VueCookies from 'vue-cookies'
+import ExcavationHeader from './ExcavationHeader'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('excavations_database') // creates new database or opens existing one
 let context
 export default {
+  name: 'ExcavationOverview',
+  components: {ExcavationHeader},
   data: function () {
     return {
       title: '',
