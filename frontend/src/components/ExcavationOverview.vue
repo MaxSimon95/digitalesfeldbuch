@@ -1,11 +1,17 @@
 <template>
   <div>
     <ExcavationHeader/>
-    <h1> {{title}}</h1>
-    TODO: Hier am Prototypen orientieren.
-    <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
-    <hr>
-    <!-- the list of excavations and correlating functionality comes from a nested component: -->
+    <div class="contentContainer">
+      <h1> {{title}}</h1>
+      <p> <span class="bolder">Beauftragte Organisation: </span> {{organisation}}</p>
+      <p> <span class="bolder">Auftraggeber: </span>{{customer}}</p>
+      <p> <span class="bolder">Grabungsfokus: </span>{{excavationFocus}}</p>
+      <p> <span class="bolder">Ort: </span>{{location}}</p>
+      <p> <span class="bolder">Grabungszeitraum: </span> Von {{excavationStartDate}} bis {{excavationEndDate}}</p>
+
+      <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
+      <hr>
+    </div>
   </div>
 </template>
 
@@ -22,7 +28,12 @@ export default {
   data: function () {
     return {
       title: '',
-      description: '',
+      customer: '',
+      organisation: '',
+      excavationFocus: '',
+      location: '',
+      excavationStartDate: '',
+      excavationEndDate: '',
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
@@ -35,18 +46,33 @@ export default {
     context._id = VueCookies.get('currentExcavation')._id
     db.get(context._id).then(function (result) {
       context.title = result.title
-      context.description = result.description
+      context.customer = result.customer
+      context.organisation = result.organisation
+      context.excavationFocus = result.excavationFocus
+      context.location = result.location
+      context.excavationStartDate = result.excavationStartDate
+      context.excavationEndDate = result.excavationEndDate
     })
   },
   methods: {
     modifyExcavation: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'ModifyExcavation', params: { _id: context._id }})
+      this.$router.push({ name: 'ModifyExcavation'})
     }
   }
 }
 </script>
 
 <style scoped>
+div.contentContainer{
+  text-align: left;
+  padding: 10px
+}
+  .bolder{
+    font-weight: bolder;
+  }
 
+div.contentContainer h1 {
+  text-align: center;
+}
 </style>

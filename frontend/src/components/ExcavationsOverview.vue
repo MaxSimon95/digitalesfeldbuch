@@ -45,6 +45,8 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
+          console.log('item.doc.campaignId' + item.doc.campaignId)
+          console.log('VueCookies.get(currentCampaign)._id' + VueCookies.get('currentCampaign')._id)
           if (item.doc.campaignId === VueCookies.get('currentCampaign')._id) context.excavations.push(item.doc)
         }
       }).catch(function (err) {

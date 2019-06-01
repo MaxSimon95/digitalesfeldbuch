@@ -102,10 +102,13 @@ export default {
         location: context.location,
         excavationStartDate: context.excavationStartDate,
         excavationEndDate: context.excavationEndDate,
-        _rev: context._rev
+        _rev: context._rev,
+        campaignId: VueCookies.get('currentCampaign')._id
       }
       db.put(excavation, function callback (err, result) {
         if (!err) {
+          console.log(excavation)
+          console.log(excavation._id)
           console.log('Successfully changed an excavation! ')
           // eslint-disable-next-line standard/object-curly-even-spacing
           // router.push({ name: 'CampaignsOverview'})
