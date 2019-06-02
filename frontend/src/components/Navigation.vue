@@ -5,7 +5,7 @@
         <router-link to="/userprofile">Account</router-link>
         <router-link to="/campaigns">Kampagnenauswahl</router-link>
         <router-link to="/campaign">Kampagne</router-link>
-        <router-link to="/excavation">Ausgrabung</router-link>
+        <router-link to="/excavation/overview">Ausgrabung</router-link>
       </Push>
 </div>
 </template>
