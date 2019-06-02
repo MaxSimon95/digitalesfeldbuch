@@ -12,6 +12,7 @@ import ExcavationModification from '@/components/ExcavationModification'
 import ExcavationOverview from '@/components/ExcavationOverview'
 import FallbackComponent from '@/components/FallbackComponent'
 import SectionsOverview from '@/components/SectionsOverview'
+import ExcavationInfo from '@/components/ExcavationInfo'
 
 Vue.use(Router)
 
@@ -23,7 +24,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -91,20 +92,28 @@ export default new Router({
       }
     },
     {
-      path: '/excavation/overview',
+      path: '/excavation',
       name: 'ExcavationOverview',
       component: ExcavationOverview,
       meta: {
         title: 'Ausgrabung'
-      }
-    },
-    {
-      path: '/excavation/sections',
-      name: 'SectionsOverview',
-      component: SectionsOverview,
-      meta: {
-        title: 'Ausgrabung'
-      }
+      },
+      children: [
+        {
+          path: '/',
+          component: ExcavationInfo,
+          name: 'ExcavationInfo',
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'sections',
+          name: 'SectionsOverview',
+          component: SectionsOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }}]
     },
     {
       path: '*',

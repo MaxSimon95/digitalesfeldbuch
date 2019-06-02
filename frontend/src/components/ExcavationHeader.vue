@@ -1,7 +1,7 @@
 <template>
   <div id="excavationHeader">
     <ul>
-      <router-link to="/excavation/overview"><li class="excavationHeaderItem" id="headerItemInfo"> <span>Info </span></li></router-link>
+      <router-link to="/excavation" exact><li class="excavationHeaderItem" id="headerItemInfo"> <span>Info </span></li></router-link>
       <router-link to="/excavation/sections"><li class="excavationHeaderItem" id="headerItemSections"> <span>Schnitte </span></li></router-link>
       <router-link to="/excavation/structures"><li class="excavationHeaderItem" id="headerItemStructures"> <span>Befunde </span></li></router-link>
       <router-link to="/excavation/finds"><li class="excavationHeaderItem" id="headerItemFinds"> <span>Funde </span></li></router-link>

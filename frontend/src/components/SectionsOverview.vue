@@ -1,12 +1,12 @@
 <template>
-  <ExcavationHeader/>
+  <div>
+    Test
+  </div>
 </template>
 
 <script>
-import ExcavationHeader from './ExcavationHeader'
 export default {
-  name: 'SectionsOverview',
-  components: {ExcavationHeader}
+  name: 'SectionsOverview'
 }
 </script>
 

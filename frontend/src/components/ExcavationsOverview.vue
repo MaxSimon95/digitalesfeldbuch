@@ -56,7 +56,7 @@ export default {
     selectExcavation: function (item) {
       VueCookies.set('currentExcavation', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'ExcavationOverview'})
+      this.$router.push({ name: 'ExcavationInfo'})
     }, // TODO
 
     createExcavation: function () {
