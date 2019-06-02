@@ -1,7 +1,7 @@
 <template>
   <div id="excavationsWrapper">
     <!-- List of Text Items -->
-    <h2>Ausgrabungen</h2>
+    <h2>Zugehörige Ausgrabungen</h2>
     <ion-list>
       <ion-item-sliding v-for="item in excavations" v-bind:key="item._id" lines="inset">
 
@@ -45,8 +45,6 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          console.log('item.doc.campaignId' + item.doc.campaignId)
-          console.log('VueCookies.get(currentCampaign)._id' + VueCookies.get('currentCampaign')._id)
           if (item.doc.campaignId === VueCookies.get('currentCampaign')._id) context.excavations.push(item.doc)
         }
       }).catch(function (err) {

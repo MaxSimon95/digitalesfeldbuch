@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> {{title}}</h1>
+    <h1> Kampagne: {{title}}</h1>
     <p> {{description}}</p>
     <ion-button @click="modifyCampaign()">Kampagne bearbeiten</ion-button>
     <hr>

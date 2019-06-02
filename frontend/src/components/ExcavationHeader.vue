@@ -24,7 +24,8 @@ export default {
   }
   a.router-link-active li{
     background-color: var(--ion-color-tertiary);
-    color: var(--ion-color-tertiary-contrast)
+    color: var(--ion-color-tertiary-contrast);
+    border-bottom: solid 3px var(--ion-color-secondary)
   }
   ul {
     padding: 0;

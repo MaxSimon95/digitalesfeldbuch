@@ -7,7 +7,9 @@
     <p> <span class="bolder">Ort: </span>{{location}}</p>
     <p> <span class="bolder">Grabungszeitraum: </span> Von {{excavationStartDate}} bis {{excavationEndDate}}</p>
 
-    <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
+    <div class="center">
+      <ion-button @click="modifyExcavation()">Ausgrabung bearbeiten</ion-button>
+    </div>
     <hr>
   </div>
 </template>
@@ -58,5 +60,19 @@ export default {
 </script>
 
 <style scoped>
+  div.contentContainer{
+    text-align: left;
+    padding: 10px
+  }
+  .bolder{
+    font-weight: bolder;
+  }
 
+  div.center{
+    text-align: center
+  }
+
+  div.contentContainer h1 {
+    text-align: center;
+  }
 </style>
