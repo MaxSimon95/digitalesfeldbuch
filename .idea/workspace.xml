@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5377c25-2a38-42d7-9485-04e2f7b1931b" name="Default Changelist" comment="Fixed Bug with Excavation Modification, tinkered with Excavation Overview">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/SectionOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/app.5283ebdbb6b75170ddb1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/app.5283ebdbb6b75170ddb1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.5283ebdbb6b75170ddb1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.5283ebdbb6b75170ddb1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,49 +22,97 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-750860855">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="vue" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Vue.js" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="ESLintLanguageService" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="vue" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Vue.js" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="629">
+              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/UserProfile.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="13" column="8" lean-forward="true" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state relative-caret-position="391">
+              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignModification.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="493">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -87,47 +120,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="833">
+              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="663">
+              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/FindCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="8" lean-forward="true" selection-end-line="132" />
+            <state relative-caret-position="850">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/FindsOverview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionOverview.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="646">
+              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -162,7 +183,6 @@
         <option value="$PROJECT_DIR$/frontend/src/components/CreateCampaign.vue" />
         <option value="$PROJECT_DIR$/frontend/.eslintignore" />
         <option value="$PROJECT_DIR$/frontend/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" />
         <option value="D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3w/assets/harvestcraft/blockstates/candledeco2.json" />
         <option value="D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco2.json" />
         <option value="$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue" />
@@ -176,8 +196,6 @@
         <option value="$PROJECT_DIR$/frontend/src/components/AppHeader.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/UserProfile.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" />
@@ -187,12 +205,34 @@
         <option value="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Navigation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/frontend/package.json" />
+      <path value="$PROJECT_DIR$/frontend/plugins/cordova-plugin-whitelist/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="245" />
-    <option name="y" value="-8" />
+    <option name="x" value="2301" />
+    <option name="y" value="-10" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -206,33 +246,68 @@
         <subPane>
           <expand>
             <path>
-              <item name="Cordova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Cordova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="inspectionProfiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Cordova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="hooks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="platforms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Cordova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Cordova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cordova" type="462c0819:PsiDirectoryNode" />
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="digitalesfeldbuch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="digitalesfeldbuch" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,14 +319,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\Master\Desktop\GP B\digitalesfeldbuch\frontend\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="C:\Users\Master\Desktop\GP B\digitalesfeldbuch\frontend\node_modules\eslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -283,6 +359,10 @@
       <workItem from="1557564365788" duration="29839000" />
       <workItem from="1557668306720" duration="7902000" />
       <workItem from="1557929371317" duration="5665000" />
+      <workItem from="1559639308945" duration="416000" />
+      <workItem from="1559654639105" duration="869000" />
+      <workItem from="1559659062018" duration="2211000" />
+      <workItem from="1559673946250" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="Made Campaign Selection shiny, added frontend implementation of campaign creation">
       <created>1557618675778</created>
@@ -372,15 +452,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153837000" />
+    <option name="totallyTimeSpent" value="158980000" />
   </component>
+  <component name="TodoView" selected-index="2" />
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2196162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -393,9 +476,14 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49947312" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
@@ -421,6 +509,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made Campaign Selection shiny, added frontend implementation of campaign creation" />
     <MESSAGE value="Done: Integrated PouchDB for CampaignCreation, work in progress: Integrating PouchDB for CampaignOverview" />
@@ -439,34 +530,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added nested routing for Excavation subcomponents" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/@ionic/core/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/ionicons/dist/css/ionicons-core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/ionicons/dist/scss/ionicons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/node_modules/ionicons/dist/scss/ionicons-core.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/HelloWorld.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/AppFooter.vue">
@@ -497,66 +561,22 @@
     <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastatis-1.10.3/assets/harvestcraft/blockstates/candledeco7.json" />
     <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3w/assets/harvestcraft/blockstates/candledeco1.json" />
     <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3w/assets/harvestcraft/blockstates/candledeco2.json" />
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco3_wall.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco1_wall.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco1.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco2.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HarvestCraft-1.10.2j/candledeco2_wall.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco3_wall.json" />
+    <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco2.json" />
+    <entry file="file://D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco3.json" />
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco3.json" />
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco1_wall.json" />
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco1.json" />
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco2.json" />
+    <entry file="file://$PROJECT_DIR$/../../HarvestCraft-1.10.2j/candledeco2_wall.json" />
     <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/FallbackComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionHeader.vue" />
     <entry file="file://$PROJECT_DIR$/frontend/src/components/AppHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -564,65 +584,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#311#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignModification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="76" column="44" lean-forward="true" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/UserProfile.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
           <folding>
-            <element signature="e#262#314#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="5" column="103" selection-start-line="5" selection-start-column="102" selection-end-line="5" selection-end-column="103" />
+        <state relative-caret-position="595">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="629">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -633,17 +643,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        <state relative-caret-position="58">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FallbackComponent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="8" lean-forward="true" selection-end-line="78" />
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1183">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -654,48 +696,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="8" lean-forward="true" selection-end-line="132" />
+        <state relative-caret-position="-153">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/UserProfile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="833">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/router/index.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="663">
+          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="850">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindsOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="646">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navigation.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="391">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
         </state>
       </provider>
     </entry>
