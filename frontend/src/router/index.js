@@ -23,6 +23,7 @@ import ExcavationInfo from '@/components/ExcavationInfo'
 import SectionModification from '@/components/SectionModification'
 import SectionCreation from '@/components/SectionCreation'
 import SectionOverview from '@/components/SectionOverview'
+import FindOverview from '@/components/FindOverview'
 
 Vue.use(Router)
 
@@ -110,54 +111,6 @@ export default new Router({
       }
     },
     {
-      path: '/finds',
-      name: 'FindsOverview',
-      component: FindsOverview,
-      meta: {
-        title: 'Funde'
-      }
-    },
-    {
-      path: '/finds/modify/:_id',
-      name: 'FindModification',
-      component: FindModification,
-      meta: {
-        title: 'Fund bearbeiten'
-      }
-    },
-    {
-      path: '/finds/new',
-      name: 'FindCreation',
-      component: FindCreation,
-      meta: {
-        title: 'Fund erstellen'
-      }
-    },
-    {
-      path: '/structures',
-      name: 'StructuresOverview',
-      component: StructuresOverview,
-      meta: {
-        title: 'Befunde'
-      }
-    },
-    {
-      path: '/structures/modify/:_id',
-      name: 'StructureModification',
-      component: StructureModification,
-      meta: {
-        title: 'Befund bearbeiten'
-      }
-    },
-    {
-      path: '/structures/new',
-      name: 'StructureCreation',
-      component: StructureCreation,
-      meta: {
-        title: 'Befund erstellen'
-      }
-    },
-    {
       path: '/excavation',
       component: ExcavationOverview,
       meta: {
@@ -200,6 +153,62 @@ export default new Router({
           path: 'sections/modify',
           name: 'ModifySection',
           component: SectionModification,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'finds',
+          name: 'FindsOverview',
+          component: FindsOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'finds/overview',
+          name: 'FindOverview',
+          component: FindOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'finds/modify/:_id',
+          name: 'FindModification',
+          component: FindModification,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'finds/new',
+          name: 'FindCreation',
+          component: FindCreation,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'structures',
+          name: 'StructuresOverview',
+          component: StructuresOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'structures/modify/:_id',
+          name: 'StructureModification',
+          component: StructureModification,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'structures/new',
+          name: 'StructureCreation',
+          component: StructureCreation,
           meta: {
             title: 'Ausgrabung'
           }

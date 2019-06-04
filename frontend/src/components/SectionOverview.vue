@@ -7,7 +7,7 @@
     <p> <span class="bolder">Endniveau: </span> {{endNiveau}}</p>
 
     <div class="center">
-      <ion-button @click="modifyExcavation()">Schnitt bearbeiten</ion-button>
+      <ion-button @click="modifySection()">Schnitt bearbeiten</ion-button>
     </div>
     <hr>
   </div>
@@ -44,7 +44,7 @@ export default {
     })
   },
   methods: {
-    modifyExcavation: function () {
+    modifySection: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'ModifySection'})
     }

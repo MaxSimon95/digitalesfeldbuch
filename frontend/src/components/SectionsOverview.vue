@@ -80,9 +80,7 @@ export default {
 </script>
 
 <style scoped>
-  #excavationsWrapper{
-    border-top: 1px solid var(--ion-color-medium-tint);
-  }
+
 </style>
 
 <style scoped>
