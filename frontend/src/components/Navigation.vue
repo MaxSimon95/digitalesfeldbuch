@@ -1,9 +1,12 @@
 <template>
 <div id="navWrapper">
       <Push>
-        <router-link to="/">Startseite</router-link>
+        <router-link to="/home">Startseite</router-link>
         <router-link to="/login">Account</router-link>
-        <router-link to="/campaigns">Kampagnen</router-link>
+        <router-link to="/userprofile">Account</router-link>
+        <router-link to="/campaigns">Kampagnenauswahl</router-link>
+        <router-link to="/campaign">Grabungsauswahl</router-link>
+        <router-link to="/excavation">Ausgrabung</router-link>
         <router-link to="/structures">Befunde</router-link>
         <router-link to="/finds">Funde</router-link>
       </Push>
@@ -24,7 +27,7 @@ export default {
 
 </script>
 
-<style>
+<style >
 
   div#navWrapper{
     position: fixed !important;
@@ -37,7 +40,7 @@ export default {
     color: #594743 !important;
   }
 
-  a.router-link-exact-active{
+  a.router-link-active{
     color:  var(--ion-color-primary-contrast) !important;
     background-color:  var(--ion-color-primary) !important;
   }

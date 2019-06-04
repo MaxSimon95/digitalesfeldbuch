@@ -16,6 +16,13 @@ import FindModification from '@/components/FindModification'
 import StructuresOverview from '@/components/StructuresOverview'
 import StructureModification from '@/components/StructureModification'
 import StructureCreation from '@/components/StructureCreation'
+import ExcavationOverview from '@/components/ExcavationOverview'
+import FallbackComponent from '@/components/FallbackComponent'
+import SectionsOverview from '@/components/SectionsOverview'
+import ExcavationInfo from '@/components/ExcavationInfo'
+import SectionModification from '@/components/SectionModification'
+import SectionCreation from '@/components/SectionCreation'
+import SectionOverview from '@/components/SectionOverview'
 
 Vue.use(Router)
 
@@ -27,7 +34,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -71,7 +78,7 @@ export default new Router({
       }
     },
     {
-      path: '/campaigns/:_id',
+      path: '/campaign',
       name: 'CampaignOverview', // name is optional
       component: CampaignOverview,
       meta: { // meta is optional
@@ -148,6 +155,63 @@ export default new Router({
       component: StructureCreation,
       meta: {
         title: 'Befund erstellen'
+      }
+    },
+    {
+      path: '/excavation',
+      component: ExcavationOverview,
+      meta: {
+        title: 'Ausgrabung'
+      },
+      children: [
+        {
+          path: '/',
+          component: ExcavationInfo,
+          name: 'ExcavationInfo',
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'sections',
+          name: 'SectionsOverview',
+          component: SectionsOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'sections/overview',
+          name: 'SectionOverview',
+          component: SectionOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'sections/create',
+          name: 'CreateSection',
+          component: SectionCreation,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'sections/modify',
+          name: 'ModifySection',
+          component: SectionModification,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        }
+      ]
+    },
+    {
+      path: '*',
+      name: '404Page',
+      component: FallbackComponent,
+      meta: {
+        title: 'Noch im Bau'
       }
     }
   ]

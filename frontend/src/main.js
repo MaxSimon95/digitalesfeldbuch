@@ -5,9 +5,15 @@ import Vue from 'vue'
 import IonicVue from '@ionic/vue'
 import App from './App'
 import router from './router'
+import VueCookies from 'vue-cookies'
 
 Vue.config.productionTip = false
 Vue.use(IonicVue)
+Vue.use(VueCookies)
+VueCookies.config('7d')
+// set global cookie
+VueCookies.set('theme', 'default')
+VueCookies.set('hover-time', '1s')
 
 // var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 // eslint-disable-next-line no-unused-vars
@@ -56,6 +62,7 @@ router.beforeEach((to, from, next) => {
 */
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

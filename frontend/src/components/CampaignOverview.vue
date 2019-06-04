@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> {{title}}</h1>
+    <h1> Kampagne: {{title}}</h1>
     <p> {{description}}</p>
     <ion-button @click="modifyCampaign()">Kampagne bearbeiten</ion-button>
     <hr>
@@ -11,6 +11,7 @@
 
 <script>
 import ExcavationsOverview from './ExcavationsOverview'
+import VueCookies from 'vue-cookies'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('campaigns_database') // creates new database or opens existing one
@@ -30,11 +31,11 @@ export default {
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
-    context._id = context.$route.params._id
+    // context._id = context.$route.params._id
+    context._id = VueCookies.get('currentCampaign')._id
     db.get(context._id).then(function (result) {
       context.title = result.title
       context.description = result.description
-      console.log(context.title + context.description)
     })
   },
   methods: {
