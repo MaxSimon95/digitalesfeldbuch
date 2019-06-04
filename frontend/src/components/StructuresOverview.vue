@@ -6,10 +6,10 @@
       <ion-item-sliding v-for="item in structures" v-bind:key="item._id" lines="inset">
 
         <ion-item-options side="start">
-          <ion-item-option @click="modifyStructure(item)">Öffnen</ion-item-option>
+          <ion-item-option @click="selectStructure(item)">Öffnen</ion-item-option>
         </ion-item-options>
 
-        <ion-item detail="true" @click="modifyStructure(item)" >
+        <ion-item detail="true" @click="selectStructure(item)" >
           <ion-label>
             <h2> {{item.structurenumber}} </h2>
             <p> {{item.description}} </p>
@@ -66,6 +66,7 @@ export default {
       })
     },
     selectStructure: function (item) {
+      VueCookies.set('currentStructure', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'StructureOverview', params: { _id: item._id }})
     },

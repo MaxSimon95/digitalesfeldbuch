@@ -1,16 +1,14 @@
 <template>
   <div class="contentContainer">
     <h1> Detailansicht Fund</h1>
-    <p> <span class="bolder">Fundnummer: </span>{{findnumber}}</p>
-    <p> <span class="bolder">Tachymeter ID: </span>{{tachymeterid}}</p>
-    <p> <span class="bolder">Fundtyp: </span>{{type}}</p>
+    <p> <span class="bolder">Befundnummer: </span>{{structurenumber}}</p>
     <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
-    <p> <span class="bolder">Material: </span> {{materials}}</p>
+    <p> <span class="bolder">Bodenart: </span> {{soil}}</p>
     <p> <span class="bolder">Vorläufige Datierung: </span> {{prelimdate}}</p>
-    <p> <span class="bolder">Vorläufige Verortung: </span> {{coordinates}}</p>
+    <p> <span class="bolder">Bodenfarbe: </span> {{colour}}</p>
 
     <div class="center">
-      <ion-button @click="modifyFind()">Fund bearbeiten</ion-button>
+      <ion-button @click="modifyStructure()">Beund bearbeiten</ion-button>
     </div>
     <hr>
   </div>
@@ -19,19 +17,17 @@
 <script>
 import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('finds_database') // creates new database or opens existing one
+var db = new PouchDB('structures_database') // creates new database or opens existing one
 let context
 export default {
-  name: 'FindOverview',
+  name: 'StructureOverview',
   data: function () {
     return {
-      findnumber: '',
-      tachymeterid: '',
-      type: '',
+      structurenumber: '',
       description: '',
-      materials: '',
+      soil: '',
       prelimdate: '',
-      coordinates: '',
+      colour: '',
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0
     }
@@ -39,21 +35,19 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     // context._id = context.$route.params._id
-    context._id = VueCookies.get('currentFind')._id
+    context._id = VueCookies.get('currentStructure')._id
     db.get(context._id).then(function (result) {
-      context.findnumber = result.findnumber
-      context.tachymeterid = result.tachymeterid
-      context.type = result.type
+      context.structurenumber = result.structurenumber
       context.description = result.description
-      context.materials = result.materials
+      context.soil = result.soil
       context.prelimdate = result.prelimdate
-      context.coordinates = result.coordinates
+      context.colour = result.colour
     })
   },
   methods: {
-    modifyFind: function () {
+    modifyStructure: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'FindModification', params: { _id: context._id }})
+      this.$router.push({ name: 'StructureModification', params: { _id: context._id }})
     }
   }
 }

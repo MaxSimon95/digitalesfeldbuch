@@ -24,6 +24,7 @@ import SectionModification from '@/components/SectionModification'
 import SectionCreation from '@/components/SectionCreation'
 import SectionOverview from '@/components/SectionOverview'
 import FindOverview from '@/components/FindOverview'
+import StructureOverview from '@/components/StructureOverview'
 
 Vue.use(Router)
 
@@ -193,6 +194,14 @@ export default new Router({
           path: 'structures',
           name: 'StructuresOverview',
           component: StructuresOverview,
+          meta: {
+            title: 'Ausgrabung'
+          }
+        },
+        {
+          path: 'structures/overview',
+          name: 'StructureOverview',
+          component: StructureOverview,
           meta: {
             title: 'Ausgrabung'
           }
