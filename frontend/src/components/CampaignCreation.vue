@@ -24,7 +24,7 @@ var db = new PouchDB('campaigns_database') // creates new database or opens exis
 var remoteDB = new PouchDB('http://localhost:5984/campaigns')
 
 db.sync(remoteDB, {
-  live: false,
+  live: true,
   retry: false
 }).on('change', function (change) {
   // yo, something changed!
@@ -35,7 +35,6 @@ db.sync(remoteDB, {
 // eslint-disable-next-line handle-callback-err
 }).on('error', function (err) {
   // totally unhandled error (shouldn't happen)
-  console.log('whyyy')
   console.log(err)
 })
 

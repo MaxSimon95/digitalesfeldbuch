@@ -9,6 +9,13 @@ import CampaignModification from '@/components/CampaignModification'
 import CampaignOverview from '@/components/CampaignOverview'
 import ExcavationCreation from '@/components/ExcavationCreation'
 import ExcavationModification from '@/components/ExcavationModification'
+import Login from '@/components/Login'
+import FindsOverview from '@/components/FindsOverview'
+import FindCreation from '@/components/FindCreation'
+import FindModification from '@/components/FindModification'
+import StructuresOverview from '@/components/StructuresOverview'
+import StructureModification from '@/components/StructureModification'
+import StructureCreation from '@/components/StructureCreation'
 
 Vue.use(Router)
 
@@ -85,6 +92,62 @@ export default new Router({
       component: ExcavationModification,
       meta: {
         title: 'Ausgrabung bearbeiten'
+      }
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      meta: {
+        title: 'Login'
+      }
+    },
+    {
+      path: '/finds',
+      name: 'FindsOverview',
+      component: FindsOverview,
+      meta: {
+        title: 'Funde'
+      }
+    },
+    {
+      path: '/finds/modify/:_id',
+      name: 'FindModification',
+      component: FindModification,
+      meta: {
+        title: 'Fund bearbeiten'
+      }
+    },
+    {
+      path: '/finds/new',
+      name: 'FindCreation',
+      component: FindCreation,
+      meta: {
+        title: 'Fund erstellen'
+      }
+    },
+    {
+      path: '/structures',
+      name: 'StructuresOverview',
+      component: StructuresOverview,
+      meta: {
+        title: 'Befunde'
+      }
+    },
+    {
+      path: '/structures/modify/:_id',
+      name: 'StructureModification',
+      component: StructureModification,
+      meta: {
+        title: 'Befund bearbeiten'
+      }
+    },
+    {
+      path: '/structures/new',
+      name: 'StructureCreation',
+      component: StructureCreation,
+      meta: {
+        title: 'Befund erstellen'
       }
     }
   ]
