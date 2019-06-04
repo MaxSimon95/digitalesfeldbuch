@@ -1,7 +1,7 @@
 <template>
   <div id="sectionsWrapper">
     <!-- List of Text Items -->
-    <h2>Übersicht der Schnitte</h2>
+    <h1>Übersicht der Schnitte</h1>
     <ion-list>
       <ion-item-sliding v-for="item in sections" v-bind:key="item._id" lines="inset">
 
