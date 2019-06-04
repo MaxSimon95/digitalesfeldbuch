@@ -4,27 +4,27 @@
     <div>
       <form>
         <ion-item>
-          <ion-label position="stacked">Name der Ausgrabung</ion-label>
+          <ion-label position="stacked">Name des Schnitts</ion-label>
           <ion-input id="title-input" v-on:ionInput="title=$event.target.value" :value=title></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="stacked">Organisation</ion-label>
+          <ion-label position="stacked">Datum</ion-label>
           <ion-input v-on:ionInput="date=$event.target.value" :value=date></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="stacked">Auftraggeber</ion-label>
+          <ion-label position="stacked">Schnittleiter</ion-label>
           <ion-input v-on:ionInput="leader=$event.target.value" :value=leader></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="stacked">Grabungsfokus</ion-label>
+          <ion-label position="stacked">StartNiveau</ion-label>
           <ion-textarea v-on:ionInput="startNiveau=$event.target.value" :value=startNiveau></ion-textarea>
         </ion-item>
 
         <ion-item>
-          <ion-label position="stacked">Ort</ion-label>
+          <ion-label position="stacked">EndNiveau</ion-label>
           <ion-textarea v-on:ionInput="endNiveau=$event.target.value" :value=endNiveau></ion-textarea>
         </ion-item>
 

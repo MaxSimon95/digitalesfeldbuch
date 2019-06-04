@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1>Übersicht der Befunde</h1>
+    <h1>Übersicht der Funde</h1>
     <!-- List of Text Items -->
     <ion-list>
       <ion-item-sliding v-for="item in finds" v-bind:key="item._id" lines="inset">
 
         <ion-item-options side="start">
-          <ion-item-option @click="modifyFind(item)">Öffnen</ion-item-option>
+          <ion-item-option @click="selectFind(item)">Öffnen</ion-item-option>
         </ion-item-options>
 
-        <ion-item detail="true" @click="modifyFind(item)" >
+        <ion-item detail="true" @click="selectFind(item)" >
           <ion-label>
             <h2> Fundnr. {{item.findnumber}} </h2>
             <p> {{item.description}} </p>
@@ -66,6 +66,7 @@ export default {
       })
     },
     selectFind: function (item) {
+      VueCookies.set('currentFind', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'FindOverview', params: { _id: item._id }})
     },
