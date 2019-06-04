@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <h1>Befund bearbeiten</h1>
   <form>
     <ion-item>
       <ion-label position="stacked">Befundnummer</ion-label>
@@ -28,6 +30,7 @@
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
+  </div>
 </template>
 
 <script>

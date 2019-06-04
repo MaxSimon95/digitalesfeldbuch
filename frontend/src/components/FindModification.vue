@@ -1,43 +1,47 @@
 <template>
-  <form>
-    <ion-item>
-      <ion-label position="stacked">Fundnummer</ion-label>
-      <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" :value=findnumber ></ion-input>
-    </ion-item>
+  <div>
+    <h1>Fund bearbeiten</h1>
+    <form>
+      <ion-item>
+        <ion-label position="stacked">Fundnummer</ion-label>
+        <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" :value=findnumber ></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Tachymeter ID</ion-label>
-      <ion-input v-on:ionInput="tachymeterid=$event.target.value" :value=tachymeterid ></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Tachymeter ID</ion-label>
+        <ion-input v-on:ionInput="tachymeterid=$event.target.value" :value=tachymeterid ></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Fundtyp</ion-label>
-      <ion-input v-on:ionInput="type=$event.target.value" :value=type ></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fundtyp</ion-label>
+        <ion-input v-on:ionInput="type=$event.target.value" :value=type ></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Kurzbeschreibung</ion-label>
-      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description></ion-textarea>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Kurzbeschreibung</ion-label>
+        <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description></ion-textarea>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Material</ion-label>
-      <ion-textarea v-on:ionInput="materials=$event.target.value" rows="4" :value=materials></ion-textarea>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Material</ion-label>
+        <ion-textarea v-on:ionInput="materials=$event.target.value" rows="2" :value=materials></ion-textarea>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Vorläufige Datierung</ion-label>
-      <ion-input v-on:ionInput="prelimdate=$event.target.value" :value=prelimdate></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Vorläufige Datierung</ion-label>
+        <ion-input v-on:ionInput="prelimdate=$event.target.value" :value=prelimdate></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Vorläufige Verortung</ion-label>
-      <ion-input v-on:ionInput="coordinates=$event.target.value" :value=coordinates></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Vorläufige Verortung</ion-label>
+        <ion-input v-on:ionInput="coordinates=$event.target.value" :value=coordinates></ion-input>
+      </ion-item>
 
-    <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
-    <ion-button @click="goBack()"> Abbrechen </ion-button>
-  </form>
+      <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
+      <ion-button @click="goBack()"> Abbrechen </ion-button>
+    </form>
+  </div>
+
 </template>
 
 <script>

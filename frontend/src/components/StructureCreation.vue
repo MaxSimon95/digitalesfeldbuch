@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <h1>Befund anlegen</h1>
   <form>
     <ion-item>
       <ion-label position="stacked">Befundnummer</ion-label>
@@ -22,12 +24,13 @@
 
     <ion-item>
       <ion-label position="stacked">Bodenfarbe</ion-label>
-      <ion-input v-on:ionInput="colour=$event.target.value" placeholder="Geben sie hier die FArbe des Befundes ein" ></ion-input>
+      <ion-input v-on:ionInput="colour=$event.target.value" placeholder="Geben sie hier die Farbe des Befundes ein" ></ion-input>
     </ion-item>
 
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
+  </div>
 </template>
 
 <script>

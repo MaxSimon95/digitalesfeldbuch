@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Übersicht der Befunde</h1>
     <!-- List of Text Items -->
     <ion-list>
       <ion-item-sliding v-for="item in finds" v-bind:key="item._id" lines="inset">

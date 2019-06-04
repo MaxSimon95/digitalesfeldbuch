@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <h1>Fund eintragen</h1>
   <form>
     <ion-item>
       <ion-label position="stacked">Fundnummer</ion-label>
@@ -22,7 +24,7 @@
 
     <ion-item>
       <ion-label position="stacked">Material</ion-label>
-      <ion-textarea v-on:ionInput="materials=$event.target.value" rows="4" placeholder="Geben Sie hier das Material des Fundes ein"></ion-textarea>
+      <ion-textarea v-on:ionInput="materials=$event.target.value" rows="2" placeholder="Geben Sie hier das Material des Fundes ein"></ion-textarea>
     </ion-item>
 
     <ion-item>
@@ -38,6 +40,7 @@
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
+  </div>
 </template>
 
 <script>
