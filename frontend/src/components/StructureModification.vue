@@ -43,7 +43,7 @@ export default {
       soil: '',
       date: '',
       prelimdate: '',
-      excavation: '',
+      excavationId: '',
       colour: '',
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
@@ -62,6 +62,7 @@ export default {
       context.prelimdate = result.prelimdate
       context.colour = result.colour
       context._rev = result._rev
+      context.excavationId = result.excavationId
     })
     this.structurenumber = context.structurenumber
     this.description = context.description
@@ -70,6 +71,7 @@ export default {
     this.prelimdate = context.prelimdate
     this.colour = context.colour
     this._rev = context._rev
+    this.excavationId = context.excavationId
   },
   methods: {
     logForm: function () {
@@ -83,9 +85,10 @@ export default {
         date: context.date,
         prelimdate: context.prelimdate,
         colour: context.colour,
-        _rev: context._rev
+        _rev: context._rev,
+        excavationId: context.excavationId
       }
-      db.put(structure, function callback(err, result) {
+      db.put(structure, function callback (err, result) {
         if (!err) {
           console.log('Successfully changed a structure! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

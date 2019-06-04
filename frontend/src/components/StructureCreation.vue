@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('structures_database') // creates new database or opens existing one
 var remoteDB = new PouchDB('http://localhost:5984/structures')
@@ -54,7 +55,7 @@ export default {
       soil: '',
       date: '',
       prelimdate: '',
-      excavation: 'Grabung 1',
+      excavationId: '',
       colour: ''
     }
   },
@@ -70,7 +71,8 @@ export default {
         excavation: this.excavation,
         soil: this.soil,
         prelimdate: this.prelimdate,
-        colour: this.colour
+        colour: this.colour,
+        excavationId: VueCookies.get('currentExcavation')._id
       }
       db.put(campaign, function callback (err, result) {
         if (!err) {

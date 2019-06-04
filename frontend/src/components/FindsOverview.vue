@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import VueCookies from 'vue-cookies'
 export default {
   name: 'FindsOverview',
   methods: {
@@ -57,7 +58,7 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          context.finds.push(item.doc)
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.finds.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)

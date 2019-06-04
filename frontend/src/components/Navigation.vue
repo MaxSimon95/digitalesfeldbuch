@@ -2,8 +2,7 @@
 <div id="navWrapper">
       <Push>
         <router-link to="/home">Startseite</router-link>
-        <router-link to="/login">Account</router-link>
-        <router-link to="/userprofile">Account</router-link>
+        <router-link to="/login">Login</router-link>
         <router-link to="/campaigns">Kampagnenauswahl</router-link>
         <router-link to="/campaign">Grabungsauswahl</router-link>
         <router-link to="/excavation">Ausgrabung</router-link>
@@ -14,6 +13,7 @@
 </template>
 
 <script>
+
 import { Push } from 'vue-burger-menu' // import the CSS transitions you wish to use, in this case we are using `Slide`
 
 export default {

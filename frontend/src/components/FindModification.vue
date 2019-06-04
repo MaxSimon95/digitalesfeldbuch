@@ -56,7 +56,7 @@ export default {
       prelimdate: '',
       coordinates: '',
       date: '',
-      excavation: '',
+      excavationId: '',
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
@@ -75,7 +75,7 @@ export default {
       context.prelimdate = result.prelimdate
       context.coordinates = result.coordinates
       context.date = result.date
-      context.excavation = result.excavation
+      context.excavationId = result.excavationId
       context._rev = result._rev
     })
     this.findnumber = context.findnumber
@@ -86,7 +86,7 @@ export default {
     this.prelimdate = context.prelimdate
     this.coordinates = context.coordinates
     this.date = context.date
-    this.excavation = context.excavation
+    this.excavationId = context.excavationId
     this._rev = context._rev
   },
   methods: {
@@ -103,10 +103,10 @@ export default {
         prelimdate: context.prelimdate,
         coordinates: context.coordinates,
         date: context.date,
-        excavation: context.excavation,
+        excavationId: context.excavationId,
         _rev: context._rev
       }
-      db.put(find, function callback(err, result) {
+      db.put(find, function callback (err, result) {
         if (!err) {
           console.log('Successfully changed a find! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

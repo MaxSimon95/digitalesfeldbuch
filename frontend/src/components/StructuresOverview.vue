@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import VueCookies from 'vue-cookies'
 export default {
   name: 'StructuresOverview',
   methods: {
@@ -57,7 +58,7 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          context.structures.push(item.doc)
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.structures.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
