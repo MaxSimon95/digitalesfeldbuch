@@ -1,6 +1,6 @@
 <template>
   <div class="contentContainer">
-    <h1> Detailansicht Fund</h1>
+    <h1> Detailansicht Befund</h1>
     <p> <span class="bolder">Befundnummer: </span>{{structurenumber}}</p>
     <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
     <p> <span class="bolder">Bodenart: </span> {{soil}}</p>
