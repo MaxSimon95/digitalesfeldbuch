@@ -34,9 +34,10 @@
 </template>
 
 <script>
+import {path} from '../adress.js'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('structures_database') // creates new database or opens existing one
-var remoteDB = new PouchDB('http://192.168.178.22:5984/structures')
+var remoteDB = new PouchDB(path + '/structures')
 
 db.sync(remoteDB, {
   live: true,

@@ -12,10 +12,11 @@
 <script>
 import ExcavationsOverview from './ExcavationsOverview'
 import VueCookies from 'vue-cookies'
+import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('campaigns_database') // creates new database or opens existing one
-var remoteDB = new PouchDB('http://192.168.178.22:5984/campaigns')
+var remoteDB = new PouchDB(path + '/campaigns')
 db.sync(remoteDB, {
   live: true,
   retry: true
