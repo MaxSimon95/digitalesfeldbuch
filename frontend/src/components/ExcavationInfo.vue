@@ -18,7 +18,7 @@
 import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('excavations_database') // creates new database or opens existing
-var remoteDB = new PouchDB('http://192.168.159.1:5984/excavations')
+var remoteDB = new PouchDB('http://192.168.178.22:5984/excavations')
 
 db.sync(remoteDB, {
   live: true,
