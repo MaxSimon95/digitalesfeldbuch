@@ -1,17 +1,398 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5377c25-2a38-42d7-9485-04e2f7b1931b" name="Default Changelist" comment="Fixed Bug with Excavation Modification, tinkered with Excavation Overview">
+    <list default="true" id="d5377c25-2a38-42d7-9485-04e2f7b1931b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/0.0a762140703f142c7dd4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/0.0a762140703f142c7dd4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/1.95b0507ba28de5647593.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/1.95b0507ba28de5647593.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/10.512b14ee03bcdd7b662b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/10.512b14ee03bcdd7b662b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/100.0447c95975254edd10fc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/100.0447c95975254edd10fc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/101.2c5dc2a5e95f8efa148b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/101.2c5dc2a5e95f8efa148b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/102.78ad126110968a48c972.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/102.78ad126110968a48c972.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/103.9e5e969abd528244a477.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/103.9e5e969abd528244a477.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/104.32386fd9bd9322ed0c0b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/104.32386fd9bd9322ed0c0b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/105.43eab1e446e140a5613c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/105.43eab1e446e140a5613c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/106.5f773911a51207d966b5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/106.5f773911a51207d966b5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/107.819047c6dd966a355207.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/107.819047c6dd966a355207.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/108.260e06f656e1a541f222.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/108.260e06f656e1a541f222.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/109.45c4b3c6666b6c416776.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/109.45c4b3c6666b6c416776.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/11.b8ecc81bb3ef3c63a139.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/11.b8ecc81bb3ef3c63a139.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/110.f556579499d8181026f6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/110.f556579499d8181026f6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/111.c22d19196d20f9dae8bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/111.c22d19196d20f9dae8bc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/112.6101e1fe56c3c3b910b1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/112.6101e1fe56c3c3b910b1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/113.a868fcbbd692635198a3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/113.a868fcbbd692635198a3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/114.8684b65ef34cf2c150d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/114.8684b65ef34cf2c150d3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/115.c142e3727e773bb09e98.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/115.c142e3727e773bb09e98.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/116.ea8ce3940003390b1906.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/116.ea8ce3940003390b1906.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/117.00fa9c0f2ed8654eded4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/117.00fa9c0f2ed8654eded4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/118.b52e4b4ceedec8f9e2df.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/118.b52e4b4ceedec8f9e2df.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/119.34c7accfbd5ab2711ca0.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/119.34c7accfbd5ab2711ca0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/12.dd5c88f4d7b9cd3be42c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/12.dd5c88f4d7b9cd3be42c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/120.7255bd597f133c5ffdae.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/120.7255bd597f133c5ffdae.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/121.dcf1b7b221f7d31b1dd6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/121.dcf1b7b221f7d31b1dd6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/122.19cec2ed17f265bef91f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/122.19cec2ed17f265bef91f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/123.3c5c1bc68572a6e7559d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/123.3c5c1bc68572a6e7559d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/124.6e3235f47d60643b8705.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/124.6e3235f47d60643b8705.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/125.52b5f74a2a54746e9fc8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/125.52b5f74a2a54746e9fc8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/126.b2edfd77ea2768345511.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/126.b2edfd77ea2768345511.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/127.33c85a904fffe929696a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/127.33c85a904fffe929696a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/128.0aa2f324406a4de589da.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/128.0aa2f324406a4de589da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/129.4b4abfed772ce0a798f6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/129.4b4abfed772ce0a798f6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/13.48c3e56b3c74131df430.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/13.48c3e56b3c74131df430.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/130.76e73ce5a31e3b592665.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/130.76e73ce5a31e3b592665.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/131.67a8d5a91a2710433636.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/131.67a8d5a91a2710433636.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/132.f02640128a66e27201ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/132.f02640128a66e27201ad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/133.ba569fc8de61ecdad667.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/133.ba569fc8de61ecdad667.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/134.ea810c3779c689b7ae5c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/134.ea810c3779c689b7ae5c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/135.6170dbd835af38413644.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/135.6170dbd835af38413644.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/136.18a4fdb6db590ed53486.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/136.18a4fdb6db590ed53486.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/137.cd0656c60e855b5b91d1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/137.cd0656c60e855b5b91d1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/138.2e76a28cc7f145a7592f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/138.2e76a28cc7f145a7592f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/139.74942c54b24af91ef2d9.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/139.74942c54b24af91ef2d9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/14.fd652238eda59406b0a7.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/14.fd652238eda59406b0a7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/140.0c71d9995896f3d75f9a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/140.0c71d9995896f3d75f9a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/141.94c28a37cafc1be12a80.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/141.94c28a37cafc1be12a80.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/142.ac7f01e37bdbd358a2bb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/142.ac7f01e37bdbd358a2bb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/143.2c651b5a03932e1d0f47.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/143.2c651b5a03932e1d0f47.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/144.9150ac26a6df17841012.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/144.9150ac26a6df17841012.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/145.56d4e99311f6f0548173.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/145.56d4e99311f6f0548173.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/146.0a2650bfc07d10d2a293.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/146.0a2650bfc07d10d2a293.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/147.d4bac78537e2041c0279.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/147.d4bac78537e2041c0279.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/148.3dd3be90c40f2f95fdd5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/148.3dd3be90c40f2f95fdd5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/149.e531c87b5e032030c889.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/149.e531c87b5e032030c889.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/15.750adc605e256ad927cc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/15.750adc605e256ad927cc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/150.b12a48105da0ed472cdc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/150.b12a48105da0ed472cdc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/151.22b2740131d48245800c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/151.22b2740131d48245800c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/152.88ecca5a126f6d8c3c98.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/152.88ecca5a126f6d8c3c98.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/153.9685c492e34053187002.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/153.9685c492e34053187002.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/154.3042314fac8b4c9ef0a4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/154.3042314fac8b4c9ef0a4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/155.f63f3ff602bec73fa91e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/155.f63f3ff602bec73fa91e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/156.54a04ee5678f40d36442.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/156.54a04ee5678f40d36442.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/157.e3280d5af95db4334813.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/157.e3280d5af95db4334813.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/158.4ca4276562f698177d2f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/158.4ca4276562f698177d2f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/159.dc8d6f51a2d7bf698f28.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/159.dc8d6f51a2d7bf698f28.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/16.f8e5d1a3e3f69fa2d8b1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/16.f8e5d1a3e3f69fa2d8b1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/160.c0b43a793693361a2895.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/160.c0b43a793693361a2895.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/161.b4a055b01d5030e0f4c4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/161.b4a055b01d5030e0f4c4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/164.8e173ac3abcd13faf51a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/164.8e173ac3abcd13faf51a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/165.9f5570a7f08d083c7ab4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/165.9f5570a7f08d083c7ab4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/166.db893d666a01665eb80a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/166.db893d666a01665eb80a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/167.b714eecfa61286396ee5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/167.b714eecfa61286396ee5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/168.ed5261d0cc5bbeea06ed.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/168.ed5261d0cc5bbeea06ed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/169.63d8a61121717c483abb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/169.63d8a61121717c483abb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/17.f3190a96b2fa316d3e63.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/17.f3190a96b2fa316d3e63.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/170.3821c4192efbd1ff8401.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/170.3821c4192efbd1ff8401.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/171.afa489544c75b95e55a7.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/171.afa489544c75b95e55a7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/172.95e338bd85e8e7c1d6f3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/172.95e338bd85e8e7c1d6f3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/173.2d99d9427ba088f725be.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/173.2d99d9427ba088f725be.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/174.bd7cce52121c089e100b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/174.bd7cce52121c089e100b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/18.db0ad61e3c9a11a5efcf.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/18.db0ad61e3c9a11a5efcf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/19.516be6abc10927e3fb78.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/19.516be6abc10927e3fb78.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/2.119670a6b7739b7e84aa.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/2.119670a6b7739b7e84aa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/20.3344ad04ca5ae4c5d666.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/20.3344ad04ca5ae4c5d666.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/21.58214b0c92b5dbe8aa61.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/21.58214b0c92b5dbe8aa61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/22.6e4ed1d0778c167fc5ff.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/22.6e4ed1d0778c167fc5ff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/23.e47aa230b59e7382f3dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/23.e47aa230b59e7382f3dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/24.9b19e6909ecacd6d972b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/24.9b19e6909ecacd6d972b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/25.394f5ce6211374f5a531.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/25.394f5ce6211374f5a531.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/26.0eb415e685fbb2c2bf13.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/26.0eb415e685fbb2c2bf13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/27.e4a071a4702e1155843e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/27.e4a071a4702e1155843e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/28.70dfe652f64180de0b5b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/28.70dfe652f64180de0b5b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/29.f0f54531900464e06aba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/29.f0f54531900464e06aba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/3.c5589d29edf0046f5660.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/3.c5589d29edf0046f5660.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/30.45ade579d8c3612b969b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/30.45ade579d8c3612b969b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/31.f73c00554429dff1878e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/31.f73c00554429dff1878e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/32.85bb4bcefdc7f3d39098.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/32.85bb4bcefdc7f3d39098.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/33.c2f59a90c5ee0543e770.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/33.c2f59a90c5ee0543e770.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/34.8340513dae689bab5fdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/34.8340513dae689bab5fdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/35.7d1d22a8addd187bd847.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/35.7d1d22a8addd187bd847.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/36.c41eb0be000b12890cac.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/36.c41eb0be000b12890cac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/37.caa5ff271622672a7abc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/37.caa5ff271622672a7abc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/38.c1ba27e93e4e7456f0de.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/38.c1ba27e93e4e7456f0de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/39.0e5b285b7b24788c8f9f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/39.0e5b285b7b24788c8f9f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/4.f7c94728ceb3f6d522b3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/4.f7c94728ceb3f6d522b3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/40.81dd5c170daefebcfa85.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/40.81dd5c170daefebcfa85.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/41.2c9ba37c628699141ba3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/41.2c9ba37c628699141ba3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/42.f8a4c5173bcf9fde5551.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/42.f8a4c5173bcf9fde5551.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/43.b209c2573ed32e8e781b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/43.b209c2573ed32e8e781b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/44.f1ee0dfd30d9d524a1b4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/44.f1ee0dfd30d9d524a1b4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/45.ef8b7bffa418c53e8124.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/45.ef8b7bffa418c53e8124.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/46.cd5c8c1914a76a6e1f34.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/46.cd5c8c1914a76a6e1f34.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/47.0a8392d3df853b9eeae2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/47.0a8392d3df853b9eeae2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/48.771f8ef2e313be369987.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/48.771f8ef2e313be369987.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/49.dd3a25a0e939d61f8bca.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/49.dd3a25a0e939d61f8bca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/5.9ca96ad1d3f363d00d89.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/5.9ca96ad1d3f363d00d89.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/50.a85e6047ad813d8e9845.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/50.a85e6047ad813d8e9845.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/51.56ef33decd340132c713.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/51.56ef33decd340132c713.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/52.00950497bef8e7fd42e3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/52.00950497bef8e7fd42e3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/53.2c085d732150b872a2a8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/53.2c085d732150b872a2a8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/54.c664cfe6217ea0a7e8a3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/54.c664cfe6217ea0a7e8a3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/55.c8ff3e796c3e53b90b52.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/55.c8ff3e796c3e53b90b52.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/56.46207bd2a9ce7e96d625.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/56.46207bd2a9ce7e96d625.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/57.79c8b7c41f45defa3365.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/57.79c8b7c41f45defa3365.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/58.56154eba9156b8b4f836.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/58.56154eba9156b8b4f836.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/59.5cbf4146ac51b40332ac.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/59.5cbf4146ac51b40332ac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/6.8fff9fcc591c77c9ae2c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/6.8fff9fcc591c77c9ae2c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/60.a8720c4f03034c3859db.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/60.a8720c4f03034c3859db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/61.392e4873fdbe3aca62eb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/61.392e4873fdbe3aca62eb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/62.5dd485330c5f310677e2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/62.5dd485330c5f310677e2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/63.97ad736c2c87b85ac12f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/63.97ad736c2c87b85ac12f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/64.8ac3ef244a5bfa005272.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/64.8ac3ef244a5bfa005272.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/65.da5b6a9fbbe69c87a861.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/65.da5b6a9fbbe69c87a861.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/66.1dffdd5a3e5c3a6ffe08.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/66.1dffdd5a3e5c3a6ffe08.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/67.414bfeefb1aa5199b8e4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/67.414bfeefb1aa5199b8e4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/68.f77ac68312311fee47a0.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/68.f77ac68312311fee47a0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/69.f1ac5602a34de1f3ada1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/69.f1ac5602a34de1f3ada1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/7.4feabeab03f42cbbee55.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/7.4feabeab03f42cbbee55.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/70.69da9d0d7f0903dc4f76.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/70.69da9d0d7f0903dc4f76.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/71.b6e111bf3ab9288b7ac1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/71.b6e111bf3ab9288b7ac1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/72.de8d6f1b1d0bc994eaba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/72.de8d6f1b1d0bc994eaba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/73.311d68a5756041b9f2dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/73.311d68a5756041b9f2dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/74.4577a34be645932dbcf5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/74.4577a34be645932dbcf5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/75.d3b4273714f5de0a5dd1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/75.d3b4273714f5de0a5dd1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/76.480679543f61992ffc8d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/76.480679543f61992ffc8d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/77.e11b035f4330c222226c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/77.e11b035f4330c222226c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/78.2da348569dfa10078e37.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/78.2da348569dfa10078e37.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/79.908e168f5eed95835213.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/79.908e168f5eed95835213.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/8.8aa064f5c4dc7eaf592e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/8.8aa064f5c4dc7eaf592e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/80.b83238c8b3b0ff134684.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/80.b83238c8b3b0ff134684.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/81.38103d43a6bd7040ad82.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/81.38103d43a6bd7040ad82.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/82.68e8d7d3ecc02289c8f8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/82.68e8d7d3ecc02289c8f8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/83.f3c538718b0b33ace00a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/83.f3c538718b0b33ace00a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/84.f1d0892c82faf17b3da3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/84.f1d0892c82faf17b3da3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/85.a278721f396eb41289cb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/85.a278721f396eb41289cb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/86.dbba507fb43005dce827.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/86.dbba507fb43005dce827.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/87.1ee07e60a4bcbc95ab48.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/87.1ee07e60a4bcbc95ab48.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/88.2b317aacbd29ae5d5a4b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/88.2b317aacbd29ae5d5a4b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/89.b2379bdbf697725d1475.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/89.b2379bdbf697725d1475.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/9.a97197868118f8048e59.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/9.a97197868118f8048e59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/90.a0cc7da1926deff3a0f1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/90.a0cc7da1926deff3a0f1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/91.dd13141c6dac034b6988.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/91.dd13141c6dac034b6988.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/92.ba0a5495cf065ab7687c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/92.ba0a5495cf065ab7687c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/93.9aaba36d81e527b6b1ce.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/93.9aaba36d81e527b6b1ce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/94.9663166a4ad876a45042.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/94.9663166a4ad876a45042.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/95.f77362e132b54afe99df.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/95.f77362e132b54afe99df.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/96.306c9fe4847b83ee0e78.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/96.306c9fe4847b83ee0e78.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/97.b3f7f64288a2c504d027.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/97.b3f7f64288a2c504d027.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/98.776b136c9aac10c47e4d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/98.776b136c9aac10c47e4d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/99.20e0f3b534706d066b21.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/99.20e0f3b534706d066b21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/app.5283ebdbb6b75170ddb1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/app.5283ebdbb6b75170ddb1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/vendor.3fc7ff9cf26bba3ad714.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/assets/www/dist/static/js/vendor.3fc7ff9cf26bba3ad714.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/java/de/thkoeln/msimon3/digitalesfeldbuch/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/java/de/thkoeln/msimon3/digitalesfeldbuch/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/platforms/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/platforms/android/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignModification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignModification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FindModification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindModification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FindOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StructureModification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructureModification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StructureOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructureOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/css/app.a26980b57716576d30520254dc473aec.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/0.0a762140703f142c7dd4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/0.0a762140703f142c7dd4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/1.95b0507ba28de5647593.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/1.95b0507ba28de5647593.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/10.512b14ee03bcdd7b662b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/10.512b14ee03bcdd7b662b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/100.0447c95975254edd10fc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/100.0447c95975254edd10fc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/101.2c5dc2a5e95f8efa148b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/101.2c5dc2a5e95f8efa148b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/102.78ad126110968a48c972.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/102.78ad126110968a48c972.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/103.9e5e969abd528244a477.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/103.9e5e969abd528244a477.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/104.32386fd9bd9322ed0c0b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/104.32386fd9bd9322ed0c0b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/105.43eab1e446e140a5613c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/105.43eab1e446e140a5613c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/106.5f773911a51207d966b5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/106.5f773911a51207d966b5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/107.819047c6dd966a355207.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/107.819047c6dd966a355207.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/108.260e06f656e1a541f222.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/108.260e06f656e1a541f222.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/109.45c4b3c6666b6c416776.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/109.45c4b3c6666b6c416776.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/11.b8ecc81bb3ef3c63a139.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/11.b8ecc81bb3ef3c63a139.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/110.f556579499d8181026f6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/110.f556579499d8181026f6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/111.c22d19196d20f9dae8bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/111.c22d19196d20f9dae8bc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/112.6101e1fe56c3c3b910b1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/112.6101e1fe56c3c3b910b1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/113.a868fcbbd692635198a3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/113.a868fcbbd692635198a3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/114.8684b65ef34cf2c150d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/114.8684b65ef34cf2c150d3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/115.c142e3727e773bb09e98.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/115.c142e3727e773bb09e98.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/116.ea8ce3940003390b1906.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/116.ea8ce3940003390b1906.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/117.00fa9c0f2ed8654eded4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/117.00fa9c0f2ed8654eded4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/118.b52e4b4ceedec8f9e2df.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/118.b52e4b4ceedec8f9e2df.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/119.34c7accfbd5ab2711ca0.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/119.34c7accfbd5ab2711ca0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/12.dd5c88f4d7b9cd3be42c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/12.dd5c88f4d7b9cd3be42c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/120.7255bd597f133c5ffdae.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/120.7255bd597f133c5ffdae.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/121.dcf1b7b221f7d31b1dd6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/121.dcf1b7b221f7d31b1dd6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/122.19cec2ed17f265bef91f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/122.19cec2ed17f265bef91f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/123.3c5c1bc68572a6e7559d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/123.3c5c1bc68572a6e7559d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/124.6e3235f47d60643b8705.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/124.6e3235f47d60643b8705.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/125.52b5f74a2a54746e9fc8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/125.52b5f74a2a54746e9fc8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/126.b2edfd77ea2768345511.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/126.b2edfd77ea2768345511.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/127.33c85a904fffe929696a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/127.33c85a904fffe929696a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/128.0aa2f324406a4de589da.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/128.0aa2f324406a4de589da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/129.4b4abfed772ce0a798f6.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/129.4b4abfed772ce0a798f6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/13.48c3e56b3c74131df430.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/13.48c3e56b3c74131df430.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/130.76e73ce5a31e3b592665.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/130.76e73ce5a31e3b592665.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/131.67a8d5a91a2710433636.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/131.67a8d5a91a2710433636.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/132.f02640128a66e27201ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/132.f02640128a66e27201ad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/133.ba569fc8de61ecdad667.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/133.ba569fc8de61ecdad667.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/134.ea810c3779c689b7ae5c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/134.ea810c3779c689b7ae5c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/135.6170dbd835af38413644.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/135.6170dbd835af38413644.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/136.18a4fdb6db590ed53486.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/136.18a4fdb6db590ed53486.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/137.cd0656c60e855b5b91d1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/137.cd0656c60e855b5b91d1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/138.2e76a28cc7f145a7592f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/138.2e76a28cc7f145a7592f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/139.74942c54b24af91ef2d9.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/139.74942c54b24af91ef2d9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/14.fd652238eda59406b0a7.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/14.fd652238eda59406b0a7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/140.0c71d9995896f3d75f9a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/140.0c71d9995896f3d75f9a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/141.94c28a37cafc1be12a80.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/141.94c28a37cafc1be12a80.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/142.ac7f01e37bdbd358a2bb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/142.ac7f01e37bdbd358a2bb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/143.2c651b5a03932e1d0f47.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/143.2c651b5a03932e1d0f47.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/144.9150ac26a6df17841012.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/144.9150ac26a6df17841012.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/145.56d4e99311f6f0548173.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/145.56d4e99311f6f0548173.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/146.0a2650bfc07d10d2a293.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/146.0a2650bfc07d10d2a293.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/147.d4bac78537e2041c0279.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/147.d4bac78537e2041c0279.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/148.3dd3be90c40f2f95fdd5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/148.3dd3be90c40f2f95fdd5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/149.e531c87b5e032030c889.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/149.e531c87b5e032030c889.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/15.750adc605e256ad927cc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/15.750adc605e256ad927cc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/150.b12a48105da0ed472cdc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/150.b12a48105da0ed472cdc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/151.22b2740131d48245800c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/151.22b2740131d48245800c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/152.88ecca5a126f6d8c3c98.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/152.88ecca5a126f6d8c3c98.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/153.9685c492e34053187002.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/153.9685c492e34053187002.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/154.3042314fac8b4c9ef0a4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/154.3042314fac8b4c9ef0a4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/155.f63f3ff602bec73fa91e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/155.f63f3ff602bec73fa91e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/156.54a04ee5678f40d36442.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/156.54a04ee5678f40d36442.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/157.e3280d5af95db4334813.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/157.e3280d5af95db4334813.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/158.4ca4276562f698177d2f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/158.4ca4276562f698177d2f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/159.dc8d6f51a2d7bf698f28.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/159.dc8d6f51a2d7bf698f28.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/16.f8e5d1a3e3f69fa2d8b1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/16.f8e5d1a3e3f69fa2d8b1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/160.c0b43a793693361a2895.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/160.c0b43a793693361a2895.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/161.b4a055b01d5030e0f4c4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/161.b4a055b01d5030e0f4c4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/164.8e173ac3abcd13faf51a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/164.8e173ac3abcd13faf51a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/165.9f5570a7f08d083c7ab4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/165.9f5570a7f08d083c7ab4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/166.db893d666a01665eb80a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/166.db893d666a01665eb80a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/167.b714eecfa61286396ee5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/167.b714eecfa61286396ee5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/168.ed5261d0cc5bbeea06ed.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/168.ed5261d0cc5bbeea06ed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/169.63d8a61121717c483abb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/169.63d8a61121717c483abb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/17.f3190a96b2fa316d3e63.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/17.f3190a96b2fa316d3e63.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/170.3821c4192efbd1ff8401.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/170.3821c4192efbd1ff8401.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/171.afa489544c75b95e55a7.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/171.afa489544c75b95e55a7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/172.95e338bd85e8e7c1d6f3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/172.95e338bd85e8e7c1d6f3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/173.2d99d9427ba088f725be.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/173.2d99d9427ba088f725be.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/174.bd7cce52121c089e100b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/174.bd7cce52121c089e100b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/18.db0ad61e3c9a11a5efcf.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/18.db0ad61e3c9a11a5efcf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/19.516be6abc10927e3fb78.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/19.516be6abc10927e3fb78.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/2.119670a6b7739b7e84aa.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/2.119670a6b7739b7e84aa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/20.3344ad04ca5ae4c5d666.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/20.3344ad04ca5ae4c5d666.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/21.58214b0c92b5dbe8aa61.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/21.58214b0c92b5dbe8aa61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/22.6e4ed1d0778c167fc5ff.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/22.6e4ed1d0778c167fc5ff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/23.e47aa230b59e7382f3dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/23.e47aa230b59e7382f3dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/24.9b19e6909ecacd6d972b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/24.9b19e6909ecacd6d972b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/25.394f5ce6211374f5a531.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/25.394f5ce6211374f5a531.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/26.0eb415e685fbb2c2bf13.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/26.0eb415e685fbb2c2bf13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/27.e4a071a4702e1155843e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/27.e4a071a4702e1155843e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/28.70dfe652f64180de0b5b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/28.70dfe652f64180de0b5b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/29.f0f54531900464e06aba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/29.f0f54531900464e06aba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/3.c5589d29edf0046f5660.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/3.c5589d29edf0046f5660.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/30.45ade579d8c3612b969b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/30.45ade579d8c3612b969b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/31.f73c00554429dff1878e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/31.f73c00554429dff1878e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/32.85bb4bcefdc7f3d39098.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/32.85bb4bcefdc7f3d39098.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/33.c2f59a90c5ee0543e770.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/33.c2f59a90c5ee0543e770.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/34.8340513dae689bab5fdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/34.8340513dae689bab5fdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/35.7d1d22a8addd187bd847.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/35.7d1d22a8addd187bd847.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/36.c41eb0be000b12890cac.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/36.c41eb0be000b12890cac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/37.caa5ff271622672a7abc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/37.caa5ff271622672a7abc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/38.c1ba27e93e4e7456f0de.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/38.c1ba27e93e4e7456f0de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/39.0e5b285b7b24788c8f9f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/39.0e5b285b7b24788c8f9f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/4.f7c94728ceb3f6d522b3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/4.f7c94728ceb3f6d522b3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/40.81dd5c170daefebcfa85.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/40.81dd5c170daefebcfa85.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/41.2c9ba37c628699141ba3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/41.2c9ba37c628699141ba3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/42.f8a4c5173bcf9fde5551.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/42.f8a4c5173bcf9fde5551.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/43.b209c2573ed32e8e781b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/43.b209c2573ed32e8e781b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/44.f1ee0dfd30d9d524a1b4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/44.f1ee0dfd30d9d524a1b4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/45.ef8b7bffa418c53e8124.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/45.ef8b7bffa418c53e8124.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/46.cd5c8c1914a76a6e1f34.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/46.cd5c8c1914a76a6e1f34.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/47.0a8392d3df853b9eeae2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/47.0a8392d3df853b9eeae2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/48.771f8ef2e313be369987.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/48.771f8ef2e313be369987.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/49.dd3a25a0e939d61f8bca.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/49.dd3a25a0e939d61f8bca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/5.9ca96ad1d3f363d00d89.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/5.9ca96ad1d3f363d00d89.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/50.a85e6047ad813d8e9845.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/50.a85e6047ad813d8e9845.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/51.56ef33decd340132c713.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/51.56ef33decd340132c713.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/52.00950497bef8e7fd42e3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/52.00950497bef8e7fd42e3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/53.2c085d732150b872a2a8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/53.2c085d732150b872a2a8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/54.c664cfe6217ea0a7e8a3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/54.c664cfe6217ea0a7e8a3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/55.c8ff3e796c3e53b90b52.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/55.c8ff3e796c3e53b90b52.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/56.46207bd2a9ce7e96d625.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/56.46207bd2a9ce7e96d625.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/57.79c8b7c41f45defa3365.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/57.79c8b7c41f45defa3365.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/58.56154eba9156b8b4f836.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/58.56154eba9156b8b4f836.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/59.5cbf4146ac51b40332ac.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/59.5cbf4146ac51b40332ac.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/6.8fff9fcc591c77c9ae2c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/6.8fff9fcc591c77c9ae2c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/60.a8720c4f03034c3859db.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/60.a8720c4f03034c3859db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/61.392e4873fdbe3aca62eb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/61.392e4873fdbe3aca62eb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/62.5dd485330c5f310677e2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/62.5dd485330c5f310677e2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/63.97ad736c2c87b85ac12f.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/63.97ad736c2c87b85ac12f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/64.8ac3ef244a5bfa005272.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/64.8ac3ef244a5bfa005272.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/65.da5b6a9fbbe69c87a861.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/65.da5b6a9fbbe69c87a861.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/66.1dffdd5a3e5c3a6ffe08.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/66.1dffdd5a3e5c3a6ffe08.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/67.414bfeefb1aa5199b8e4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/67.414bfeefb1aa5199b8e4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/68.f77ac68312311fee47a0.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/68.f77ac68312311fee47a0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/69.f1ac5602a34de1f3ada1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/69.f1ac5602a34de1f3ada1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/7.4feabeab03f42cbbee55.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/7.4feabeab03f42cbbee55.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/70.69da9d0d7f0903dc4f76.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/70.69da9d0d7f0903dc4f76.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/71.b6e111bf3ab9288b7ac1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/71.b6e111bf3ab9288b7ac1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/72.de8d6f1b1d0bc994eaba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/72.de8d6f1b1d0bc994eaba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/73.311d68a5756041b9f2dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/73.311d68a5756041b9f2dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/74.4577a34be645932dbcf5.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/74.4577a34be645932dbcf5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/75.d3b4273714f5de0a5dd1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/75.d3b4273714f5de0a5dd1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/76.480679543f61992ffc8d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/76.480679543f61992ffc8d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/77.e11b035f4330c222226c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/77.e11b035f4330c222226c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/78.2da348569dfa10078e37.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/78.2da348569dfa10078e37.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/79.908e168f5eed95835213.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/79.908e168f5eed95835213.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/8.8aa064f5c4dc7eaf592e.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/8.8aa064f5c4dc7eaf592e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/80.b83238c8b3b0ff134684.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/80.b83238c8b3b0ff134684.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/81.38103d43a6bd7040ad82.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/81.38103d43a6bd7040ad82.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/82.68e8d7d3ecc02289c8f8.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/82.68e8d7d3ecc02289c8f8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/83.f3c538718b0b33ace00a.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/83.f3c538718b0b33ace00a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/84.f1d0892c82faf17b3da3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/84.f1d0892c82faf17b3da3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/85.a278721f396eb41289cb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/85.a278721f396eb41289cb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/86.dbba507fb43005dce827.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/86.dbba507fb43005dce827.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/87.1ee07e60a4bcbc95ab48.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/87.1ee07e60a4bcbc95ab48.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/88.2b317aacbd29ae5d5a4b.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/88.2b317aacbd29ae5d5a4b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/89.b2379bdbf697725d1475.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/89.b2379bdbf697725d1475.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/9.a97197868118f8048e59.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/9.a97197868118f8048e59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/90.a0cc7da1926deff3a0f1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/90.a0cc7da1926deff3a0f1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/91.dd13141c6dac034b6988.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/91.dd13141c6dac034b6988.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/92.ba0a5495cf065ab7687c.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/92.ba0a5495cf065ab7687c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/93.9aaba36d81e527b6b1ce.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/93.9aaba36d81e527b6b1ce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/94.9663166a4ad876a45042.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/94.9663166a4ad876a45042.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/95.f77362e132b54afe99df.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/95.f77362e132b54afe99df.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/96.306c9fe4847b83ee0e78.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/96.306c9fe4847b83ee0e78.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/97.b3f7f64288a2c504d027.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/97.b3f7f64288a2c504d027.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/98.776b136c9aac10c47e4d.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/98.776b136c9aac10c47e4d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/99.20e0f3b534706d066b21.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/99.20e0f3b534706d066b21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.5283ebdbb6b75170ddb1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/app.5283ebdbb6b75170ddb1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/manifest.8973a69e98cd2e92f545.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.3fc7ff9cf26bba3ad714.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/www/dist/static/js/vendor.3fc7ff9cf26bba3ad714.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,37 +407,34 @@
     <session id="-750860855">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="vue" value="43" />
+          <entry key="vue" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Vue.js" value="43" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="ESLintLanguageService" value="3" />
+          <entry key="Vue.js" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="vue" value="10" />
+          <entry key="vue" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Vue.js" value="10" />
+          <entry key="Vue.js" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="ESLintLanguageService" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -64,64 +442,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/UserProfile.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignModification.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            <state relative-caret-position="901">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -129,17 +480,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureCreation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+            <state relative-caret-position="731">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/FindCreation.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureModification.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <state relative-caret-position="714">
+              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/FindOverview.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -147,8 +525,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/FindsOverview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            <state relative-caret-position="714">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -185,33 +563,37 @@
         <option value="$PROJECT_DIR$/frontend/.eslintrc.js" />
         <option value="D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3w/assets/harvestcraft/blockstates/candledeco2.json" />
         <option value="D:/Programme/AdersinLauncher/instances/gaia/minecraft/resourcepacks/Anastasis-1.10.3/assets/harvestcraft/blockstates/candledeco2.json" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/CampaignModification.vue" />
         <option value="$PROJECT_DIR$/frontend/src/main.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExavationHeader.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/SectionHeader.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/FallbackComponent.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/AppHeader.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/UserProfile.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/SectionOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/router/index.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Navigation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CampaignModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/FindCreation.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/FindModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/FindOverview.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/FindsOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SectionCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SectionModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SectionOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructureCreation.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructureModification.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructureOverview.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue" />
       </list>
     </option>
   </component>
@@ -231,17 +613,17 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2301" />
-    <option name="y" value="-10" />
+    <option name="x" value="2103" />
+    <option name="y" value="-14" />
     <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="height" value="816" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,7 +695,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,7 +744,12 @@
       <workItem from="1559639308945" duration="416000" />
       <workItem from="1559654639105" duration="869000" />
       <workItem from="1559659062018" duration="2211000" />
-      <workItem from="1559673946250" duration="1350000" />
+      <workItem from="1559673946250" duration="2404000" />
+      <workItem from="1559680244802" duration="6000" />
+      <workItem from="1559723603516" duration="2010000" />
+      <workItem from="1559739863088" duration="3569000" />
+      <workItem from="1559749057969" duration="1194000" />
+      <workItem from="1559754214223" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="Made Campaign Selection shiny, added frontend implementation of campaign creation">
       <created>1557618675778</created>
@@ -448,22 +835,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559485142437</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Edited Database path">
+      <created>1559679193841</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1559679193842</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158980000" />
+    <option name="totallyTimeSpent" value="167425000" />
   </component>
   <component name="TodoView" selected-index="2" />
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2196162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1652452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -484,6 +881,8 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
@@ -527,19 +926,10 @@
     <MESSAGE value="Fixed navigation bug" />
     <MESSAGE value="Findings renamed to finds" />
     <MESSAGE value="Added nested routing for Excavation subcomponents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added nested routing for Excavation subcomponents" />
+    <MESSAGE value="Edited Database path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited Database path" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/ionicons/dist/scss/ionicons-core.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/AppFooter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/.eslintignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -595,9 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,60 +993,6 @@
         <state relative-caret-position="51">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/FallbackComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindModification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/HelloWorld.vue">
@@ -682,41 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureModification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/UserProfile.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -724,59 +1022,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignModification.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        <state relative-caret-position="476">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignsOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        <state relative-caret-position="459">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationHeader.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationOverview.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ExcavationsOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FallbackComponent.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindCreation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="901">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionModification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SectionsOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureCreation.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="731">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindCreation.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureModification.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="714">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructureOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/FindOverview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/FindsOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        <state relative-caret-position="714">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/CampaignCreation.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/StructuresOverview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        <state relative-caret-position="646">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
         </state>
       </provider>
     </entry>

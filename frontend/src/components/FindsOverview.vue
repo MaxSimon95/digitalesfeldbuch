@@ -39,8 +39,8 @@ export default {
       var remoteDB = new PouchDB('http://192.168.137.1::5984/finds')
 
       db.sync(remoteDB, {
-        live: false,
-        retry: false
+        live: true,
+        retry: true
       }).on('change', function (change) {
         // yo, something changed!
       }).on('paused', function (info) {

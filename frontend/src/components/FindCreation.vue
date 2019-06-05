@@ -32,11 +32,6 @@
       <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Geben Sie hier eine vorläufige Datierung des Fundes ein"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Vorläufige Verortung</ion-label>
-      <ion-input v-on:ionInput="coordinates=$event.target.value" placeholder="Geben Sie hier eine vorläufige Verortung des Fundes ein"></ion-input>
-    </ion-item>
-
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
@@ -48,11 +43,11 @@ import VueCookies from 'vue-cookies'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('finds_database') // creates new database or opens existing one
-var remoteDB = new PouchDB('http://192.168.137.1:5984/finds')
+var remoteDB = new PouchDB('http://192.168.159.1:5984/finds')
 
 db.sync(remoteDB, {
   live: true,
-  retry: false
+  retry: true
 }).on('change', function (change) {
 }).on('paused', function (info) {
 }).on('active', function (info) {

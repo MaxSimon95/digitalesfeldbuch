@@ -48,6 +48,23 @@
 import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('excavations_database') // creates new database or opens existing one
+var remoteDB = new PouchDB('http://192.168.159.1:5984/excavations')
+
+db.sync(remoteDB, {
+  live: true,
+  retry: true
+}).on('change', function (change) {
+  // yo, something changed!
+}).on('paused', function (info) {
+  // replication was paused, usually because of a lost connection
+}).on('active', function (info) {
+  // replication was resumed
+// eslint-disable-next-line handle-callback-err
+}).on('error', function (err) {
+  // totally unhandled error (shouldn't happen)
+  console.log('whyyy')
+  console.log(err)
+})
 let context
 export default {
   name: 'ExcavationModification',
