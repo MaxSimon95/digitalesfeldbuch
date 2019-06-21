@@ -1,5 +1,8 @@
 <template>
     <div>
+      <p v-if="campaigns.length === 0">
+        <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Kampagnen angelegt.
+      </p>
       <!-- List of Text Items -->
       <ion-list>
         <ion-item-sliding v-for="item in campaigns" v-bind:key="item._id" lines="inset">

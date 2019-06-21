@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>Übersicht der Funde</h1>
+    <p v-if="finds.length === 0">
+      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Funde dokumentiert.
+    </p>
     <!-- List of Text Items -->
     <ion-list>
       <ion-item-sliding v-for="item in finds" v-bind:key="item._id" lines="inset">

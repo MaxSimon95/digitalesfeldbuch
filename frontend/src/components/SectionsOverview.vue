@@ -1,7 +1,10 @@
 <template>
-  <div id="sectionsWrapper">
+  <div id="sectionsWrapper" >
     <!-- List of Text Items -->
     <h1>Übersicht der Schnitte</h1>
+    <p v-if="sections.length === 0">
+      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte dokumentiert.
+    </p>
     <ion-list>
       <ion-item-sliding v-for="item in sections" v-bind:key="item._id" lines="inset">
 
@@ -27,12 +30,12 @@
     </ion-list>
     <ion-button color="secondary" expand="block" @click="createSection()">Neuer Schnitt</ion-button>
   </div>
+
 </template>
 
 <script>
 import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
-
 export default {
   name: 'SectionsOverview',
   methods: {
@@ -86,7 +89,7 @@ export default {
 
     deleteSection: function (item) { } // TODO: change campaign
   },
-  beforeMount () {
+  created () {
     this.getSections()
   },
   data: function () {

@@ -1,11 +1,18 @@
 <template>
-  <div>
+  <div v-if="campaignIsSet">
     <h1> Kampagne: {{title}}</h1>
     <p> {{description}}</p>
     <ion-button @click="modifyCampaign()">Kampagne bearbeiten</ion-button>
     <hr>
     <!-- the list of excavations and correlating functionality comes from a nested component: -->
     <ExcavationsOverview/>
+  </div>
+  <div v-else>
+    <h1><ion-icon name="alert"></ion-icon></h1>
+    <p>
+      Sie müssen zunächst eine Kampagne auswählen, bevor der Zugriff auf die zugehörigen Grabungen möglich ist.
+    </p>
+    <ion-button color="secondary" expand="block" @click="openCampaignsOverview()">Kampagne auswählen</ion-button>
   </div>
 </template>
 
@@ -42,24 +49,39 @@ export default {
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
-      _rev: 0
+      _rev: 0,
+      campaignIsSet: false
     }
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
-    context = this
-    // context._id = context.$route.params._id
-    context._id = VueCookies.get('currentCampaign')._id
-    db.get(context._id).then(function (result) {
-      context.title = result.title
-      context.description = result.description
-    })
+    if(VueCookies.get('currentCampaign') !== null)
+    {
+      this.campaignIsSet = true
+      context = this
+      // context._id = context.$route.params._id
+      context._id = VueCookies.get('currentCampaign')._id
+      db.get(context._id).then(function (result) {
+        context.title = result.title
+        context.description = result.description
+      })
+
+    }
+    else{
+
+    }
+
+
   },
   methods: {
     modifyCampaign: function () {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'ModifyCampaign', params: { _id: context._id }})
+    },
+    openCampaignsOverview: function () {
+      this.$router.push({ name: 'CampaignsOverview'})
     }
   }
+
 }
 </script>
 

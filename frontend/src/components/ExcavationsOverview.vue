@@ -2,6 +2,9 @@
   <div id="excavationsWrapper">
     <!-- List of Text Items -->
     <h2>Zugehörige Ausgrabungen</h2>
+    <p v-if="excavations.length === 0">
+      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Ausgrabungen angelegt.
+    </p>
     <ion-list>
       <ion-item-sliding v-for="item in excavations" v-bind:key="item._id" lines="inset">
 
@@ -34,6 +37,7 @@
 <script>
 import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
+
 
 export default {
   name: 'ExcavationsOverview',
@@ -89,13 +93,14 @@ export default {
     deleteExcavation: function (item) { } // TODO: change campaign
   },
   beforeMount () {
-    this.getExcavations()
+      this.getExcavations()
   },
   data: function () {
     return {
-      excavations: []
+      excavations: [],
     }
   }
+
 }
 
 </script>
