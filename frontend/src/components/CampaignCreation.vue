@@ -5,25 +5,43 @@
     <ion-label position="stacked">Name der Kampagne</ion-label>
     <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie den Namen der Kampagne ein" ></ion-input>
   </ion-item>
+<ion-item>
+  <ion-label position="stacked">Ansprechpartner</ion-label>
+  <ion-list>
 
-    <ion-list>
-      Ansprechpartner
-      <ion-button>
-        <ion-text>
-          Max Mustermann
-        </ion-text>
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
+    <ion-button>
+      <ion-text>
+        Max Mustermann
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
 
-      <ion-button>
-        <ion-text>
-          Frau Schmitz
-        </ion-text>
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
+    <ion-button>
+      <ion-text>
+        Elke Schmitz
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
 
-      <ion-button color="secondary"> Hinzufügen </ion-button>
-    </ion-list>
+    <ion-button>
+      <ion-text>
+        Hans Gärtner
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+
+    <ion-button>
+      <ion-text>
+        Annegret Brauer
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-list>
+
+  <ion-button color="secondary"> Hinzufügen </ion-button>
+
+</ion-item>
+
 
   <ion-item>
     <ion-label position="stacked">Kurzbeschreibung</ion-label>

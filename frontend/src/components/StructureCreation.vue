@@ -8,24 +8,43 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="stacked">Zugehöriger Schnitt</ion-label>
+      <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Wählen Sie hier den zugehörigen Schnitt aus" ></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="stacked">Bodenart</ion-label>
       <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" placeholder="Geben Sie hier Art des Befundes an"></ion-textarea>
     </ion-item>
 
-    <ion-list>
+    <ion-item>
       <ion-label position="stacked">Einschlüsse</ion-label>
+      <ion-list>
 
-      <ion-button>
-        Grauwacke 10%
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
+        <ion-button>
+          Beispieleinschluss 1: 10%
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
 
-      <ion-button>
-        Ziegelbruch 10%
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
+        <ion-button>
+          Beispieleinschluss 2: 10%
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+
+        <ion-button>
+          Beispieleinschluss 3: 12%
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+
+        <ion-button>
+          Beispieleinschluss 4: 6%
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+
+      </ion-list>
       <ion-button color="secondary"> Hinzufügen </ion-button>
-    </ion-list>
+    </ion-item>
+
 
     <ion-item>
       <!--<ion-label psoition="floating">Bodenfarbe</ion-label> -->

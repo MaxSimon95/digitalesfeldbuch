@@ -8,6 +8,11 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="stacked">Befund</ion-label>
+      <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="stacked">Tachymeter ID</ion-label>
       <ion-input v-on:ionInput="tachymeterid=$event.target.value" placeholder="Geben sie hier die Tachymeter ID für die spätere Verortung ein" ></ion-input>
     </ion-item>
@@ -16,24 +21,28 @@
       <ion-label position="stacked">Fundart</ion-label>
       <ion-input v-on:ionInput="type=$event.target.value" placeholder="Geben sie hier die Art des Fundes ein" ></ion-input>
     </ion-item>
+<ion-item>
+  <ion-label position="stacked">Material</ion-label>
+  <ion-list>
+    <ion-button>
+      <ion-text>
+        Metall: Bronze
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
 
-    <ion-list>
-      <ion-button>
-        <ion-text>
-          Metall: Bronze
-        </ion-text>
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
+    <ion-button>
+      <ion-text>
+        Organische Reste: Bein
+      </ion-text>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
 
-      <ion-button>
-        <ion-text>
-          Organische Reste: Bein
-        </ion-text>
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
 
-      <ion-button color="secondary"> Hinzufügen </ion-button>
-    </ion-list>
+  </ion-list>
+  <ion-button color="secondary"> Hinzufügen </ion-button>
+</ion-item>
+
 
     <ion-item>
       <ion-label position="stacked">Vorläufige Datierung</ion-label>
