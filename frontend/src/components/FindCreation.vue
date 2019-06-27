@@ -9,28 +9,42 @@
 
     <ion-item>
       <ion-label position="stacked">Tachymeter ID</ion-label>
-      <ion-input v-on:ionInput="tachymeterid=$event.target.value" placeholder="Geben sie hier die Tachymeter ID des Fundes ein ein" ></ion-input>
+      <ion-input v-on:ionInput="tachymeterid=$event.target.value" placeholder="Geben sie hier die Tachymeter ID für die spätere Verortung ein" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Fundtyp</ion-label>
-      <ion-input v-on:ionInput="type=$event.target.value" placeholder="Geben sie hier den Fundtyp ein" ></ion-input>
+      <ion-label position="stacked">Fundart</ion-label>
+      <ion-input v-on:ionInput="type=$event.target.value" placeholder="Geben sie hier die Art des Fundes ein" ></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Kurzbeschreibung</ion-label>
-      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier eine kurze Beschreibung des Fundes ein"></ion-textarea>
-    </ion-item>
+    <ion-list>
+      <ion-button>
+        <ion-text>
+          Metall: Bronze
+        </ion-text>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
 
-    <ion-item>
-      <ion-label position="stacked">Material</ion-label>
-      <ion-textarea v-on:ionInput="materials=$event.target.value" rows="2" placeholder="Geben Sie hier das Material des Fundes ein"></ion-textarea>
-    </ion-item>
+      <ion-button>
+        <ion-text>
+          Organische Reste: Bein
+        </ion-text>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+
+      <ion-button color="secondary"> Hinzufügen </ion-button>
+    </ion-list>
 
     <ion-item>
       <ion-label position="stacked">Vorläufige Datierung</ion-label>
       <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Geben Sie hier eine vorläufige Datierung des Fundes ein"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Anmerkung</ion-label>
+      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier weitere Anmerkungen zu dem Fund an"></ion-textarea>
+    </ion-item>
+
 
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>

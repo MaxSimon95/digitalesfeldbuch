@@ -33,7 +33,7 @@
 
       <ion-item>
         <ion-label position="stacked">Ende der Ausgrabung</ion-label>
-        <ion-input v-on:ionInput="excavationEndDate=$event.target.value" placeholder="Geben Sie hier das Enddatum der Ausgrabung an"></ion-input>
+        <ion-input v-on:ionInput="excavationEndDate=$event.target.value" placeholder="Geben Sie hier das geplante Enddatum der Ausgrabung an"></ion-input>
       </ion-item>
 
       <!--

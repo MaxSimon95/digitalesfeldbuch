@@ -6,10 +6,31 @@
     <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie den Namen der Kampagne ein" ></ion-input>
   </ion-item>
 
+    <ion-list>
+      Ansprechpartner
+      <ion-button>
+        <ion-text>
+          Max Mustermann
+        </ion-text>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-text>
+          Frau Schmitz
+        </ion-text>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+
+      <ion-button color="secondary"> Hinzufügen </ion-button>
+    </ion-list>
+
   <ion-item>
     <ion-label position="stacked">Kurzbeschreibung</ion-label>
     <ion-textarea v-on:ionInput="description=$event.target.value" rows="14" placeholder="Geben Sie hier eine kurze Beschreibung der Kampagne ein"></ion-textarea>
   </ion-item>
+
+
 
   <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>

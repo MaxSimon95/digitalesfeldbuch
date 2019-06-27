@@ -8,23 +8,43 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Kurzbeschreibung</ion-label>
-      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier eine kurze Beschreibung des Befundes ein"></ion-textarea>
-    </ion-item>
-
-    <ion-item>
       <ion-label position="stacked">Bodenart</ion-label>
-      <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" placeholder="Geben Sie hier Art des Befundes und etwaige Einschlüsse ein"></ion-textarea>
+      <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" placeholder="Geben Sie hier Art des Befundes an"></ion-textarea>
     </ion-item>
 
+    <ion-list>
+      <ion-label position="stacked">Einschlüsse</ion-label>
+
+      <ion-button>
+        Grauwacke 10%
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        Ziegelbruch 10%
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary"> Hinzufügen </ion-button>
+    </ion-list>
+
     <ion-item>
-      <ion-label position="stacked">Bodenfarbe</ion-label>
-      <ion-input v-on:ionInput="colour=$event.target.value" placeholder="Geben sie hier die Farbe des Befundes ein" ></ion-input>
+      <!--<ion-label psoition="floating">Bodenfarbe</ion-label> -->
+      <ion-label >Hue:</ion-label>
+      <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
+      <ion-label >Value:</ion-label>
+      <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
+      <ion-label >Chroma:</ion-label>
+      <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Vorläufige Datierung</ion-label>
       <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Geben sie hier eine vorläufige Datierung des Befundes ein" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Anmerkung</ion-label>
+      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier weitere Anmerkungen zu dem Befund ein"></ion-textarea>
     </ion-item>
 
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
