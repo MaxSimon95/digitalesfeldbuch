@@ -21,7 +21,7 @@
       <ion-label position="stacked">Fundart</ion-label>
       <ion-input v-on:ionInput="type=$event.target.value" placeholder="Geben sie hier die Art des Fundes ein" ></ion-input>
     </ion-item>
-<ion-item>
+<!--<ion-item>
   <ion-label position="stacked">Material</ion-label>
   <ion-list>
     <ion-button>
@@ -41,7 +41,7 @@
 
   </ion-list>
   <ion-button color="secondary"> Hinzufügen </ion-button>
-</ion-item>
+</ion-item> -->
 
 
     <ion-item>

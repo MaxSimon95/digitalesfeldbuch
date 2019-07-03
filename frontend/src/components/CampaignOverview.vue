@@ -2,6 +2,11 @@
   <div v-if="campaignIsSet">
     <h1> Kampagne: {{title}}</h1>
     <p> {{description}}</p>
+    <p>
+      Ansprechpartner:
+      <span v-for="item in affiliatedContactPersons">
+        {{item.name}}<span v-if="affiliatedContactPersons.length !== 0">,</span>
+      </span></p>
     <ion-button @click="modifyCampaign()">Kampagne bearbeiten</ion-button>
     <hr>
     <!-- the list of excavations and correlating functionality comes from a nested component: -->
@@ -50,6 +55,7 @@ export default {
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
       _rev: 0,
+      affiliatedContactPersons: [],
       campaignIsSet: false
     }
   },
@@ -63,6 +69,7 @@ export default {
       db.get(context._id).then(function (result) {
         context.title = result.title
         context.description = result.description
+        context.affiliatedContactPersons = result.affiliatedContactPersons
       })
 
     }

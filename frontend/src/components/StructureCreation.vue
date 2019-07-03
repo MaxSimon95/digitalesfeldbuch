@@ -16,7 +16,7 @@
       <ion-label position="stacked">Bodenart</ion-label>
       <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" placeholder="Geben Sie hier Art des Befundes an"></ion-textarea>
     </ion-item>
-
+<!--
     <ion-item>
       <ion-label position="stacked">Einschlüsse</ion-label>
       <ion-list>
@@ -43,18 +43,18 @@
 
       </ion-list>
       <ion-button color="secondary"> Hinzufügen </ion-button>
-    </ion-item>
+    </ion-item> -->
 
-
+<!--
     <ion-item>
-      <!--<ion-label psoition="floating">Bodenfarbe</ion-label> -->
+      <ion-label psoition="floating">Bodenfarbe</ion-label>
       <ion-label >Hue:</ion-label>
       <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
       <ion-label >Value:</ion-label>
       <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
       <ion-label >Chroma:</ion-label>
       <ion-input v-on:ionInput="colour=$event.target.value" ></ion-input>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-label position="stacked">Vorläufige Datierung</ion-label>
