@@ -1,6 +1,11 @@
 <template>
   <div class="contentContainer">
     <h1> {{title}}</h1>
+    <p>
+      Ansprechpartner:
+      <span v-for="item in affiliatedContactPersons">
+        {{item.name}}<span v-if="affiliatedContactPersons.length !== 0">,</span>
+      </span></p>
     <p> <span class="bolder">Beauftragte Organisation: </span> {{organisation}}</p>
     <p> <span class="bolder">Auftraggeber: </span>{{customer}}</p>
     <p> <span class="bolder">Grabungsfokus: </span>{{excavationFocus}}</p>
@@ -65,6 +70,7 @@ export default {
       context.location = result.location
       context.excavationStartDate = result.excavationStartDate
       context.excavationEndDate = result.excavationEndDate
+      context.affiliatedContactPersons = result.affiliatedContactPersons
     })
   },
   methods: {

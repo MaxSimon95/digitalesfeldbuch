@@ -12,7 +12,7 @@
 
 
         <ion-list>
-          <ion-button v-for="item in affiliatedContactPersons">
+          <ion-button v-for="item in affiliatedContactPersons" v-bind:key="item._id">
             <ion-text>
               {{item.name}}
             </ion-text>
