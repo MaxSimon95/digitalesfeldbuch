@@ -16,6 +16,7 @@
   "dependencies": {
     "@ionic/core": "^4.3.0",
     "@ionic/vue": "0.0.4",
+    "chroma-js": "^2.0.4",
     "cordova-android": "^8.0.0",
     "pouchdb-browser": "^7.0.0",
     "vue": "^2.5.2",

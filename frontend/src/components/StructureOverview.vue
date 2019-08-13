@@ -5,10 +5,18 @@
     <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
     <p> <span class="bolder">Bodenart: </span> {{soil}}</p>
     <p> <span class="bolder">Vorläufige Datierung: </span> {{prelimdate}}</p>
-    <p> <span class="bolder">Bodenfarbe: </span> {{colour}}</p>
+    <p> <span class="bolder">Bodenfarbe: </span> </p>
+      <p> Farbwerte: Hue: {{colour_hue}}, Value: {{colour_value}}, Chroma: {{colour_chroma}} </p>
+    <p> Farbvorschau: <span class="color_preview_container" v-html="colour_preview_html"></span> </p>
+
+    <p>
+      <span class="bolder"> Einschlüsse: </span>
+      <span v-for="item in affiliatedMaterials">
+        {{item}}<span v-if="affiliatedMaterials.length !== 0">,</span>
+      </span></p>
 
     <div class="center">
-      <ion-button @click="modifyStructure()">Beund bearbeiten</ion-button>
+      <ion-button @click="modifyStructure()">Befund bearbeiten</ion-button>
     </div>
     <hr>
   </div>
@@ -16,6 +24,7 @@
 
 <script>
 import VueCookies from 'vue-cookies'
+import chroma from 'chroma-js'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
@@ -40,12 +49,17 @@ export default {
       description: '',
       soil: '',
       prelimdate: '',
-      colour: '',
+      colour_hue: '',
+      colour_value: '',
+      colour_chroma: '',
+      colour_preview_html: '',
+      affiliatedMaterials: [],
+
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0
     }
   },
-  created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
+  created () {
     context = this
     // context._id = context.$route.params._id
     context._id = VueCookies.get('currentStructure')._id
@@ -54,8 +68,21 @@ export default {
       context.description = result.description
       context.soil = result.soil
       context.prelimdate = result.prelimdate
-      context.colour = result.colour
+      context.affiliatedMaterials = result.affiliatedMaterials
+      context.colour_hue = result.colour_hue
+      context.colour_value = result.colour_value
+      context.colour_chroma = result.colour_chroma
+      console.log(context.colour_hue + context.colour_chroma +  context.colour_value)
+      var colour_hcl = chroma.hcl(parseInt(context.colour_hue), parseInt(context.colour_chroma), parseInt(context.colour_value));
+      console.log(colour_hcl)
+
+      //context.colour_preview_html = chroma.hcl(130, 40, 80);
+      context.colour_preview_html = '<span style="display: inherit; width: 100%; height: 100%; background-color: ' + colour_hcl + '"></span>'
     })
+  },
+  beforeMount () {
+
+
   },
   methods: {
     modifyStructure: function () {
@@ -82,4 +109,11 @@ export default {
   div.contentContainer h1 {
     text-align: center;
   }
+
+  span.color_preview_container{
+  width: 100%;
+  display: inline-block;
+    height: 35px
+  }
+
 </style>

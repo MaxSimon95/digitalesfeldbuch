@@ -6,6 +6,8 @@
         <router-link to="/campaigns">Kampagnenauswahl</router-link>
         <router-link to="/campaign">Grabungsauswahl</router-link>
         <router-link to="/excavation">Ausgrabung</router-link>
+        <hr>
+        <router-link to="/administration">Verwaltung</router-link>
      <!--   <router-link to="/structures">Befunde</router-link>
         <router-link to="/finds">Funde</router-link> -->
       </Push>
