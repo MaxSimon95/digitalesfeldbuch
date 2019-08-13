@@ -20,11 +20,11 @@
     <ion-item>
       <ion-label position="stacked">Bodenfarbe (HVC-Format)</ion-label>
       <ion-label position="stacked">Hue:</ion-label>
-      <ion-input v-on:ionInput="colour_hue=$event.target.value" placeholder="Hier Hue-Wert der Bodenfarbe angeben"></ion-input>
+      <ion-input v-on:ionInput="colour_hue=$event.target.value" :value=colour_hue></ion-input>
       <ion-label position="stacked">Value:</ion-label>
-      <ion-input v-on:ionInput="colour_value=$event.target.value" placeholder="Hier Value-Wert der Bodenfarbe angeben"></ion-input>
+      <ion-input v-on:ionInput="colour_value=$event.target.value" :value=colour_value></ion-input>
       <ion-label position="stacked">Chroma:</ion-label>
-      <ion-input v-on:ionInput="colour_chroma=$event.target.value" placeholder="Hier Chroma-Wert der Bodenfarbe angeben"></ion-input>
+      <ion-input v-on:ionInput="colour_chroma=$event.target.value" :value="colour_chroma"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -47,7 +47,7 @@
 
       </ion-list>
 
-      <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
+      <ion-button @click="showOverlay" color="secondary"> Einschluss hinzufügen</ion-button>
     </ion-item>
 
     <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
