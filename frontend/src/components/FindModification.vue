@@ -7,11 +7,6 @@
         <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" :value=findnumber ></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Tachymeter ID</ion-label>
-        <ion-input v-on:ionInput="tachymeterid=$event.target.value" :value=tachymeterid ></ion-input>
-      </ion-item>
-
       <ion-item >Material
         <p v-if="availableMaterials.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
@@ -32,11 +27,37 @@
         </ion-select>
       </ion-item>
 
+      <ion-item >
+        Fundart
+        <p v-if="availableTypes.length === 0">
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Typen hinterlegt.
+        </p>
+        <ion-select interface="popover" v-on:ionChange="type=$event.target.value">
+
+          <ion-item>Clicker</ion-item>
+          <ion-select-option v-for="item in availableTypes" v-if="item !== type" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
+            <ion-text>
+              {{item}}
+            </ion-text>
+          </ion-select-option>
+          <ion-select-option v-else v-bind:key="item" lines="inset" v-bind:value="item" selected="true">
+            <ion-text>
+              {{item}}
+            </ion-text>
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Tachymeter ID</ion-label>
+        <ion-input v-on:ionInput="tachymeterid=$event.target.value" :value=tachymeterid ></ion-input>
+      </ion-item>
+<!--
       <ion-item>
         <ion-label position="stacked">Fundtyp</ion-label>
         <ion-input v-on:ionInput="type=$event.target.value" :value=type ></ion-input>
       </ion-item>
-
+-->
       <ion-item>
         <ion-label position="stacked">Kurzbeschreibung</ion-label>
         <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description></ion-textarea>
@@ -84,6 +105,7 @@ export default {
       description: '',
       type: '',
       availableMaterials: [],
+      availableTypes: [],
       affiliatedMaterial: '',
       tachymeterid: '',
       prelimdate: '',
@@ -98,6 +120,7 @@ export default {
   },
   beforeMount () {
     this.getMaterials()
+    this.getTypes()
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
@@ -127,6 +150,36 @@ export default {
     this._rev = context._rev
   },
   methods: {
+    getTypes: function () {
+      var context = this
+      context.availableTypes.push("Fibel")
+      context.availableTypes.push("Schmuck")
+      context.availableTypes.push("Münze")
+      context.availableTypes.push("Objekt")
+      context.availableTypes.push("Schlacke")
+      context.availableTypes.push("Militaria")
+      context.availableTypes.push("Gefäß")
+      context.availableTypes.push("Fensterglas")
+      context.availableTypes.push("Nägel")
+      context.availableTypes.push("Beschläge")
+      context.availableTypes.push("Kugeln")
+      context.availableTypes.push("Randstück (RS)")
+      context.availableTypes.push("Wandstück (WS)")
+      context.availableTypes.push("Bodenstück (BS)")
+      context.availableTypes.push("Henkelstück (HS)")
+      context.availableTypes.push("Deckelstück (DS)")
+      context.availableTypes.push("Amphorenstöpsel")
+      context.availableTypes.push("Werkzeug")
+      context.availableTypes.push("Spielzeug")
+      context.availableTypes.push("Produktionsrückstand")
+      context.availableTypes.push("Wandmalerei")
+      context.availableTypes.push("Boden")
+      context.availableTypes.push("Mosaik")
+      context.availableTypes.push("Statuette")
+      context.availableTypes.push("Plastik")
+      context.availableTypes.push("Rohr")
+
+    },
     getMaterials: function () {
       var context = this // to enable accessing the 'contactPersons' variable inside submethods
       /*contactPersonDb.allDocs({
@@ -140,22 +193,34 @@ export default {
         console.log(err)
       })
       */
-      context.availableMaterials.push("Beispielmaterial 1")
-      context.availableMaterials.push("Beispielmaterial 2")
-      context.availableMaterials.push("Beispielmaterial 3")
-      context.availableMaterials.push("Beispielmaterial 4")
-      context.availableMaterials.push("Beispielmaterial 1")
-      context.availableMaterials.push("Beispielmaterial 2")
-      context.availableMaterials.push("Beispielmaterial 3")
-      context.availableMaterials.push("Beispielmaterial 4")
-      context.availableMaterials.push("Beispielmaterial 1")
-      context.availableMaterials.push("Beispielmaterial 2")
-      context.availableMaterials.push("Beispielmaterial 3")
-      context.availableMaterials.push("Beispielmaterial 4")
-      context.availableMaterials.push("Beispielmaterial 1")
-      context.availableMaterials.push("Beispielmaterial 2")
-      context.availableMaterials.push("Beispielmaterial 3")
-      context.availableMaterials.push("Beispielmaterial 4")
+      context.availableMaterials.push("Metall")
+      context.availableMaterials.push("Gold")
+      context.availableMaterials.push("Silber")
+      context.availableMaterials.push("Kupferlegierung")
+      context.availableMaterials.push("Blei")
+      context.availableMaterials.push("Eisen")
+      context.availableMaterials.push("Unbestimmt")
+      context.availableMaterials.push("Glas")
+      context.availableMaterials.push("Stein")
+      context.availableMaterials.push("Mörtel/Putz")
+      context.availableMaterials.push("Knochen")
+      context.availableMaterials.push("Organische Reste")
+      context.availableMaterials.push("Ziegel")
+      context.availableMaterials.push("Keramik")
+      context.availableMaterials.push("Terra Sigillata (TS)")
+      context.availableMaterials.push("Glanztonware")
+      context.availableMaterials.push("Terra Nigra")
+      context.availableMaterials.push("Terra Rubra")
+      context.availableMaterials.push("Marmorierte Ware")
+      context.availableMaterials.push("Goldglimmerware")
+      context.availableMaterials.push("Glasierte Ware")
+      context.availableMaterials.push("Backplatten")
+      context.availableMaterials.push("Glattwandige Ware")
+      context.availableMaterials.push("Rauwandige Ware")
+      context.availableMaterials.push("Schwerkeramik")
+      context.availableMaterials.push("Amphoren")
+      context.availableMaterials.push("Frei geformte Ware")
+      context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
     },
     logForm: function () {
       let router = this.$router // the corre'form'is' is not reachable inside the dp.put call back, so it gets put into a variable.
