@@ -5,7 +5,7 @@
     <p> <span class="bolder">Tachymeter ID: </span>{{tachymeterid}}</p>
     <p> <span class="bolder">Fundtyp: </span>{{type}}</p>
     <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
-    <p> <span class="bolder">Material: </span> {{materials}}</p>
+    <p> <span class="bolder">Material: </span> {{affiliatedMaterial}}</p>
     <p> <span class="bolder">Vorläufige Datierung: </span> {{prelimdate}}</p>
     <p> <span class="bolder">Vorläufige Verortung: </span> {{coordinates}}</p>
 
@@ -42,7 +42,7 @@ export default {
       tachymeterid: '',
       type: '',
       description: '',
-      materials: '',
+      affiliatedMaterial: '',
       prelimdate: '',
       coordinates: '',
       // eslint-disable-next-line vue/no-reserved-keys
@@ -58,9 +58,10 @@ export default {
       context.tachymeterid = result.tachymeterid
       context.type = result.type
       context.description = result.description
-      context.materials = result.materials
+      context.affiliatedMaterial = result.affiliatedMaterial
       context.prelimdate = result.prelimdate
       context.coordinates = result.coordinates
+      console.log(result)
     })
   },
   methods: {

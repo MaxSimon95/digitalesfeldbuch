@@ -9,7 +9,7 @@
 
     <ion-item>
       <ion-label position="stacked">Befund</ion-label>
-      <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
+      <ion-input v-on:ionInput="structurenumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
     </ion-item>
 
     <ion-item>
@@ -17,31 +17,27 @@
       <ion-input v-on:ionInput="tachymeterid=$event.target.value" placeholder="Geben sie hier die Tachymeter ID für die spätere Verortung ein" ></ion-input>
     </ion-item>
 
+    <ion-item >Material
+    <p v-if="availableMaterials.length === 0">
+      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
+    </p>
+    <ion-select interface="popover" placeholder="Fundmaterial bestimmen" v-on:ionChange="affiliatedMaterial=$event.target.value">
+
+      <ion-item>Clicker</ion-item>
+      <ion-select-option v-for="item in availableMaterials" v-bind:key="item" lines="inset" v-bind:value="item" >
+          <ion-text>
+            {{item}}
+          </ion-text>
+        </ion-select-option>
+    </ion-select>
+    </ion-item>
+
     <ion-item>
       <ion-label position="stacked">Fundart</ion-label>
       <ion-input v-on:ionInput="type=$event.target.value" placeholder="Geben sie hier die Art des Fundes ein" ></ion-input>
     </ion-item>
-<!--<ion-item>
-  <ion-label position="stacked">Material</ion-label>
-  <ion-list>
-    <ion-button>
-      <ion-text>
-        Metall: Bronze
-      </ion-text>
-      <ion-icon name="close"></ion-icon>
-    </ion-button>
-
-    <ion-button>
-      <ion-text>
-        Organische Reste: Bein
-      </ion-text>
-      <ion-icon name="close"></ion-icon>
-    </ion-button>
 
 
-  </ion-list>
-  <ion-button color="secondary"> Hinzufügen </ion-button>
-</ion-item> -->
 
 
     <ion-item>
@@ -91,10 +87,33 @@ export default {
       prelimdate: '',
       coordinates: '',
       date: '',
-      excavationId: ''
+      excavationId: '',
+      availableMaterials: [],
+      affiliatedMaterial: ''
     }
   },
+  beforeMount () {
+    this.getMaterials()
+  },
   methods: {
+    getMaterials: function () {
+      var context = this // to enable accessing the 'contactPersons' variable inside submethods
+      /*contactPersonDb.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          context.availableMaterials.push(item.doc)
+        }
+      }).catch(function (err) {
+        console.log(err)
+      })
+      */
+      context.availableMaterials.push("Beispielmaterial 1")
+      context.availableMaterials.push("Beispielmaterial 2")
+      context.availableMaterials.push("Beispielmaterial 3")
+      context.availableMaterials.push("Beispielmaterial 4")
+    },
     logForm: function () {
       let router = this.$router // the correct 'this' is not reachable inside the dp.put call back, so it gets put into a variable.
       // eslint-disable-next-line standard/object-curly-even-spacing
@@ -103,12 +122,12 @@ export default {
         findnumber: this.findnumber,
         description: this.description,
         type: this.type,
-        materials: this.materials,
         tachymeterid: this.tachymeterid,
         prelimdate: this.prelimdate,
         coordinates: this.coordinates,
         date: new Date().toDateString(),
-        excavationId: VueCookies.get('currentExcavation')._id
+        excavationId: VueCookies.get('currentExcavation')._id,
+        affiliatedMaterial: this.affiliatedMaterial
       }
       db.put(campaign, function callback (err, result) {
         if (!err) {

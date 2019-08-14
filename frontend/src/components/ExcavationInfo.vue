@@ -52,6 +52,7 @@ export default {
       location: '',
       excavationStartDate: '',
       excavationEndDate: '',
+      affiliatedContactPersons: [],
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys

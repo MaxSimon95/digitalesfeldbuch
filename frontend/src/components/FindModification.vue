@@ -12,6 +12,26 @@
         <ion-input v-on:ionInput="tachymeterid=$event.target.value" :value=tachymeterid ></ion-input>
       </ion-item>
 
+      <ion-item >Material
+        <p v-if="availableMaterials.length === 0">
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
+        </p>
+        <ion-select interface="popover" v-on:ionChange="affiliatedMaterial=$event.target.value">
+
+          <ion-item>Clicker</ion-item>
+          <ion-select-option v-if="item !== affiliatedMaterial" v-for="item in availableMaterials" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
+            <ion-text>
+              {{item}}
+            </ion-text>
+          </ion-select-option>
+          <ion-select-option v-else v-bind:key="item" lines="inset" v-bind:value="item" selected="true">
+            <ion-text>
+              {{item}}
+            </ion-text>
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-item>
         <ion-label position="stacked">Fundtyp</ion-label>
         <ion-input v-on:ionInput="type=$event.target.value" :value=type ></ion-input>
@@ -20,11 +40,6 @@
       <ion-item>
         <ion-label position="stacked">Kurzbeschreibung</ion-label>
         <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description></ion-textarea>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">Material</ion-label>
-        <ion-textarea v-on:ionInput="materials=$event.target.value" rows="2" :value=materials></ion-textarea>
       </ion-item>
 
       <ion-item>
@@ -68,7 +83,8 @@ export default {
       findnumber: '',
       description: '',
       type: '',
-      materials: '',
+      availableMaterials: [],
+      affiliatedMaterial: '',
       tachymeterid: '',
       prelimdate: '',
       coordinates: '',
@@ -80,6 +96,9 @@ export default {
       _rev: 0
     }
   },
+  beforeMount () {
+    this.getMaterials()
+  },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = context.$route.params._id
@@ -87,7 +106,8 @@ export default {
       context.findnumber = result.findnumber
       context.description = result.description
       context.type = result.type
-      context.materials = result.materials
+      context.affiliatedMaterial = result.affiliatedMaterial
+      console.log("affiliated Mat: " + result.affiliatedMaterial)
       context.tachymeterid = result.tachymeterid
       context.prelimdate = result.prelimdate
       context.coordinates = result.coordinates
@@ -98,7 +118,7 @@ export default {
     this.findnumber = context.findnumber
     this.description = context.description
     this.type = context.type
-    this.materials = context.materials
+    this.affiliatedMaterial = context.affiliatedMaterial
     this.tachymeterid = context.tachymeterid
     this.prelimdate = context.prelimdate
     this.coordinates = context.coordinates
@@ -107,6 +127,36 @@ export default {
     this._rev = context._rev
   },
   methods: {
+    getMaterials: function () {
+      var context = this // to enable accessing the 'contactPersons' variable inside submethods
+      /*contactPersonDb.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          context.availableMaterials.push(item.doc)
+        }
+      }).catch(function (err) {
+        console.log(err)
+      })
+      */
+      context.availableMaterials.push("Beispielmaterial 1")
+      context.availableMaterials.push("Beispielmaterial 2")
+      context.availableMaterials.push("Beispielmaterial 3")
+      context.availableMaterials.push("Beispielmaterial 4")
+      context.availableMaterials.push("Beispielmaterial 1")
+      context.availableMaterials.push("Beispielmaterial 2")
+      context.availableMaterials.push("Beispielmaterial 3")
+      context.availableMaterials.push("Beispielmaterial 4")
+      context.availableMaterials.push("Beispielmaterial 1")
+      context.availableMaterials.push("Beispielmaterial 2")
+      context.availableMaterials.push("Beispielmaterial 3")
+      context.availableMaterials.push("Beispielmaterial 4")
+      context.availableMaterials.push("Beispielmaterial 1")
+      context.availableMaterials.push("Beispielmaterial 2")
+      context.availableMaterials.push("Beispielmaterial 3")
+      context.availableMaterials.push("Beispielmaterial 4")
+    },
     logForm: function () {
       let router = this.$router // the corre'form'is' is not reachable inside the dp.put call back, so it gets put into a variable.
       // eslint-disable-next-line standard/object-curly-even-spacing
@@ -115,7 +165,7 @@ export default {
         findnumber: context.findnumber,
         description: context.description,
         type: context.type,
-        materials: context.materials,
+        affiliatedMaterial: context.affiliatedMaterial,
         tachymeterid: context.tachymeterid,
         prelimdate: context.prelimdate,
         coordinates: context.coordinates,

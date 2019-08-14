@@ -57,7 +57,7 @@
 
         <ion-item>Hier kann man ein einen Einschluss aus einem bestimmten Material dokumentieren.</ion-item>
         <p v-if="availableMaterials.length === 0">
-          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Ansprechpartner angelegt.
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
         </p>
         <ion-list>
           <ion-item v-for="item in availableMaterials" v-bind:key="item._id" lines="inset">
