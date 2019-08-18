@@ -7,6 +7,25 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" :value=structurenumber ></ion-input>
     </ion-item>
 
+    <ion-item >Schnitt
+      <p v-if="availableSections.length === 0">
+        <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
+      </p>
+      <ion-select v-else interface="popover" v-on:ionChange="sectionnumber=$event.target.value">
+
+        <ion-select-option v-if="item.title !== sectionnumber" v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="false">
+          <ion-text>
+            {{item.title}} {{item.title == sectionnumber}} {{sectionnumber}}
+          </ion-text>
+        </ion-select-option>
+        <ion-select-option v-else v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="true">
+          <ion-text>
+            {{item.title}} &check;
+          </ion-text>
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
     <ion-item>
       <ion-label position="stacked">Kurzbeschreibung</ion-label>
       <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description ></ion-textarea>
@@ -82,8 +101,10 @@
 
 <script>
 import {path} from '../adress.js'
+import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('structures_database') // creates new database or opens existing one
+var db_sections = new PouchDB('sections_database')
 var remoteDB = new PouchDB(path + '/structures')
 
 db.sync(remoteDB, {
@@ -102,6 +123,7 @@ export default {
     return {
       overlayDisplay: 'none',
       structurenumber: '',
+      sectionnumber: '',
       description: '',
       soil: '',
       date: '',
@@ -115,17 +137,20 @@ export default {
       // eslint-disable-next-line vue/no-reserved-keys
       _rev: 0,
       availableMaterials: [],
-      affiliatedMaterials: []
+      affiliatedMaterials: [],
+      availableSections: []
     }
   },
   beforeMount () {
     this.getMaterials()
+    this.getSections()
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = context.$route.params._id
     db.get(context._id).then(function (result) {
       context.structurenumber = result.structurenumber
+      context.sectionnumber = result.sectionnumber
       context.description = result.description
       context.soil = result.soil
       context.date = result.date
@@ -137,6 +162,7 @@ export default {
       context.excavationId = result.excavationId
       context.affiliatedMaterials = result.affiliatedMaterials
     })
+    this.sectionnumber = context.sectionnumber
     this.structurenumber = context.structurenumber
     this.description = context.description
     this.soil = context.soil
@@ -150,6 +176,20 @@ export default {
     this.affiliatedMaterials = context.affiliatedMaterials
   },
   methods: {
+    getSections(){
+      let context = this
+      db_sections.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        console.log(result)
+        console.log(context.sectionnumber)
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableSections.push(item.doc)
+
+        }
+      })
+    },
     getMaterials: function () {
       var context = this // to enable accessing the 'contactPersons' variable inside submethods
       /*contactPersonDb.allDocs({
@@ -217,7 +257,8 @@ export default {
         colour_chroma: context.colour_chroma,
         affiliatedMaterials: context.affiliatedMaterials,
         _rev: context._rev,
-        excavationId: context.excavationId
+        excavationId: context.excavationId,
+        sectionnumber: context.sectionnumber
       }
       db.put(structure, function callback (err, result) {
         if (!err) {
