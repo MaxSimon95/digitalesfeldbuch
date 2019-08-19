@@ -37,12 +37,12 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Bodenfarbe (HVC-Format)</ion-label>
-      <ion-label position="stacked">Hue:</ion-label>
+      <ion-label position="stacked">Bodenfarbe (Munsell-Format, z.B. 10.0PB 5.00/8.0)</ion-label>
+      <ion-label position="stacked">Hue: (z.B. 10.0PB)</ion-label>
       <ion-input v-on:ionInput="colour_hue=$event.target.value" :value=colour_hue></ion-input>
-      <ion-label position="stacked">Value:</ion-label>
+      <ion-label position="stacked">Value (z.B. 5.00):</ion-label>
       <ion-input v-on:ionInput="colour_value=$event.target.value" :value=colour_value></ion-input>
-      <ion-label position="stacked">Chroma:</ion-label>
+      <ion-label position="stacked">Chroma (z.B. 8.00):</ion-label>
       <ion-input v-on:ionInput="colour_chroma=$event.target.value" :value="colour_chroma"></ion-input>
     </ion-item>
 

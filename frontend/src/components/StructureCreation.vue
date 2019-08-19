@@ -7,9 +7,23 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" placeholder="Geben sie hier die Befundnummer ein" ></ion-input>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label position="stacked">Zugehöriger Schnitt</ion-label>
       <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Wählen Sie hier den zugehörigen Schnitt aus" ></ion-input>
+    </ion-item> -->
+
+    <ion-item >Schnitt
+      <p v-if="availableSections.length === 0">
+        <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
+      </p>
+      <ion-select v-else interface="popover" placeholder="zugehöriger Schnitt" v-on:ionChange="sectionnumber=$event.target.value">
+
+        <ion-select-option v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" >
+          <ion-text>
+            {{item.title}}
+          </ion-text>
+        </ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
@@ -47,12 +61,12 @@
 
 
     <ion-item>
-      <ion-label position="stacked">Bodenfarbe (HVC-Format)</ion-label>
-      <ion-label position="stacked">Hue:</ion-label>
+      <ion-label position="stacked">Bodenfarbe (Munsell-Format, z.B. 10.0PB 5.00/8.0)</ion-label>
+      <ion-label position="stacked">Hue: (z.B. 10.0PB)</ion-label>
       <ion-input v-on:ionInput="colour_hue=$event.target.value" placeholder="Hier Hue-Wert der Bodenfarbe angeben"></ion-input>
-      <ion-label position="stacked">Value:</ion-label>
+      <ion-label position="stacked">Value (z.B. 5.00):</ion-label>
       <ion-input v-on:ionInput="colour_value=$event.target.value" placeholder="Hier Value-Wert der Bodenfarbe angeben"></ion-input>
-      <ion-label position="stacked">Chroma:</ion-label>
+      <ion-label position="stacked">Chroma (z.B. 8.00):</ion-label>
       <ion-input v-on:ionInput="colour_chroma=$event.target.value" placeholder="Hier Chroma-Wert der Bodenfarbe angeben"></ion-input>
     </ion-item>
 
@@ -120,6 +134,7 @@ import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('structures_database') // creates new database or opens existing one
+var db_sections = new PouchDB('sections_database')
 var remoteDB = new PouchDB(path + '/structures')
 
 db.sync(remoteDB, {
@@ -137,6 +152,7 @@ export default {
   data: function () {
     return {
       structurenumber: '',
+      sectionnumber: '',
       description: '',
       overlayDisplay: 'none',
       soil: '',
@@ -147,13 +163,27 @@ export default {
       colour_value: '',
       colour_chroma: '',
       availableMaterials: [],
-      affiliatedMaterials: []
+      affiliatedMaterials: [],
+      availableSections:[]
     }
   },
   beforeMount () {
     this.getMaterials()
+    this.getSections()
   },
   methods: {
+    getSections(){
+      let context = this
+      db_sections.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableSections.push(item.doc)
+
+        }
+      })
+    },
     getMaterials: function () {
       var context = this // to enable accessing the 'contactPersons' variable inside submethods
       /*contactPersonDb.allDocs({
@@ -212,6 +242,7 @@ export default {
       let campaign = {
         _id: this.findnumber + new Date().toISOString(),
         structurenumber: this.structurenumber,
+        sectionnumber: this.sectionnumber,
         description: this.description,
         date: new Date().toDateString(),
         excavation: this.excavation,

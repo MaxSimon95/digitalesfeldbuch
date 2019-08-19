@@ -7,18 +7,31 @@
       <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" placeholder="Geben sie hier die Fundnummer ein" ></ion-input>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label position="stacked">Befund</ion-label>
       <ion-input v-on:ionInput="structurenumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
+    </ion-item> -->
+
+    <ion-item >Befund
+      <p v-if="availableStructures.length === 0">
+        <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde hinterlegt.
+      </p>
+      <ion-select v-else interface="popover" placeholder="zugehöriger Befund" v-on:ionChange="structurenumber=$event.target.value">
+
+        <ion-select-option v-for="item in availableStructures" v-bind:key="item._id" lines="inset" v-bind:value="item.structurenumber" >
+          <ion-text>
+            {{item.structurenumber}}
+          </ion-text>
+        </ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item >Material
     <p v-if="availableMaterials.length === 0">
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
     </p>
-    <ion-select interface="popover" placeholder="Fundmaterial bestimmen" v-on:ionChange="affiliatedMaterial=$event.target.value">
+    <ion-select v-else interface="popover" placeholder="Fundmaterial bestimmen" v-on:ionChange="affiliatedMaterial=$event.target.value">
 
-      <ion-item>Clicker</ion-item>
       <ion-select-option v-for="item in availableMaterials" v-bind:key="item" lines="inset" v-bind:value="item" >
           <ion-text>
             {{item}}
@@ -36,9 +49,8 @@
       <p v-if="availableTypes.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Typen hinterlegt.
       </p>
-      <ion-select placeholder="Fundart bestimmen" interface="popover" v-on:ionChange="type=$event.target.value">
+      <ion-select v-else placeholder="Fundart bestimmen" interface="popover" v-on:ionChange="type=$event.target.value">
 
-        <ion-item>Clicker</ion-item>
         <ion-select-option v-for="item in availableTypes" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
           <ion-text>
             {{item}}
@@ -76,6 +88,7 @@ import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('finds_database') // creates new database or opens existing one
+var db_structures = new PouchDB('structures_database') //
 var remoteDB = new PouchDB(path + '/finds')
 
 db.sync(remoteDB, {
@@ -93,6 +106,7 @@ export default {
   data: function () {
     return {
       findnumber: '',
+      structurenumber: '',
       description: '',
       type: '',
       materials: '',
@@ -103,14 +117,28 @@ export default {
       excavationId: '',
       availableMaterials: [],
       affiliatedMaterial: '',
-      availableTypes: []
+      availableTypes: [],
+      availableStructures: []
     }
   },
   beforeMount () {
     this.getMaterials()
     this.getTypes()
+    this.getStructures()
   },
   methods: {
+    getStructures(){
+      let context = this
+      db_structures.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+
+        }
+      })
+    },
     getTypes: function () {
       var context = this
       context.availableTypes.push("Fibel")
@@ -188,6 +216,7 @@ export default {
       // eslint-disable-next-line standard/object-curly-even-spacing
       let campaign = {
         _id: this.findnumber + new Date().toISOString(),
+        structurenumber: this.structurenumber,
         findnumber: this.findnumber,
         description: this.description,
         type: this.type,

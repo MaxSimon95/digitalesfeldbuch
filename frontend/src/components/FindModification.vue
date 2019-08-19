@@ -7,13 +7,31 @@
         <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" :value=findnumber ></ion-input>
       </ion-item>
 
+      <ion-item >Befund
+        <p v-if="availableStructures.length === 0">
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde hinterlegt.
+        </p>
+        <ion-select interface="popover" v-on:ionChange="structurenumber=$event.target.value">
+
+          <ion-select-option v-if="item.structurenumber !== structurenumber" v-for="item in availableStructures" v-bind:key="item._id" lines="inset" v-bind:value="item.structurenumber" selected="false">
+            <ion-text>
+              {{item.structurenumber}}
+            </ion-text>
+          </ion-select-option>
+          <ion-select-option v-else v-bind:key="item._id" lines="inset" v-bind:value="item.structurenumber" selected="true">
+            <ion-text>
+              {{item.structurenumber}} &check;
+            </ion-text>
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-item >Material
         <p v-if="availableMaterials.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
         </p>
         <ion-select interface="popover" v-on:ionChange="affiliatedMaterial=$event.target.value">
 
-          <ion-item>Clicker</ion-item>
           <ion-select-option v-if="item !== affiliatedMaterial" v-for="item in availableMaterials" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
             <ion-text>
               {{item}}
@@ -34,7 +52,6 @@
         </p>
         <ion-select interface="popover" v-on:ionChange="type=$event.target.value">
 
-          <ion-item>Clicker</ion-item>
           <ion-select-option v-for="item in availableTypes" v-if="item !== type" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
             <ion-text>
               {{item}}
@@ -82,9 +99,11 @@
 
 <script>
 import {path} from '../adress.js'
+import VueCookies from 'vue-cookies'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('finds_database') // creates new database or opens existing one
+var db_structures = new PouchDB('structures_database')
 var remoteDB = new PouchDB(path + '/finds')
 
 db.sync(remoteDB, {
@@ -102,10 +121,12 @@ export default {
   data: function () {
     return {
       findnumber: '',
+      structurenumber: '',
       description: '',
       type: '',
       availableMaterials: [],
       availableTypes: [],
+      availableStructures: [],
       affiliatedMaterial: '',
       tachymeterid: '',
       prelimdate: '',
@@ -121,12 +142,14 @@ export default {
   beforeMount () {
     this.getMaterials()
     this.getTypes()
+    this.getStructures()
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = context.$route.params._id
     db.get(context._id).then(function (result) {
       context.findnumber = result.findnumber
+      context.structurenumber = result.structurenumber
       context.description = result.description
       context.type = result.type
       context.affiliatedMaterial = result.affiliatedMaterial
@@ -139,6 +162,7 @@ export default {
       context._rev = result._rev
     })
     this.findnumber = context.findnumber
+    this.structurenumber = context.structurenumber
     this.description = context.description
     this.type = context.type
     this.affiliatedMaterial = context.affiliatedMaterial
@@ -150,6 +174,18 @@ export default {
     this._rev = context._rev
   },
   methods: {
+    getStructures(){
+      let context = this
+      db_structures.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+
+        }
+      })
+    },
     getTypes: function () {
       var context = this
       context.availableTypes.push("Fibel")
@@ -227,6 +263,7 @@ export default {
       // eslint-disable-next-line standard/object-curly-even-spacing
       let find = {
         _id: context._id,
+        structurenumber: context.structurenumber,
         findnumber: context.findnumber,
         description: context.description,
         type: context.type,
@@ -259,5 +296,8 @@ export default {
 </script>
 
 <style scoped>
+  button {
+    --width:95% !important;
+  }
 
 </style>
