@@ -11,11 +11,11 @@
 
 
         <ion-list>
-                  <ion-button v-for="item in affiliatedContactPersons" v-bind:key="item._id">
+                  <ion-button v-for="item in affiliatedContactPersons" v-bind:key="item._id" @click="removeElement(item)">
                     <ion-text>
                       {{item.name}}
                     </ion-text>
-                   <!-- <ion-icon name="close"></ion-icon> -->
+                   <ion-icon name="close"></ion-icon>
                   </ion-button>
 
                 </ion-list>
@@ -151,6 +151,15 @@
       this.getContactPersons()
     },
     methods: {
+      removeElement(item)
+      {
+        console.log("remove da " + item)
+        var tempArray = this.affiliatedContactPersons.filter(function(arrayitem) {
+          console.log(arrayitem.name + " " + item.name)
+          return arrayitem._id !== item._id
+        })
+        this.affiliatedContactPersons = tempArray
+      },
       getContactPersons: function () {
         var context = this // to enable accessing the 'contactPersons' variable inside submethods
         contactPersonDb.allDocs({
