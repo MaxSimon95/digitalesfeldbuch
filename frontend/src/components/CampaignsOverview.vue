@@ -34,7 +34,7 @@
 <script>
 import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
-import PouchDB from PouchDB
+import PouchDB from 'pouchdb'
 
 export default {
   name: 'CampaignsOverview',
