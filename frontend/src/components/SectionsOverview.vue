@@ -41,10 +41,10 @@ export default {
   methods: {
     getSections: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-      var db = new PouchDB('sections_database')
-      var remoteDB = new PouchDB(path + '/sections')
+      var sectiondb = new PouchDB('sections_database')
+      var sectionremoteDB = new PouchDB(path + '/sections')
 
-      db.sync(remoteDB, {
+      sectiondb.sync(sectionremoteDB, {
         live: true,
         retry: true
       }).on('change', function (change) {
@@ -60,7 +60,7 @@ export default {
       })
 
       var context = this // to enable accessing the 'campaigns' variable inside submethods
-      db.allDocs({
+      sectiondb.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {

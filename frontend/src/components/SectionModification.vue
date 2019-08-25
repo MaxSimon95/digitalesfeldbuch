@@ -40,10 +40,10 @@ import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('sections_database') // creates new database or opens existing var db = new PouchDB('sections_database') // creates new database or opens existing one
-var remoteDB = new PouchDB(path + '/sections')
+var sectiondb = new PouchDB('sections_database') // creates new database or opens existing var db = new PouchDB('sections_database') // creates new database or opens existing one
+var sectionremoteDB = new PouchDB(path + '/sections')
 
-db.sync(remoteDB, {
+sectiondb.sync(sectionremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -77,7 +77,7 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = VueCookies.get('currentSection')._id
-    db.get(context._id).then(function (result) {
+    sectiondb.get(context._id).then(function (result) {
       context.title = result.title
       context.leader = result.leader
       context.date = result.date
@@ -106,7 +106,7 @@ export default {
         _rev: context._rev,
         excavationId: VueCookies.get('currentExcavation')._id
       }
-      db.put(section, function callback (err, result) {
+      sectiondb.put(section, function callback (err, result) {
         if (!err) {
           console.log('Successfully changed a section! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

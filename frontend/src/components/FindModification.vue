@@ -102,11 +102,11 @@ import {path} from '../adress.js'
 import VueCookies from 'vue-cookies'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('finds_database') // creates new database or opens existing one
+var findsdb = new PouchDB('finds_database') // creates new database or opens existing one
 var db_structures = new PouchDB('structures_database')
-var remoteDB = new PouchDB(path + '/finds')
+var findsremoteDB = new PouchDB(path + '/finds')
 
-db.sync(remoteDB, {
+findsdb.sync(findsremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -147,7 +147,7 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = context.$route.params._id
-    db.get(context._id).then(function (result) {
+    findsdb.get(context._id).then(function (result) {
       context.findnumber = result.findnumber
       context.structurenumber = result.structurenumber
       context.description = result.description
@@ -275,7 +275,7 @@ export default {
         excavationId: context.excavationId,
         _rev: context._rev
       }
-      db.put(find, function callback (err, result) {
+      findsdb.put(find, function callback (err, result) {
         if (!err) {
           console.log('Successfully changed a find! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

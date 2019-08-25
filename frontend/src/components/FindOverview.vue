@@ -22,10 +22,10 @@ import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('finds_database') // creates new database or opens existing one
-var remoteDB = new PouchDB(path + '/finds')
+var findsdb = new PouchDB('finds_database') // creates new database or opens existing one
+var findsremoteDB = new PouchDB(path + '/finds')
 
-db.sync(remoteDB, {
+findsdb.sync(findsremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -55,7 +55,7 @@ export default {
     context = this
     // context._id = context.$route.params._id
     context._id = VueCookies.get('currentFind')._id
-    db.get(context._id).then(function (result) {
+    findsdb.get(context._id).then(function (result) {
       context.findnumber = result.findnumber
       context.structurenumber = result.structurenumber
       context.tachymeterid = result.tachymeterid

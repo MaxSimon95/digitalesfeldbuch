@@ -44,10 +44,10 @@ export default {
   methods: {
     getExcavations: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-      var db = new PouchDB('excavations_database')
-      var remoteDB = new PouchDB(path + '/excavations')
+      var excavationsdb = new PouchDB('excavations_database')
+      var excavationsremoteDB = new PouchDB(path + '/excavations')
 
-      db.sync(remoteDB, {
+      excavationsdb.sync(excavationsremoteDB, {
         live: true,
         retry: true
       }).on('change', function (change) {
@@ -63,7 +63,7 @@ export default {
         console.log(err)
       })
       var context = this // to enable accessing the 'campaigns' variable inside submethods
-      db.allDocs({
+      excavationsdb.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {

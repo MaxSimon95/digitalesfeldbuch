@@ -27,12 +27,14 @@
         </ion-item-sliding>
       </ion-list>
           <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
+          <ion-button color="secondary" expand="block" @click="synccampaigns()">Synchronisieren</ion-button>
     </div>
 </template>
 
 <script>
 import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
+import PouchDB from PouchDB
 
 export default {
   name: 'CampaignsOverview',
@@ -81,6 +83,12 @@ export default {
     modifyCampaign: function (item) {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'ModifyCampaign', params: { _id: item._id }})
+    },
+
+    synccampaigns: function(){
+        var context = this
+        var remoteDB = new PouchDB(path + '/campaigns')
+        context.db.sync(remoteDB)
     },
 
     deleteCampaign: function (item) { } // TODO: change campaign

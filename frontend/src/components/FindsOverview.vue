@@ -40,10 +40,10 @@ export default {
   methods: {
     getFinds: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-      var db = new PouchDB('finds_database')
-      var remoteDB = new PouchDB(path + '/finds')
+      var findsdb = new PouchDB('finds_database')
+      var findsremoteDB = new PouchDB(path + '/finds')
 
-      db.sync(remoteDB, {
+      findsdb.sync(findsremoteDB, {
         live: true,
         retry: true
       }).on('change', function (change) {
@@ -59,7 +59,7 @@ export default {
       })
 
       var context = this // to enable accessing the 'campaigns' variable inside submethods
-      db.allDocs({
+      findsdb.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {

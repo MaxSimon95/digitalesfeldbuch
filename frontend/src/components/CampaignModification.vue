@@ -93,13 +93,13 @@ import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('campaigns_database') // creates new database or opens existing onevar remoteDB = new PouchDB('http://192.168.159.1:5984/sections')
-var remoteDB = new PouchDB(path + '/campaigns')
+var campaignsdb = new PouchDB('campaigns_database') // creates new database or opens existing onevar remoteDB = new PouchDB('http://192.168.159.1:5984/sections')
+var remotecampaignsDB = new PouchDB(path + '/campaigns')
 
 var contactPersonDb = new PouchDB('contactPerson_database')
 var remotecontactPersonDb = new PouchDB(path + '/contactPersons')
 
-db.sync(remoteDB, {
+campaignsdb.sync(remotecampaignsDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -155,7 +155,7 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = VueCookies.get('currentCampaign')._id
-    db.get(context._id).then(function (result) {
+    campaignsdb.get(context._id).then(function (result) {
       context.title = result.title
       context.description = result.description
       context._rev = result._rev
@@ -235,7 +235,7 @@ export default {
         _rev: context._rev,
         affiliatedContactPersons: context.affiliatedContactPersons
       }
-      db.put(campaign, function callback (err, result) {
+      campaignsdb.put(campaign, function callback (err, result) {
         if (!err) {
           console.log('Successfully posted a campaign! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

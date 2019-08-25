@@ -47,10 +47,10 @@ import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('sections_database') // creates new database or opens existing one
-var remoteDB = new PouchDB(path + '/sections')
+var sectiondb = new PouchDB('sections_database') // creates new database or opens existing one
+var sectionremoteDB = new PouchDB(path + '/sections')
 
-db.sync(remoteDB, {
+sectiondb.sync(sectionremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -92,7 +92,7 @@ export default {
         excavationStartDate: this.excavationStartDate,
         excavationId: VueCookies.get('currentExcavation')._id
       }
-      db.put(section, function callback (err, result) {
+      sectiondb.put(section, function callback (err, result) {
         if (!err) {
           console.log('Successfully posted a section')
           // eslint-disable-next-line standard/object-curly-even-spacing
