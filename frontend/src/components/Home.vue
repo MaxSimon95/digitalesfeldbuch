@@ -1,7 +1,9 @@
 <template>
   <div>
     <ion-content class="ion-content" padding>
-      <ion-button @click="openModal">Open Modal</ion-button>
+      <ion-text>Willkommen im Digitalen Feldbuch.</ion-text>
+
+      <ion-text>Wählen Sie über das Menu oben links aus, was Sie tun möchten!</ion-text>
     </ion-content>
   </div>
 </template>
