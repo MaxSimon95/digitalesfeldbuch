@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ion-content class="ion-content" padding>
-      <ion-text>Willkommen im Digitalen Feldbuch.</ion-text>
+
+      <ion-text >Willkommen im Digitalen Feldbuch.</ion-text>
 
       <ion-text>Wählen Sie über das Menu oben links aus, was Sie tun möchten!</ion-text>
-    </ion-content>
+
   </div>
 </template>
 
@@ -34,3 +34,8 @@
   }
   }
 </script>
+<style scoped>
+  div{
+    padding: 50px
+  }
+  </style>
