@@ -5,7 +5,9 @@
        <!-- <router-link to="/login">Login</router-link> -->
         <router-link to="/campaigns">Kampagnenauswahl</router-link>
         <router-link to="/campaign">Grabungsauswahl</router-link>
-        <router-link to="/excavation">Grabungsdetails</router-link>
+        <router-link to="/excavation/sections">Schnitte</router-link>
+        <router-link to="/excavation/structures">Befunde (SE)</router-link>
+        <router-link to="/excavation/finds">Funde</router-link>
         <hr>
         <!--<router-link to="/administration">Verwaltung</router-link>-->
      <!--   <router-link to="/structures">Befunde</router-link>

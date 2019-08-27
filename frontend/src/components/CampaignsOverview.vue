@@ -27,17 +27,19 @@
         </ion-item-sliding>
       </ion-list>
           <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
-          <ion-button color="secondary" expand="block" @click="synccampaigns()">Synchronisieren</ion-button>
+
     </div>
 </template>
 
 <script>
 import VueCookies from 'vue-cookies'
+import RestartButton from './RestartButton'
 import {path} from '../adress.js'
 import PouchDB from 'pouchdb'
 
 export default {
   name: 'CampaignsOverview',
+  components: {RestartButton},
   methods: {
     getCampaigns: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker

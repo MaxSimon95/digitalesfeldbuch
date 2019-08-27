@@ -3,7 +3,7 @@
     <h1>Befund bearbeiten</h1>
   <form>
     <ion-item>
-      <ion-label position="stacked">Befundnummer</ion-label>
+      <ion-label position="stacked">Befundnummer (SE)</ion-label>
       <ion-input v-on:ionInput="structurenumber=$event.target.value" :value=structurenumber ></ion-input>
     </ion-item>
 

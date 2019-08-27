@@ -3,7 +3,7 @@
     <h1>Befund anlegen</h1>
   <form>
     <ion-item>
-      <ion-label position="stacked">Befundnummer</ion-label>
+      <ion-label position="stacked">Befundnummer (SE)</ion-label>
       <ion-input v-on:ionInput="structurenumber=$event.target.value" placeholder="Geben sie hier die Befundnummer ein" ></ion-input>
     </ion-item>
 

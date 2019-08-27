@@ -4,7 +4,7 @@
     <form>
       <ion-item>
         <ion-label position="stacked">Fundnummer</ion-label>
-        <ion-input v-on:ionInput="findnumber=$event.target.value" type="number" :value=findnumber ></ion-input>
+        <ion-input v-on:ionInput="findnumber=$event.target.value" :value=findnumber ></ion-input>
       </ion-item>
 
       <ion-item >Befund
