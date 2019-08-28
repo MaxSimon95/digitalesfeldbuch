@@ -71,8 +71,8 @@
       <ion-list>
         <ion-button v-for="item in affiliatedInclusions" v-bind:key="item._id" @click="removeElement(item)">
           <ion-text>
-            {{item}}
-
+            {{item.name}},
+            {{item.percentage}}%
           </ion-text>
           <ion-icon name="close"></ion-icon>
         </ion-button>
@@ -84,6 +84,28 @@
     </div>
 
     <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
+      <div class="formOverlayInner">
+        <ion-list>
+          <ion-item>Einen neuen Einschluss hinzufügen</ion-item>
+          <ion-item>
+            <ion-label position="stacked">Bezeichnung</ion-label>
+            <ion-input placeholder="Hier die Bezeichnung eintragen"
+                       v-on:ionInput="inclusionName=$event.target.value"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Anteil</ion-label>
+            <ion-input placeholder="Hier den Anteil in % angeben"
+                       v-on:ionInput="inclusionPercentage=$event.target.value"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button color="secondary" @click="addInclusion()"> Hinzufügen</ion-button>
+          </ion-item>
+        </ion-list>
+        <ion-button @click="hideOverlay()"> Abbrechen </ion-button>
+      </div>
+    </div>
+
+    <!--div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
       <div class="formOverlayInner">
         <h2>Einschluss hinzufügen</h2>
         <hr/>
@@ -105,7 +127,7 @@
           Abbrechen
         </ion-button>
       </div>
-    </div>
+    </div-->
 
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
@@ -238,6 +260,14 @@ export default {
         context.availableInclusions.push("Mörtel/Putz")
         context.availableInclusions.push("Oxyde")
         context.availableInclusions.push("Sonstiges")
+    },
+    addInclusion: function () {
+        this.hideOverlay()
+        var newinclusion = {
+            name: this.inclusionName,
+            percentage: this.inclusionPercentage
+        }
+        this.affiliatedInclusions.push(newinclusion)
     },
     addExistingMaterialToStructure: function (item) {
       this.hideOverlay()
