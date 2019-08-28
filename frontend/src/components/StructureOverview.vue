@@ -13,7 +13,8 @@
     <p>
       <span class="bolder"> Einschlüsse: </span>
       <span v-for="item in affiliatedInclusions">
-        {{item}}<span v-if="affiliatedInclusions.length !== 0">,</span>
+        {{item.name}}<span v-if="affiliatedInclusions.length !== 0"> </span>
+        {{item.percentage}}<span v-if="affiliatedInclusions.length !== 0">%;</span>
       </span></p>
 
     <div class="center">
