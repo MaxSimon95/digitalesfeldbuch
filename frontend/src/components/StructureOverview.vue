@@ -30,10 +30,10 @@ import * as munsell from 'munsell'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('structures_database') // creates new database or opens existing one
-var remoteDB = new PouchDB(path + '/structures')
+var structuresdb = new PouchDB('structures_database') // creates new database or opens existing one
+var structuresremoteDB = new PouchDB(path + '/structures')
 
-db.sync(remoteDB, {
+structuresdb.sync(structuresremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -66,7 +66,7 @@ export default {
     context = this
     // context._id = context.$route.params._id
     context._id = VueCookies.get('currentStructure')._id
-    db.get(context._id).then(function (result) {
+    structuresdb.get(context._id).then(function (result) {
       context.structurenumber = result.structurenumber
       context.sectionnumber = result.sectionnumber
       context.description = result.description

@@ -27,7 +27,7 @@
         </ion-item-sliding>
       </ion-list>
           <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
-
+          <!--<ion-button color="secondary" expand="block" @click="synccampaigns()">Synchronisieren</ion-button>-->
     </div>
 </template>
 
@@ -37,15 +37,17 @@ import RestartButton from './RestartButton'
 import {path} from '../adress.js'
 import PouchDB from 'pouchdb'
 
+//var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
+var campaignsdb = new PouchDB('campaigns_database')
+
 export default {
+
   name: 'CampaignsOverview',
   components: {RestartButton},
   methods: {
     getCampaigns: function () {
-      var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-      var db = new PouchDB('campaigns_database')
-      var remoteDB = new PouchDB(path + '/campaigns')
-      db.sync(remoteDB, {
+      var campaignsremoteDB = new PouchDB(path + '/campaigns')
+      campaignsdb.sync(campaignsremoteDB, {
         live: true,
         retry: true
       }).on('change', function (change) {
@@ -60,7 +62,7 @@ export default {
         console.log(err)
       })
       var context = this // to enable accessing the 'campaigns' variable inside submethods
-      db.allDocs({
+      campaignsdb.allDocs({
         include_docs: true,
         attachments: true
       }).then(function (result) {
@@ -88,9 +90,8 @@ export default {
     },
 
     synccampaigns: function(){
-        var context = this
-        var remoteDB = new PouchDB(path + '/campaigns')
-        context.db.sync(remoteDB)
+        var campaignsremoteDB = new PouchDB(path + '/campaigns')
+        campaignsdb.sync(campaignsremoteDB)
     },
 
     deleteCampaign: function (item) { } // TODO: change campaign

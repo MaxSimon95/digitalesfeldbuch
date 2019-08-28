@@ -103,11 +103,11 @@
 import {path} from '../adress.js'
 import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('structures_database') // creates new database or opens existing one
+var structuresdb = new PouchDB('structures_database') // creates new database or opens existing one
 var db_sections = new PouchDB('sections_database')
-var remoteDB = new PouchDB(path + '/structures')
+var structuresremoteDB = new PouchDB(path + '/structures')
 
-db.sync(remoteDB, {
+structuresdb.sync(structuresremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -148,7 +148,7 @@ export default {
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
     context._id = context.$route.params._id
-    db.get(context._id).then(function (result) {
+    structuresdb.get(context._id).then(function (result) {
       context.structurenumber = result.structurenumber
       context.sectionnumber = result.sectionnumber
       context.description = result.description
@@ -212,34 +212,18 @@ export default {
         console.log(err)
       })
       */
-      context.availableMaterials.push("Metall")
-      context.availableMaterials.push("Gold")
-      context.availableMaterials.push("Silber")
-      context.availableMaterials.push("Kupferlegierung")
-      context.availableMaterials.push("Blei")
-      context.availableMaterials.push("Eisen")
-      context.availableMaterials.push("Unbestimmt")
-      context.availableMaterials.push("Glas")
-      context.availableMaterials.push("Stein")
-      context.availableMaterials.push("Mörtel/Putz")
-      context.availableMaterials.push("Knochen")
-      context.availableMaterials.push("Organische Reste")
-      context.availableMaterials.push("Ziegel")
-      context.availableMaterials.push("Keramik")
-      context.availableMaterials.push("Terra Sigillata (TS)")
-      context.availableMaterials.push("Glanztonware")
-      context.availableMaterials.push("Terra Nigra")
-      context.availableMaterials.push("Terra Rubra")
-      context.availableMaterials.push("Marmorierte Ware")
-      context.availableMaterials.push("Goldglimmerware")
-      context.availableMaterials.push("Glasierte Ware")
-      context.availableMaterials.push("Backplatten")
-      context.availableMaterials.push("Glattwandige Ware")
-      context.availableMaterials.push("Rauwandige Ware")
-      context.availableMaterials.push("Schwerkeramik")
-      context.availableMaterials.push("Amphoren")
-      context.availableMaterials.push("Frei geformte Ware")
-      context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
+        context.availableMaterials.push("Holzkohle")
+        context.availableMaterials.push("gebrannter Lehm (Rotlehm)")
+        context.availableMaterials.push("gebrannter Lehm (Hüttenlehm)")
+        context.availableMaterials.push("Mörtelreste")
+        context.availableMaterials.push("Ziegelreste")
+        context.availableMaterials.push("Steine")
+        context.availableMaterials.push("Keramik")
+        context.availableMaterials.push("Knochen")
+        context.availableMaterials.push("Konkretionen")
+        context.availableMaterials.push("Mörtel/Putz")
+        context.availableMaterials.push("Oxyde")
+        context.availableMaterials.push("Sonstiges")
     },
     addExistingMaterialToStructure: function (item) {
       this.hideOverlay()
@@ -269,7 +253,7 @@ export default {
         excavationId: context.excavationId,
         sectionnumber: context.sectionnumber
       }
-      db.put(structure, function callback (err, result) {
+      structuresdb.put(structure, function callback (err, result) {
         if (!err) {
           console.log('Successfully changed a structure! ')
           // eslint-disable-next-line standard/object-curly-even-spacing

@@ -104,11 +104,11 @@
         <hr/>
 
         <ion-item>Hier kann man ein einen Einschluss aus einem bestimmten Material dokumentieren.</ion-item>
-        <p v-if="availableMaterials.length === 0">
+        <p v-if="availableInclusions.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Ansprechpartner angelegt.
         </p>
         <ion-list>
-          <ion-item v-for="item in availableMaterials" v-bind:key="item._id" lines="inset">
+          <ion-item v-for="item in availableInclusions" v-bind:key="item._id" lines="inset">
             <ion-button color="secondary" @click="addExistingMaterialToStructure(item)">
               <ion-text>
                 {{item}}
@@ -133,11 +133,11 @@ import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
-var db = new PouchDB('structures_database') // creates new database or opens existing one
+var structuresdb = new PouchDB('structures_database') // creates new database or opens existing one
 var db_sections = new PouchDB('sections_database')
-var remoteDB = new PouchDB(path + '/structures')
+var structuresremoteDB = new PouchDB(path + '/structures')
 
-db.sync(remoteDB, {
+structuresdb.sync(structuresremoteDB, {
   live: true,
   retry: true
 }).on('change', function (change) {
@@ -162,7 +162,7 @@ export default {
       colour_hue: '',
       colour_value: '',
       colour_chroma: '',
-      availableMaterials: [],
+      availableInclusions: [],
       affiliatedMaterials: [],
       availableSections:[]
     }
@@ -206,34 +206,18 @@ export default {
         console.log(err)
       })
       */
-      context.availableMaterials.push("Metall")
-      context.availableMaterials.push("Gold")
-      context.availableMaterials.push("Silber")
-      context.availableMaterials.push("Kupferlegierung")
-      context.availableMaterials.push("Blei")
-      context.availableMaterials.push("Eisen")
-      context.availableMaterials.push("Unbestimmt")
-      context.availableMaterials.push("Glas")
-      context.availableMaterials.push("Stein")
-      context.availableMaterials.push("Mörtel/Putz")
-      context.availableMaterials.push("Knochen")
-      context.availableMaterials.push("Organische Reste")
-      context.availableMaterials.push("Ziegel")
+      context.availableMaterials.push("Holzkohle")
+      context.availableMaterials.push("gebrannter Lehm (Rotlehm)")
+      context.availableMaterials.push("gebrannter Lehm (Hüttenlehm)")
+      context.availableMaterials.push("Mörtelreste")
+      context.availableMaterials.push("Ziegelreste")
+      context.availableMaterials.push("Steine")
       context.availableMaterials.push("Keramik")
-      context.availableMaterials.push("Terra Sigillata (TS)")
-      context.availableMaterials.push("Glanztonware")
-      context.availableMaterials.push("Terra Nigra")
-      context.availableMaterials.push("Terra Rubra")
-      context.availableMaterials.push("Marmorierte Ware")
-      context.availableMaterials.push("Goldglimmerware")
-      context.availableMaterials.push("Glasierte Ware")
-      context.availableMaterials.push("Backplatten")
-      context.availableMaterials.push("Glattwandige Ware")
-      context.availableMaterials.push("Rauwandige Ware")
-      context.availableMaterials.push("Schwerkeramik")
-      context.availableMaterials.push("Amphoren")
-      context.availableMaterials.push("Frei geformte Ware")
-      context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
+      context.availableMaterials.push("Knochen")
+      context.availableMaterials.push("Konkretionen")
+      context.availableMaterials.push("Mörtel/Putz")
+      context.availableMaterials.push("Oxyde")
+      context.availableMaterials.push("Sonstiges")
     },
     addExistingMaterialToStructure: function (item) {
       this.hideOverlay()
@@ -263,7 +247,7 @@ export default {
         affiliatedMaterials: this.affiliatedMaterials,
         excavationId: VueCookies.get('currentExcavation')._id
       }
-      db.put(campaign, function callback (err, result) {
+      structuresdb.put(campaign, function callback (err, result) {
         if (!err) {
           console.log('Successfully posted a Structure! STANDO POWER!')
           // eslint-disable-next-line standard/object-curly-even-spacing
