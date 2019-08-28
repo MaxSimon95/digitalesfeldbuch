@@ -60,15 +60,27 @@
     </ion-item> -->
 
 
-    <ion-item>
-      <ion-label position="stacked">Bodenfarbe (Munsell-Format, z.B. 10.0PB 5.00/8.0)</ion-label>
-      <ion-label position="stacked">Hue: (z.B. 10.0PB)</ion-label>
-      <ion-input v-on:ionInput="colour_hue=$event.target.value" placeholder="Hier Hue-Wert der Bodenfarbe angeben"></ion-input>
-      <ion-label position="stacked">Value (z.B. 5.00):</ion-label>
-      <ion-input v-on:ionInput="colour_value=$event.target.value" placeholder="Hier Value-Wert der Bodenfarbe angeben"></ion-input>
-      <ion-label position="stacked">Chroma (z.B. 8.00):</ion-label>
-      <ion-input v-on:ionInput="colour_chroma=$event.target.value" placeholder="Hier Chroma-Wert der Bodenfarbe angeben"></ion-input>
-    </ion-item>
+    <div class="munsellWrapperOuter">
+      <div class="munsellWrapperInner">
+
+      <ion-label position="stacked">Bodenfarbe (Munsell-Format, z.B. 10YR 5/4)</ion-label>
+      <!--<ion-label position="stacked">Hue: (z.B. 10.0PB)</ion-label>-->
+        <div>
+        <div class="munselInputDiv" id="hueInputDiv">
+        <ion-input v-on:ionInput="colour_hue=$event.target.value" placeholder="10YR"></ion-input>
+        </div>
+      <!--<ion-label position="stacked">Value (z.B. 5.00):</ion-label>-->
+        <div class="munselInputDiv" id="valueInputDiv">
+      <ion-input v-on:ionInput="colour_value=$event.target.value" placeholder="5"></ion-input>
+        </div>
+      <!--<ion-label position="stacked">Chroma (z.B. 8.00):</ion-label>-->
+          /
+        <div class="munselInputDiv" id="chromaInputDiv">
+      <ion-input v-on:ionInput="colour_chroma=$event.target.value" placeholder="4"></ion-input>
+          </div>
+        </div>
+        </div>
+    </div>
 
     <ion-item>
       <ion-label position="stacked">Vorläufige Datierung</ion-label>
@@ -266,6 +278,24 @@ export default {
 </script>
 
 <style scoped>
+
+  .munsellWrapperOuter{
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .munsellWrapperInner{
+    border-bottom: solid 1px #d0ced0;
+  }
+  
+  .munselInputDiv{
+    display: inline-block;
+    width: 75px;
+  }
+
+  #valueInputDiv, #chromaInputDiv{
+    text-align: center;
+  }
 
   .inclusionWrapper{
     text-align: left;
