@@ -85,7 +85,7 @@
 
 
       <ion-list>
-        <ion-button v-for="item in affiliatedMaterials" v-bind:key="item._id" @click="removeElement(item)">
+        <ion-button v-for="item in affiliatedInclusions" v-bind:key="item._id" @click="removeElement(item)">
           <ion-text>
             {{item}}
 
@@ -105,7 +105,7 @@
 
         <ion-item>Hier kann man ein einen Einschluss aus einem bestimmten Material dokumentieren.</ion-item>
         <p v-if="availableInclusions.length === 0">
-          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Ansprechpartner angelegt.
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Einschlüsse hinzugefügt.
         </p>
         <ion-list>
           <ion-item v-for="item in availableInclusions" v-bind:key="item._id" lines="inset">
@@ -163,7 +163,7 @@ export default {
       colour_value: '',
       colour_chroma: '',
       availableInclusions: [],
-      affiliatedMaterials: [],
+      affiliatedInclusions: [],
       availableSections:[]
     }
   },
@@ -175,11 +175,11 @@ export default {
     removeElement(item)
     {
       console.log("remove da " + item)
-      var tempArray = this.affiliatedMaterials.filter(function(arrayitem) {
+      var tempArray = this.affiliatedInclusions.filter(function(arrayitem) {
         console.log(arrayitem._id + " " + item._id)
         return arrayitem !== item
       })
-      this.affiliatedMaterials = tempArray
+      this.affiliatedInclusions = tempArray
     },
     getSections(){
       let context = this
@@ -200,28 +200,28 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          context.availableMaterials.push(item.doc)
+          context.availableInclusions.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
       })
       */
-      context.availableMaterials.push("Holzkohle")
-      context.availableMaterials.push("gebrannter Lehm (Rotlehm)")
-      context.availableMaterials.push("gebrannter Lehm (Hüttenlehm)")
-      context.availableMaterials.push("Mörtelreste")
-      context.availableMaterials.push("Ziegelreste")
-      context.availableMaterials.push("Steine")
-      context.availableMaterials.push("Keramik")
-      context.availableMaterials.push("Knochen")
-      context.availableMaterials.push("Konkretionen")
-      context.availableMaterials.push("Mörtel/Putz")
-      context.availableMaterials.push("Oxyde")
-      context.availableMaterials.push("Sonstiges")
+      context.availableInclusions.push("Holzkohle")
+      context.availableInclusions.push("gebrannter Lehm (Rotlehm)")
+      context.availableInclusions.push("gebrannter Lehm (Hüttenlehm)")
+      context.availableInclusions.push("Mörtelreste")
+      context.availableInclusions.push("Ziegelreste")
+      context.availableInclusions.push("Steine")
+      context.availableInclusions.push("Keramik")
+      context.availableInclusions.push("Knochen")
+      context.availableInclusions.push("Zement")
+      context.availableInclusions.push("Mörtel/Putz")
+      context.availableInclusions.push("Oxyde")
+      context.availableInclusions.push("Sonstiges")
     },
     addExistingMaterialToStructure: function (item) {
       this.hideOverlay()
-      this.affiliatedMaterials.push(item)
+      this.affiliatedInclusions.push(item)
     },
     hideOverlay: function () {
       this.overlayDisplay = 'none';
@@ -244,7 +244,7 @@ export default {
         colour_hue: this.colour_hue,
         colour_value: this.colour_value,
         colour_chroma: this.colour_chroma,
-        affiliatedMaterials: this.affiliatedMaterials,
+        affiliatedInclusions: this.affiliatedInclusions,
         excavationId: VueCookies.get('currentExcavation')._id
       }
       structuresdb.put(campaign, function callback (err, result) {

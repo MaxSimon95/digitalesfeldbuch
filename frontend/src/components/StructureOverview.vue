@@ -12,8 +12,8 @@
 
     <p>
       <span class="bolder"> Einschlüsse: </span>
-      <span v-for="item in affiliatedMaterials">
-        {{item}}<span v-if="affiliatedMaterials.length !== 0">,</span>
+      <span v-for="item in affiliatedInclusions">
+        {{item}}<span v-if="affiliatedInclusions.length !== 0">,</span>
       </span></p>
 
     <div class="center">
@@ -56,7 +56,7 @@ export default {
       colour_value: '',
       colour_chroma: '',
       colour_preview_html: '',
-      affiliatedMaterials: [],
+      affiliatedInclusions: [],
 
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0
@@ -72,7 +72,7 @@ export default {
       context.description = result.description
       context.soil = result.soil
       context.prelimdate = result.prelimdate
-      context.affiliatedMaterials = result.affiliatedMaterials
+      context.affiliatedInclusions = result.affiliatedInclusions
       context.colour_hue = result.colour_hue
       context.colour_value = result.colour_value
       context.colour_chroma = result.colour_chroma

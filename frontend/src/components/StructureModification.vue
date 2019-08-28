@@ -56,7 +56,7 @@
 
 
       <ion-list>
-        <ion-button v-for="item in affiliatedMaterials" v-bind:key="item._id" @click="removeElement(item)">
+        <ion-button v-for="item in affiliatedInclusions" v-bind:key="item._id" @click="removeElement(item)">
           <ion-text>
             {{item}}
 
@@ -74,12 +74,12 @@
         <h2>Einschluss hinzufügen</h2>
         <hr/>
 
-        <ion-item>Hier kann man ein einen Einschluss aus einem bestimmten Material dokumentieren.</ion-item>
-        <p v-if="availableMaterials.length === 0">
-          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Materialien hinterlegt.
+        <ion-item>Hier kann man einen Einschluss .</ion-item>
+        <p v-if="availableInclusions.length === 0">
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Einschlüsse hinterlegt.
         </p>
         <ion-list>
-          <ion-item v-for="item in availableMaterials" v-bind:key="item._id" lines="inset">
+          <ion-item v-for="item in availableInclusions" v-bind:key="item._id" lines="inset">
             <ion-button color="secondary" @click="addExistingMaterialToStructure(item)">
               <ion-text>
                 {{item}}
@@ -136,8 +136,8 @@ export default {
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
       _rev: 0,
-      availableMaterials: [],
-      affiliatedMaterials: [],
+      availableInclusions: [],
+      affiliatedInclusions: [],
       availableSections: []
     }
   },
@@ -160,7 +160,7 @@ export default {
       context.colour_chroma = result.colour_chroma
       context._rev = result._rev
       context.excavationId = result.excavationId
-      context.affiliatedMaterials = result.affiliatedMaterials
+      context.affiliatedInclusions = result.affiliatedInclusions
     })
     this.sectionnumber = context.sectionnumber
     this.structurenumber = context.structurenumber
@@ -173,17 +173,17 @@ export default {
     this.colour_chroma = context.colour_chroma
     this._rev = context._rev
     this.excavationId = context.excavationId
-    this.affiliatedMaterials = context.affiliatedMaterials
+    this.affiliatedInclusions = context.affiliatedInclusions
   },
   methods: {
     removeElement(item)
     {
       console.log("remove da " + item)
-      var tempArray = this.affiliatedMaterials.filter(function(arrayitem) {
+      var tempArray = this.affiliatedInclusions.filter(function(arrayitem) {
         console.log(arrayitem._id + " " + item._id)
         return arrayitem !== item
       })
-      this.affiliatedMaterials = tempArray
+      this.affiliatedInclusions = tempArray
     },
     getSections(){
       let context = this
@@ -206,28 +206,28 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          context.availableMaterials.push(item.doc)
+          context.availableInclusions.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
       })
       */
-        context.availableMaterials.push("Holzkohle")
-        context.availableMaterials.push("gebrannter Lehm (Rotlehm)")
-        context.availableMaterials.push("gebrannter Lehm (Hüttenlehm)")
-        context.availableMaterials.push("Mörtelreste")
-        context.availableMaterials.push("Ziegelreste")
-        context.availableMaterials.push("Steine")
-        context.availableMaterials.push("Keramik")
-        context.availableMaterials.push("Knochen")
-        context.availableMaterials.push("Konkretionen")
-        context.availableMaterials.push("Mörtel/Putz")
-        context.availableMaterials.push("Oxyde")
-        context.availableMaterials.push("Sonstiges")
+        context.availableInclusions.push("Holzkohle")
+        context.availableInclusions.push("gebrannter Lehm (Rotlehm)")
+        context.availableInclusions.push("gebrannter Lehm (Hüttenlehm)")
+        context.availableInclusions.push("Mörtelreste")
+        context.availableInclusions.push("Ziegelreste")
+        context.availableInclusions.push("Steine")
+        context.availableInclusions.push("Keramik")
+        context.availableInclusions.push("Knochen")
+        context.availableInclusions.push("Zement")
+        context.availableInclusions.push("Mörtel/Putz")
+        context.availableInclusions.push("Oxyde")
+        context.availableInclusions.push("Sonstiges")
     },
     addExistingMaterialToStructure: function (item) {
       this.hideOverlay()
-      this.affiliatedMaterials.push(item)
+      this.affiliatedInclusions.push(item)
     },
     hideOverlay: function () {
       this.overlayDisplay = 'none';
@@ -248,7 +248,7 @@ export default {
         colour_hue: context.colour_hue,
         colour_value: context.colour_value,
         colour_chroma: context.colour_chroma,
-        affiliatedMaterials: context.affiliatedMaterials,
+        affiliatedInclusions: context.affiliatedInclusions,
         _rev: context._rev,
         excavationId: context.excavationId,
         sectionnumber: context.sectionnumber
@@ -275,4 +275,45 @@ export default {
 
 <style scoped>
 
+  .formOverlayOuter {
+    background: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    left: 0;
+    top: 0px;
+    padding-top: 64px;
+    height: 100%;
+    width: 100%;
+    z-index: 35;
+    display: none;
+    overflow: scroll
+  }
+
+  .formOverlayOuter.overlayVisible {
+    display: block
+  }
+
+  .formOverlayInner {
+    background: var(--ion-color-light);
+    z-index: 500;
+
+    padding: 8px
+  }
+
+  @media screen and (min-width: 768px) {
+    .formOverlayOuter {
+      top: 0
+    }
+
+    .formOverlayInner {
+      min-height: auto;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 110px;
+      border: 1px solid var(--ion-color-primary);
+      -webkit-box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.24);
+      -moz-box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.24);
+      box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.24);
+    }
+
+  }
 </style>
