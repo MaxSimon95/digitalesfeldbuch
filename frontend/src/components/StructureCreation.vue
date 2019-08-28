@@ -80,7 +80,8 @@
       <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier weitere Anmerkungen zu dem Befund ein"></ion-textarea>
     </ion-item>
 
-    <ion-item>
+    <div class="inclusionWrapper">
+      <div>
       <ion-label position="stacked">Einschlüsse</ion-label>
 
 
@@ -135,7 +136,8 @@
       </ion-list>
 
       <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
-    </ion-item>
+      </div>
+    </div>
 
     <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
       <div class="formOverlayInner">
@@ -311,6 +313,15 @@ export default {
 </script>
 
 <style scoped>
+
+  .inclusionWrapper{
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .inclusionWrapper div{
+    border-bottom: solid 1px #d0ced0;
+  }
 
   .formOverlayOuter {
     background: rgba(0, 0, 0, 0.50);
