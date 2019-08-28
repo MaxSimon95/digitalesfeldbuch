@@ -15,7 +15,7 @@
 
         <ion-select-option v-if="item.title !== sectionnumber" v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="false">
           <ion-text>
-            {{item.title}} {{item.title == sectionnumber}} {{sectionnumber}}
+            {{item.title}}
           </ion-text>
         </ion-select-option>
         <ion-select-option v-else v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="true">

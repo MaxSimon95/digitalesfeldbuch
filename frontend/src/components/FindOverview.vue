@@ -2,7 +2,8 @@
   <div class="contentContainer">
     <h1> Detailansicht Fund</h1>
     <p> <span class="bolder">Fundnummer: </span>{{findnumber}}</p>
-    <p> <span class="bolder">zugehöriger Befund: </span>{{structurenumber}}</p>
+    <p> <span class="bolder">zugehöriger Schnitt: </span>{{sectionnumber}}</p>
+    <p> <span class="bolder">zugehöriger Befund (SE): </span>{{structurenumber}}</p>
     <p> <span class="bolder">Tachymeter ID: </span>{{tachymeterid}}</p>
     <p> <span class="bolder">Fundtyp: </span>{{type}}</p>
     <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
@@ -39,6 +40,7 @@ export default {
   name: 'FindOverview',
   data: function () {
     return {
+      sectionnumber:'',
       findnumber: '',
       structurenumber: '',
       tachymeterid: '',
@@ -57,6 +59,7 @@ export default {
     context._id = VueCookies.get('currentFind')._id
     findsdb.get(context._id).then(function (result) {
       context.findnumber = result.findnumber
+      context.sectionnumber = result.sectionnumber
       context.structurenumber = result.structurenumber
       context.tachymeterid = result.tachymeterid
       context.type = result.type

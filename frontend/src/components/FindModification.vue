@@ -7,7 +7,26 @@
         <ion-input v-on:ionInput="findnumber=$event.target.value" :value=findnumber ></ion-input>
       </ion-item>
 
-      <ion-item >Befund
+      <ion-item >Schnitt
+        <p v-if="availableSections.length === 0">
+          <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
+        </p>
+        <ion-select v-else interface="popover" v-on:ionChange="sectionnumber=$event.target.value">
+
+          <ion-select-option v-if="item.title !== sectionnumber" v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="false">
+            <ion-text>
+              {{item.title}}
+            </ion-text>
+          </ion-select-option>
+          <ion-select-option v-else v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="true">
+            <ion-text>
+              {{item.title}} &check;
+            </ion-text>
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item >Befund (SE)
         <p v-if="availableStructures.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde hinterlegt.
         </p>
@@ -104,6 +123,7 @@ import VueCookies from 'vue-cookies'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var findsdb = new PouchDB('finds_database') // creates new database or opens existing one
 var db_structures = new PouchDB('structures_database')
+var db_sections = new PouchDB('sections_database')
 var findsremoteDB = new PouchDB(path + '/finds')
 
 findsdb.sync(findsremoteDB, {
@@ -122,6 +142,7 @@ export default {
     return {
       findnumber: '',
       structurenumber: '',
+      sectionnumber: '',
       description: '',
       type: '',
       availableMaterials: [],
@@ -133,6 +154,7 @@ export default {
       coordinates: '',
       date: '',
       excavationId: '',
+      availableSections: [],
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
@@ -143,6 +165,7 @@ export default {
     this.getMaterials()
     this.getTypes()
     this.getStructures()
+    this.getSections()
   },
   created () { // This entire code block is a very ugly but working solution to get the database data conceirning titles and descriptions into the ionic-input fields. They are not supporting according vue methods for some reason
     context = this
@@ -150,6 +173,7 @@ export default {
     findsdb.get(context._id).then(function (result) {
       context.findnumber = result.findnumber
       context.structurenumber = result.structurenumber
+      context.sectionnumber = result.sectionnumber
       context.description = result.description
       context.type = result.type
       context.affiliatedMaterial = result.affiliatedMaterial
@@ -161,8 +185,10 @@ export default {
       context.excavationId = result.excavationId
       context._rev = result._rev
     })
+    this.sectionnumber = context.sectionnumber
     this.findnumber = context.findnumber
     this.structurenumber = context.structurenumber
+    this.sectionnumber = context.sectionnumber
     this.description = context.description
     this.type = context.type
     this.affiliatedMaterial = context.affiliatedMaterial
@@ -216,6 +242,20 @@ export default {
       context.availableTypes.push("Rohr")
 
     },
+    getSections(){
+      let context = this
+      db_sections.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        console.log(result)
+        console.log(context.sectionnumber)
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableSections.push(item.doc)
+
+        }
+      })
+    },
     getMaterials: function () {
       var context = this // to enable accessing the 'contactPersons' variable inside submethods
       /*contactPersonDb.allDocs({
@@ -264,6 +304,7 @@ export default {
       let find = {
         _id: context._id,
         structurenumber: context.structurenumber,
+        sectionnumber: context.sectionnumber,
         findnumber: context.findnumber,
         description: context.description,
         type: context.type,
