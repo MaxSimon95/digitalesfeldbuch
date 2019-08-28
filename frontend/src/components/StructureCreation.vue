@@ -108,7 +108,8 @@
       </ion-list>
 
       <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
-    </ion-item>
+      </div>
+    </div>
 
     <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
       <div class="formOverlayInner">
