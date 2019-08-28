@@ -8,7 +8,8 @@
         </ion-item>
 
 
-        <ion-item>
+        <div class="contactPersonWrapper">
+          <div>
           <ion-label position="stacked">Ansprechpartner</ion-label>
 
 
@@ -23,7 +24,8 @@
           </ion-list>
 
           <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
-        </ion-item>
+          </div>
+        </div>
 
         <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
           <div class="formOverlayInner">
@@ -288,6 +290,15 @@ export default {
 
 
 <style scoped>
+
+  .contactPersonWrapper{
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .contactPersonWrapper div{
+    border-bottom: solid 1px #d0ced0;
+  }
 
   .formOverlayOuter {
     background: rgba(0, 0, 0, 0.50);

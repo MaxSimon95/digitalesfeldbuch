@@ -6,7 +6,8 @@
         <ion-input placeholder="Geben Sie den Namen der Kampagne ein"
                    v-on:ionInput="title=$event.target.value"></ion-input>
       </ion-item>
-      <ion-item>
+      <div class="contactPersonWrapper">
+        <div>
         <ion-label position="stacked">Ansprechpartner</ion-label>
 
 
@@ -20,8 +21,9 @@
 
                 </ion-list>
 
-        <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
-      </ion-item>
+        <ion-button class="addButton" @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
+        </div>
+</div>
 
       <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
         <div class="formOverlayInner">
@@ -234,6 +236,15 @@
 
 <style scoped>
 
+  .contactPersonWrapper{
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .contactPersonWrapper div{
+    border-bottom: solid 1px #d0ced0;
+  }
+
   .formOverlayOuter {
     background: rgba(0, 0, 0, 0.50);
     position: fixed;
@@ -275,4 +286,5 @@
     }
 
   }
+
 </style>
