@@ -49,7 +49,7 @@
           <ion-list>
             <ion-item>Einen neuen Ansprechpartner anlegen</ion-item>
             <ion-item>
-              <ion-label position="stacked">Name des Ansprechpartners</ion-label>
+              <ion-label position="stacked">Name des Ansprechpartners  (Nachname, Vorname)</ion-label>
               <ion-input placeholder="Hier den Name eintragen"
                          v-on:ionInput="contactPersonName=$event.target.value"></ion-input>
             </ion-item>
