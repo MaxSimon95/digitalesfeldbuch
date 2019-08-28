@@ -12,7 +12,21 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
     </ion-item> -->
 
-    <ion-item >Befund
+    <ion-item >Schnitt
+      <p v-if="availableSections.length === 0">
+        <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
+      </p>
+      <ion-select v-else interface="popover" placeholder="zugehöriger Schnitt" v-on:ionChange="sectionnumber=$event.target.value">
+
+        <ion-select-option v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" >
+          <ion-text>
+            {{item.title}}
+          </ion-text>
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item >Befund (SE)
       <p v-if="availableStructures.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde hinterlegt.
       </p>
@@ -89,6 +103,7 @@ import {path} from '../adress.js'
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var db = new PouchDB('finds_database') // creates new database or opens existing one
 var db_structures = new PouchDB('structures_database') //
+var db_sections = new PouchDB('sections_database')
 var remoteDB = new PouchDB(path + '/finds')
 
 db.sync(remoteDB, {
@@ -107,6 +122,7 @@ export default {
     return {
       findnumber: '',
       structurenumber: '',
+      sectionnumber: '',
       description: '',
       type: '',
       materials: '',
@@ -118,13 +134,15 @@ export default {
       availableMaterials: [],
       affiliatedMaterial: '',
       availableTypes: [],
-      availableStructures: []
+      availableStructures: [],
+      availableSections:[]
     }
   },
   beforeMount () {
     this.getMaterials()
     this.getTypes()
     this.getStructures()
+    this.getSections()
   },
   methods: {
     getStructures(){
@@ -135,6 +153,18 @@ export default {
       }).then(function (result) {
         for (let item of result.rows) {
           if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+
+        }
+      })
+    },
+    getSections(){
+      let context = this
+      db_sections.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableSections.push(item.doc)
 
         }
       })
@@ -217,6 +247,7 @@ export default {
       let campaign = {
         _id: this.findnumber + new Date().toISOString(),
         structurenumber: this.structurenumber,
+        sectionnumber: this.sectionnumber,
         findnumber: this.findnumber,
         description: this.description,
         type: this.type,
