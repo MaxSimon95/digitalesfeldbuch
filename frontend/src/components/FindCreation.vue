@@ -239,6 +239,7 @@ export default {
       context.availableMaterials.push("Amphoren")
       context.availableMaterials.push("Frei geformte Ware")
       context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
+      context.availableMaterials.push("Mittelalter/Neuzeit Glas")
 
     },
     logForm: function () {
