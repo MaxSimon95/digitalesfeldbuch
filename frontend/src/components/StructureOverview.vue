@@ -2,10 +2,14 @@
   <div class="contentContainer">
     <h1> Detailansicht Befund (SE)</h1>
     <p> <span class="bolder">Befundnummer: </span>{{structurenumber}}</p>
-    <p> <span class="bolder">Kurzbeschreibung: </span> {{description}}</p>
     <p> <span class="bolder">zugehöriger Schnitt: </span> {{sectionnumber}}</p>
-    <p> <span class="bolder">Bodenart: </span> {{soil}}</p>
-    <p> <span class="bolder">Vorläufige Datierung: </span> {{prelimdate}}</p>
+    <p> <span class="bolder">Maße: </span> {{measurings}}</p>
+    <p> <span class="bolder">Niveau: </span> {{niveau}}</p>
+    <p> <span class="bolder">Lokalisierung in Sondage: </span> {{localisation}}</p>
+    <p> <span class="bolder">Ausdehnung: </span> {{extension}}</p>
+    <p> <span class="bolder">Konsistenz Oberfläche: </span> {{outerconsistency}}</p>
+    <p> <span class="bolder">Konsistenz Schichtinneres: </span> {{innerconsistency}}</p>
+    <!--p> <span class="bolder">Bodenart: </span> {{soil}}</p-->
     <p> <span class="bolder">Bodenfarbe: </span> </p>
       <p> Farbwerte: Hue: {{colour_hue}}, Value: {{colour_value}}, Chroma: {{colour_chroma}} </p>
     <p> Farbvorschau: <span class="color_preview_container" v-html="colour_preview_html"></span> </p>
@@ -16,6 +20,8 @@
         {{item.name}}<span v-if="affiliatedInclusions.length !== 0"> </span>
         {{item.percentage}}<span v-if="affiliatedInclusions.length !== 0">%;</span>
       </span></p>
+    <p> <span class="bolder">Allgemeine Beschreibung: </span> {{description}}</p>
+    <p> <span class="bolder">Vorläufige Datierung/ Interpretation: </span> {{prelimdate}}</p>
 
     <div class="center">
       <ion-button @click="modifyStructure()">Befund bearbeiten</ion-button>
@@ -51,7 +57,13 @@ export default {
       structurenumber: '',
       sectionnumber: '',
       description: '',
-      soil: '',
+      extension: '',
+      outerconsistency: '',
+      innerconsistency: '',
+      measurings: '',
+      niveau: '',
+      localisation: '',
+      //soil: '',
       prelimdate: '',
       colour_hue: '',
       colour_value: '',
@@ -71,7 +83,13 @@ export default {
       context.structurenumber = result.structurenumber
       context.sectionnumber = result.sectionnumber
       context.description = result.description
-      context.soil = result.soil
+      context.extension = result.extension
+      context.outerconsistency = result.outerconsistency
+      context.innerconsistency = result.innerconsistency
+      context.measurings = result.measurings
+      context.niveau = result.niveau
+      context.localisation = result.localisation
+      //context.soil = result.soil
       context.prelimdate = result.prelimdate
       context.affiliatedInclusions = result.affiliatedInclusions
       context.colour_hue = result.colour_hue

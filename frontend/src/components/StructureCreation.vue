@@ -7,11 +7,6 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" placeholder="Geben sie hier die Befundnummer ein" ></ion-input>
     </ion-item>
 
-    <!-- <ion-item>
-      <ion-label position="stacked">Zugehöriger Schnitt</ion-label>
-      <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Wählen Sie hier den zugehörigen Schnitt aus" ></ion-input>
-    </ion-item> -->
-
     <ion-item >Schnitt
       <p v-if="availableSections.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
@@ -27,37 +22,41 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Bodenart</ion-label>
-      <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" placeholder="Geben Sie hier Art des Befundes an"></ion-textarea>
+      <ion-label position="stacked">Maße (Ausdehnung/ Schichtstärke)</ion-label>
+      <ion-input v-on:ionInput="measurings=$event.target.value" placeholder="Geben Sie hier die Maße des Befundes an"></ion-input>
     </ion-item>
-<!--
+
     <ion-item>
-      <ion-label position="stacked">Einschlüsse</ion-label>
-      <ion-list>
+      <ion-label position="stacked">Niveau (OK + UK)</ion-label>
+      <ion-input v-on:ionInput="niveau=$event.target.value" placeholder="Geben Sie hier das Niveau des Befundes an"></ion-input>
+    </ion-item>
 
-        <ion-button>
-          Beispieleinschluss 1: 10%
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
+    <ion-item>
+      <ion-label position="stacked">Lokalisierung in Sondage</ion-label>
+      <ion-input v-on:ionInput="localisation=$event.target.value" placeholder="Geben Sie hier die Lokalisierung des Befundes an"></ion-input>
+    </ion-item>
 
-        <ion-button>
-          Beispieleinschluss 2: 10%
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
+    <ion-item>
+      <ion-label position="stacked">Ausdehnung (reicht von/ bis, stößt an, zieht ins Profil)</ion-label>
+      <ion-textarea v-on:ionInput="extension=$event.target.value" rows="4" placeholder="Geben Sie hier die Ausdehnung des Befunds ein"></ion-textarea>
+    </ion-item>
 
-        <ion-button>
-          Beispieleinschluss 3: 12%
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
+    <ion-item>
+      <ion-label position="stacked">Konsistenz Oberfläche (kompakt -weich etc.)</ion-label>
+      <ion-textarea v-on:ionInput="outerconsistency=$event.target.value" rows="2" placeholder="Geben Sie hier die Konsistenz der Oberfläche des Befunds ein"></ion-textarea>
+    </ion-item>
 
-        <ion-button>
-          Beispieleinschluss 4: 6%
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
+    <ion-item>
+      <ion-label position="stacked">Konsistenz Schichtinneres (kompakt -weich etc.)</ion-label>
+      <ion-textarea v-on:ionInput="innerconsistency=$event.target.value" rows="2" placeholder="Geben Sie hier die Konsistenz des Schichtinneren des Befunds ein"></ion-textarea>
+    </ion-item>
 
-      </ion-list>
-      <ion-button color="secondary"> Hinzufügen </ion-button>
+    <!-- <ion-item>
+      <ion-label position="stacked">Zugehöriger Schnitt</ion-label>
+      <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Wählen Sie hier den zugehörigen Schnitt aus" ></ion-input>
     </ion-item> -->
+
+
 
 
     <div class="munsellWrapperOuter">
@@ -82,15 +81,7 @@
         </div>
     </div>
 
-    <ion-item>
-      <ion-label position="stacked">Vorläufige Datierung</ion-label>
-      <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Geben sie hier eine vorläufige Datierung des Befundes ein" ></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Anmerkung</ion-label>
-      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier weitere Anmerkungen zu dem Befund ein"></ion-textarea>
-    </ion-item>
 
     <div class="inclusionWrapper">
       <div>
@@ -110,6 +101,19 @@
       <ion-button @click="showOverlay" color="secondary"> Hinzufügen</ion-button>
       </div>
     </div>
+
+    <ion-item>
+      <ion-label position="stacked">Allgemeine Beschreibung</ion-label>
+      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" placeholder="Geben Sie hier eine allgemeine Beschreibung des Befunds ein"></ion-textarea>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Vorläufige Datierung/ Interpretation</ion-label>
+      <ion-input v-on:ionInput="prelimdate=$event.target.value" placeholder="Geben sie hier eine vorläufige Datierung des Befundes ein" ></ion-input>
+    </ion-item>
+
+
 
     <div class="formOverlayOuter overlayVisible" v-bind:style="{ display: overlayDisplay }" >
       <div class="formOverlayInner">
@@ -209,10 +213,16 @@ export default {
       sectionnumber: '',
       description: '',
       overlayDisplay: 'none',
-      soil: '',
+      //soil: '',
       date: '',
       prelimdate: '',
       excavationId: '',
+      extension: '',
+      outerconsistency: '',
+      innerconsistency: '',
+      measurings: '',
+      niveau: '',
+      localisation: '',
       colour_hue: '',
       colour_value: '',
       colour_chroma: '',
@@ -301,8 +311,14 @@ export default {
         description: this.description,
         date: new Date().toDateString(),
         excavation: this.excavation,
-        soil: this.soil,
+        //soil: this.soil,
         prelimdate: this.prelimdate,
+        extension: this.extension,
+        outerconsistency: this.outerconsistency,
+        innerconsistency: this.innerconsistency,
+        measurings: this.measurings,
+        niveau: this.niveau,
+        localisation: this.localisation,
         colour_hue: this.colour_hue,
         colour_value: this.colour_value,
         colour_chroma: this.colour_chroma,
@@ -335,7 +351,7 @@ export default {
   .munsellWrapperInner{
     border-bottom: solid 1px #d0ced0;
   }
-  
+
   .munselInputDiv{
     display: inline-block;
     width: 75px;

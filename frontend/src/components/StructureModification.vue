@@ -27,14 +27,39 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Kurzbeschreibung</ion-label>
-      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description ></ion-textarea>
+      <ion-label position="stacked">Maße (Ausdehnung/ Schichtstärke)</ion-label>
+      <ion-input v-on:ionInput="measurings=$event.target.value" :value=measurings></ion-input>
     </ion-item>
 
     <ion-item>
+      <ion-label position="stacked">Niveau (OK + UK)</ion-label>
+      <ion-input v-on:ionInput="niveau=$event.target.value" :value=niveau></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Lokalisierung in Sondage</ion-label>
+      <ion-input v-on:ionInput="localisation=$event.target.value" :value=localisation></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ausdehnung (reicht von/ bis, stößt an, zieht ins Profil)</ion-label>
+      <ion-textarea v-on:ionInput="extension=$event.target.value" rows="4" :value=extension></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Konsistenz Oberfläche (kompakt -weich etc.)</ion-label>
+      <ion-textarea v-on:ionInput="outerconsistency=$event.target.value" rows="2" :value=outerconsistency></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Konsistenz Schichtinneres (kompakt -weich etc.)</ion-label>
+      <ion-textarea v-on:ionInput="innerconsistency=$event.target.value" rows="2" :value=innerconsistency></ion-textarea>
+    </ion-item>
+
+    <!--ion-item>
       <ion-label position="stacked">Bodenart</ion-label>
       <ion-textarea v-on:ionInput="soil=$event.target.value" rows="4" :value=soil ></ion-textarea>
-    </ion-item>
+    </ion-item-->
 
     <div class="munsellWrapperOuter">
       <div class="munsellWrapperInner">
@@ -57,11 +82,6 @@
         </div>
       </div>
     </div>
-
-    <ion-item>
-      <ion-label position="stacked">Vorläufige Datierung</ion-label>
-      <ion-input v-on:ionInput="prelimdate=$event.target.value" :value=prelimdate ></ion-input>
-    </ion-item>
 
     <div class="inclusionWrapper">
       <div>
@@ -129,6 +149,16 @@
       </div>
     </div-->
 
+    <ion-item>
+      <ion-label position="stacked">Allgemeine Beschreibung</ion-label>
+      <ion-textarea v-on:ionInput="description=$event.target.value" rows="4" :value=description ></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Vorläufige Datierung/ Interpretation</ion-label>
+      <ion-input v-on:ionInput="prelimdate=$event.target.value" :value=prelimdate ></ion-input>
+    </ion-item>
+
     <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
     <ion-button @click="goBack()"> Abbrechen </ion-button>
   </form>
@@ -161,7 +191,13 @@ export default {
       structurenumber: '',
       sectionnumber: '',
       description: '',
-      soil: '',
+      extension: '',
+      outerconsistency: '',
+      innerconsistency: '',
+      measurings: '',
+      niveau: '',
+      localisation: '',
+      //soil: '',
       date: '',
       prelimdate: '',
       excavationId: '',
@@ -188,7 +224,13 @@ export default {
       context.structurenumber = result.structurenumber
       context.sectionnumber = result.sectionnumber
       context.description = result.description
-      context.soil = result.soil
+      context.extension = result.extension
+      context.outerconsistency = result.outerconsistency
+      context.innerconsistency = result.innerconsistency
+      context.measurings = result.measurings
+      context.niveau = result.niveau
+      context.localisation = result.localisation
+      //context.soil = result.soil
       context.date = result.date
       context.prelimdate = result.prelimdate
       context.colour_hue = result.colour_hue
@@ -201,7 +243,13 @@ export default {
     this.sectionnumber = context.sectionnumber
     this.structurenumber = context.structurenumber
     this.description = context.description
-    this.soil = context.soil
+    this.extension = context.extension
+    this.outerconsistency = context.outerconsistency
+    this.innerconsistency = context.innerconsistency
+    this.measurings = context.measurings
+    this.niveau = context.niveau
+    this.localisation = context.localisation
+    //this.soil = context.soil
     this.date = context.date
     this.prelimdate = context.prelimdate
     this.colour_hue = context.colour_hue
@@ -286,7 +334,13 @@ export default {
         _id: context._id,
         structurenumber: context.structurenumber,
         description: context.description,
-        soil: context.soil,
+        extension: context.extension,
+        outerconsistency: context.outerconsistency,
+        innerconsistency: context.innerconsistency,
+        measurings: context.measurings,
+        niveau: context.niveau,
+        localisation: context.localisation,
+        //soil: context.soil,
         date: context.date,
         prelimdate: context.prelimdate,
         colour_hue: context.colour_hue,
