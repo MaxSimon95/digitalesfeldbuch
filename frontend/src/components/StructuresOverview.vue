@@ -15,7 +15,7 @@
         <ion-item detail="true" @click="selectStructure(item)" >
           <ion-label>
             <h2> {{item.structurenumber}} </h2>
-            <p> {{item.description}} </p>
+            <p> {{item.structurename}} </p>
           </ion-label>
         </ion-item>
 

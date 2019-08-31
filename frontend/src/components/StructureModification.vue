@@ -7,6 +7,11 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" :value=structurenumber ></ion-input>
     </ion-item>
 
+    <ion-item>
+      <ion-label position="stacked">Befundnummer (SE)</ion-label>
+      <ion-input v-on:ionInput="structurename=$event.target.value" :value=structurename ></ion-input>
+    </ion-item>
+
     <ion-item >Schnitt
       <p v-if="availableSections.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
@@ -189,6 +194,7 @@ export default {
     return {
       overlayDisplay: 'none',
       structurenumber: '',
+      structurename: '',
       sectionnumber: '',
       description: '',
       extension: '',
@@ -222,6 +228,7 @@ export default {
     context._id = context.$route.params._id
     structuresdb.get(context._id).then(function (result) {
       context.structurenumber = result.structurenumber
+      context.structurename = result.structurename
       context.sectionnumber = result.sectionnumber
       context.description = result.description
       context.extension = result.extension
@@ -242,6 +249,7 @@ export default {
     })
     this.sectionnumber = context.sectionnumber
     this.structurenumber = context.structurenumber
+    this.structurename = context.structurename
     this.description = context.description
     this.extension = context.extension
     this.outerconsistency = context.outerconsistency
@@ -333,6 +341,7 @@ export default {
       let structure = {
         _id: context._id,
         structurenumber: context.structurenumber,
+        structurename: context.structurename,
         description: context.description,
         extension: context.extension,
         outerconsistency: context.outerconsistency,
