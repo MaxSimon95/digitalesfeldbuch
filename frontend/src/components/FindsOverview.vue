@@ -69,6 +69,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.finds.sort()
     },
     selectFind: function (item) {
       VueCookies.set('currentFind', item)

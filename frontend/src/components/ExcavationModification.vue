@@ -213,6 +213,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.availableContactPersons.sort()
     },
     addExistingContactPersonToExcarvation: function (item) {
       this.hideOverlay()

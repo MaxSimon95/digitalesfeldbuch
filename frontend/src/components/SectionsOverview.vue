@@ -70,6 +70,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.sections.sort()
     },
     selectSection: function (item) {
       VueCookies.set('currentSection', item)

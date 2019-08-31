@@ -196,10 +196,12 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.availableContactPersons.sort()
     },
     addExistingContactPersonToCampaign: function (item) {
       this.hideOverlay()
       this.affiliatedContactPersons.push(item)
+      this.affiliatedContactPersons.sort()
     },
     addNewContactPersonToCampaign: function () {
       this.hideOverlay()

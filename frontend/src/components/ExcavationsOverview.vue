@@ -73,6 +73,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.excavations.sort()
     },
     selectExcavation: function (item) {
       VueCookies.set('currentExcavation', item)

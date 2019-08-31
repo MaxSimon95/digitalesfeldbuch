@@ -72,6 +72,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.campaigns.sort()
     },
     selectCampaign: function (item) {
       VueCookies.set('currentCampaign', item)

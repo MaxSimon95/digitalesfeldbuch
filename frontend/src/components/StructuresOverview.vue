@@ -68,6 +68,7 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+      context.structures.sort()
     },
     selectStructure: function (item) {
       VueCookies.set('currentStructure', item)

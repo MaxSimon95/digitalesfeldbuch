@@ -71,6 +71,7 @@ export default {
         context.description = result.description
         context.affiliatedContactPersons = result.affiliatedContactPersons
       })
+      context.affiliatedContactPersons.sort()
 
     }
     else{
