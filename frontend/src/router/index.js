@@ -58,7 +58,8 @@ export default new Router({
       name: 'CreateCampaign',
       component: CampaignCreation,
       meta: {
-        title: 'Kampagne anlegen'
+        title: 'Kampagne anlegen',
+        showBackButton: true
       }
     },
     {
@@ -66,7 +67,8 @@ export default new Router({
       name: 'ModifyCampaign',
       component: CampaignModification,
       meta: {
-        title: 'Kampagne bearbeiten'
+        title: 'Kampagne bearbeiten',
+        showBackButton: true
       }
     }, /* {
       path: '/deletecampaign',
@@ -97,7 +99,8 @@ export default new Router({
       name: 'CreateExcavation',
       component: ExcavationCreation,
       meta: {
-        title: 'Ausgrabung anlegen'
+        title: 'Ausgrabung anlegen',
+        showBackButton: true
       }
     },
     {
@@ -105,7 +108,8 @@ export default new Router({
       name: 'ModifyExcavation',
       component: ExcavationModification,
       meta: {
-        title: 'Ausgrabung bearbeiten'
+        title: 'Ausgrabung bearbeiten',
+        showBackButton: true
       }
     },
     {
@@ -113,7 +117,8 @@ export default new Router({
       name: 'Login',
       component: Login,
       meta: {
-        title: 'Login'
+        title: 'Login',
+        showBackButton: true
       }
     },
     {
@@ -152,7 +157,8 @@ export default new Router({
           name: 'CreateSection',
           component: SectionCreation,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -160,7 +166,8 @@ export default new Router({
           name: 'ModifySection',
           component: SectionModification,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -176,7 +183,8 @@ export default new Router({
           name: 'FindOverview',
           component: FindOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -184,7 +192,8 @@ export default new Router({
           name: 'FindModification',
           component: FindModification,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -192,7 +201,8 @@ export default new Router({
           name: 'FindCreation',
           component: FindCreation,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -208,7 +218,8 @@ export default new Router({
           name: 'StructureOverview',
           component: StructureOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -216,7 +227,8 @@ export default new Router({
           name: 'StructureModification',
           component: StructureModification,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {
@@ -224,7 +236,8 @@ export default new Router({
           name: 'StructureCreation',
           component: StructureCreation,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         }
       ]
@@ -234,7 +247,8 @@ export default new Router({
       name: '404Page',
       component: FallbackComponent,
       meta: {
-        title: 'Noch im Bau'
+        title: 'Noch im Bau',
+        showBackButton: true
       }
     }
   ]

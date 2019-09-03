@@ -1,6 +1,9 @@
 <template>
-<div id="navWrapper">
-      <Push>
+  <div class="hiddenDiv">
+    <span class="invisibleUpdateForcerSpan">{{$route.name}}</span>
+
+<div v-if="showNav" id="navWrapper">
+      <Push >
         <router-link to="/home">Startseite</router-link>
        <!-- <router-link to="/login">Login</router-link> -->
         <router-link to="/campaigns">Kampagnenauswahl</router-link>
@@ -13,7 +16,10 @@
      <!--   <router-link to="/structures">Befunde</router-link>
         <router-link to="/finds">Funde</router-link> -->
       </Push>
+
 </div>
+  </div>
+
 </template>
 
 <script>
@@ -24,14 +30,41 @@ export default {
   components: {
     Push // Register your component
   },
+  data: function () {
+    return {
+      showNav: true
+    }
+  },
   methods: {
-    handleClick: function () { alert('asd') }
+    handleClick: function () { alert('asd') },
+    backButtonToggle () {
+
+      if(this.$route.meta.showBackButton != true) this.showNav = true
+      else this.showNav = false
+      console.log("toggle")
+      console.log(this.showNav)
+    }
+  },
+  created () {
+    this.backButtonToggle()
+  },
+  updated () {
+    console.log("UPDATE NAV")
+    this.backButtonToggle()
   }
 }
 
 </script>
 
 <style >
+
+  div.hiddenDiv {
+    height:0
+  }
+
+  span.invisibleUpdateForcerSpan{
+visibility: hidden;
+  }
 
   div#navWrapper{
     position: fixed !important;

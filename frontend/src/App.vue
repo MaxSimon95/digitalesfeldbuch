@@ -1,7 +1,10 @@
 /* eslint-disable */
 <template>
   <div id="app">
-    <Navigation msg="test"/>
+    <div class="navWrapOuter">
+      <Navigation msg="test"/>
+    </div>
+
     <div id="page-wrap">
       <AppHeader/>
       <!-- <img src="./assets/logo.png"> -->
@@ -17,8 +20,6 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import VueCookies from 'vue-cookies'
 
-VueCookies.set('beispielcooki', 'beispielwert')
-console.log(VueCookies.get('beispielcooki'))
 
 export default {
   name: 'App',
