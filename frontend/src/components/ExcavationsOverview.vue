@@ -96,6 +96,12 @@ export default {
   beforeMount () {
       this.getExcavations()
   },
+    even: function(arr) {
+        // Set slice() to avoid to generate an infinite loop!
+        return arr.slice().sort(function(a, b) {
+            return a.item - b.item
+        })
+    },
   data: function () {
     return {
       excavations: [],

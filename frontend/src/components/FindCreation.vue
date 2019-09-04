@@ -197,6 +197,8 @@ export default {
       context.availableTypes.push("Statuette")
       context.availableTypes.push("Plastik")
       context.availableTypes.push("Rohr")
+      context.availableTypes.push("Baumaterial")
+      context.availableTypes.sort()
     },
     getMaterials: function () {
       var context = this // to enable accessing the 'contactPersons' variable inside submethods
@@ -240,7 +242,8 @@ export default {
       context.availableMaterials.push("Frei geformte Ware")
       context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
       context.availableMaterials.push("Mittelalter/Neuzeit Glas")
-
+      context.availableMaterials.push("Schiefer")
+      context.availableMaterials.sort()
     },
     logForm: function () {
       let router = this.$router // the correct 'this' is not reachable inside the dp.put call back, so it gets put into a variable.

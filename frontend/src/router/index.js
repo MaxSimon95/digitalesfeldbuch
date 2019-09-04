@@ -25,6 +25,7 @@ import SectionCreation from '@/components/SectionCreation'
 import SectionOverview from '@/components/SectionOverview'
 import FindOverview from '@/components/FindOverview'
 import StructureOverview from '@/components/StructureOverview'
+import ConstructedObjectCreation from '@/components/ConstructedObjectCreation'
 
 Vue.use(Router)
 
@@ -39,6 +40,14 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/constructedobjects',
+      name: 'ConstructedObjectCreation',
+      component: ConstructedObjectCreation,
+      meta: {
+        title: 'Ausgrabung'
+      }
     },
     {
       path: '/campaigns',
