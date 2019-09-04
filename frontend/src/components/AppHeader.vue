@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     backButtonToggle () {
-      console.log(this.$route)
+      //console.log(this.$route)
      /* switch(this.$route.name)
       {
         case "ModifyCampaign": this.backButtonShow = true; break;
@@ -63,7 +63,7 @@ export default {
       }*/
       if(this.$route.meta.showBackButton != undefined) this.backButtonShow = this.$route.meta.showBackButton
       else this.backButtonShow = false
-      console.log(this.backButtonShow)
+      //console.log(this.backButtonShow)
     }
   }
 }

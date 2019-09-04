@@ -149,7 +149,8 @@ export default new Router({
           name: 'SectionOverview',
           component: SectionOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Ausgrabung',
+            showBackButton: true
           }
         },
         {

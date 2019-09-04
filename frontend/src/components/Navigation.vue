@@ -41,15 +41,15 @@ export default {
 
       if(this.$route.meta.showBackButton != true) this.showNav = true
       else this.showNav = false
-      console.log("toggle")
-      console.log(this.showNav)
+      //console.log("toggle")
+      //console.log(this.showNav)
     }
   },
   created () {
     this.backButtonToggle()
   },
   updated () {
-    console.log("UPDATE NAV")
+    //console.log("UPDATE NAV")
     this.backButtonToggle()
   }
 }
