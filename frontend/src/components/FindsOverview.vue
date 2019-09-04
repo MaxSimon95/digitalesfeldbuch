@@ -6,8 +6,34 @@
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Funde dokumentiert.
     </p>
     <!-- List of Text Items -->
-    <div v-else>
-      <h3>Komplette Liste:</h3>
+    <div class="buttonContainer"><ion-button color="secondary"  expand="block" @click="createFind()">Neuer Fund</ion-button></div>
+    <div v-if="sectionlessFinds.length !== 0">
+      <h3>Funde mit fehlender Schnittzuordnung:</h3>
+      <ion-list>
+        <ion-item-sliding v-for="item in even(sectionlessFinds)" v-bind:key="item._id" lines="inset">
+
+          <ion-item-options side="start">
+            <ion-item-option @click="selectFind(item)">Öffnen</ion-item-option>
+          </ion-item-options>
+
+          <ion-item detail="true" @click="selectFind(item)" >
+            <ion-label>
+              <h2> Fundnr. {{item.findnumber}} </h2>
+              <p> {{item.description}} </p>
+            </ion-label>
+          </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option @click="modifyFind(item)">Bearbeiten</ion-item-option>
+            <ion-item-option color="danger" @click="deleteFind(item)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+    <div v-if="finds.length !== 0">
+      <h3>Fundliste des Schnitts:</h3>
     <ion-list>
       <ion-item-sliding v-for="item in even(finds)" v-bind:key="item._id" lines="inset">
 
@@ -31,7 +57,7 @@
       </ion-item-sliding>
     </ion-list>
     </div>
-    <ion-button color="secondary" expand="block" @click="createFind()">Neuer Fund</ion-button>
+    <!--<ion-button color="secondary" expand="block" @click="createFind()">Neuen Fund anlegen</ion-button>-->
   </div>
 
 </template>
@@ -74,10 +100,11 @@ export default {
       }).then(function (result) {
         for (let item of result.rows) {
           //if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.finds.push(item.doc)
-          console.log(item.doc.sectionnumber.trim())
-          console.log(VueCookies.get('currentSection').title.trim())
-          console.log(VueCookies.get('currentSection').title.trim()==item.doc.sectionnumber.trim())
+          //console.log(item.doc.sectionnumber.trim())
+          //console.log(VueCookies.get('currentSection').title.trim())
+          //console.log(VueCookies.get('currentSection').title.trim()==item.doc.sectionnumber.trim())
           if (item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim()) context.finds.push(item.doc)
+          if (item.doc.sectionnumber.trim() === '') context.sectionlessFinds.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
@@ -115,7 +142,8 @@ export default {
   data: function () {
     return {
       finds: [],
-      currentSectionName: 'j'
+      sectionlessFinds: [],
+      currentSectionName: ''
     }
   }
 }
@@ -135,5 +163,10 @@ h2 a{
   h3{
     text-align: left;
     padding-left: 16px;
+    font-weight: bolder;
   }
+
+.buttonContainer{
+  padding: 0 150px;
+}
 </style>

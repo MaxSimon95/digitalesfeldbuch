@@ -1,10 +1,39 @@
 <template>
   <div>
     <h1>Übersicht der Befunde</h1>
+    <h2 @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
     <p v-if="structures.length === 0">
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde dokumentiert.
     </p>
+    <div class="buttonContainer"><ion-button color="secondary"  expand="block" @click="createStructure()">Neuer Befund</ion-button></div>
     <!-- List of Text Items -->
+    <div v-if="sectionlessStructures.length !== 0">
+      <h3>Befunde mit fehlender Schnittzuordnung: </h3>
+      <ion-list>
+        <ion-item-sliding v-for="item in even(sectionlessStructures)" v-bind:key="item._id" lines="inset">
+
+          <ion-item-options side="start">
+            <ion-item-option @click="selectStructure(item)">Öffnen</ion-item-option>
+          </ion-item-options>
+
+          <ion-item detail="true" @click="selectStructure(item)" >
+            <ion-label>
+              <h2> {{item.structurenumber}} </h2>
+              <p> {{item.structurename}} </p>
+            </ion-label>
+          </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option @click="modifyStructure(item)">Bearbeiten</ion-item-option>
+            <ion-item-option color="danger" @click="deleteStructure(item)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+    <div v-if="structures.length !== 0">
+      <h3>Befundliste des Schnitts:</h3>
     <ion-list>
       <ion-item-sliding v-for="item in even(structures)" v-bind:key="item._id" lines="inset">
 
@@ -27,8 +56,10 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-    <ion-button color="secondary" expand="block" @click="createStructure()">Neuer Befund</ion-button>
+    </div>
+    <!--<ion-button color="secondary" expand="block" @click="createStructure()">Neuen Befund</ion-button>-->
   </div>
+
 </template>
 
 <script>
@@ -38,6 +69,10 @@ import {path} from '../adress.js'
 export default {
   name: 'StructuresOverview',
   methods: {
+    changeSection: function(){
+      VueCookies.set('actionForSectionSelection','goToStructures')
+      this.$router.push({ name: 'SectionsOverview'});
+    },
     getStructures: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
       var structuresdb = new PouchDB('structures_database')
@@ -63,7 +98,9 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.structures.push(item.doc)
+          //if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.structures.push(item.doc)
+          if (item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim()) context.structures.push(item.doc)
+          if (item.doc.sectionnumber.trim() === '') context.sectionlessStructures.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
@@ -95,15 +132,35 @@ export default {
   },
   beforeMount () {
     this.getStructures()
+    this.currentSectionName = VueCookies.get('currentSection').title
   },
   data: function () {
     return {
-      structures: []
+      structures: [],
+      sectionlessStructures: [],
+      currentSectionName: ''
     }
   }
 }
 </script>
 
 <style scoped>
+  h2 a{
+    text-decoration: none;
+  }
 
+  h2 ion-button{
+    position: relative;
+    top: -8px
+  }
+
+  h3{
+    text-align: left;
+    padding-left: 16px;
+    font-weight: bolder;
+  }
+
+  .buttonContainer{
+    padding: 0 150px;
+  }
 </style>

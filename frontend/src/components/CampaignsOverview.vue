@@ -1,9 +1,12 @@
 <template>
     <div>
+      <h1>Auswahl einer übergeordneten Kampagne</h1>
       <p v-if="campaigns.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Kampagnen angelegt.
       </p>
       <!-- List of Text Items -->
+      <div class="buttonContainer"><ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button></div>
+      <!--<ion-button color="secondary" expand="block" @click="synccampaigns()">Synchronisieren</ion-button>-->
       <ion-list>
         <ion-item-sliding v-for="item in even(campaigns)" v-bind:key="item._id" lines="inset">
 
@@ -26,8 +29,7 @@
           </ion-item-options>
         </ion-item-sliding>
       </ion-list>
-          <ion-button color="secondary" expand="block" @click="createCampaign()">Neue Kampagne</ion-button>
-          <!--<ion-button color="secondary" expand="block" @click="synccampaigns()">Synchronisieren</ion-button>-->
+
     </div>
 </template>
 
@@ -116,4 +118,7 @@ export default {
 </script>
 
 <style scoped>
+  .buttonContainer{
+    padding: 0 150px;
+  }
 </style>
