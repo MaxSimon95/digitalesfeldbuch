@@ -298,6 +298,7 @@ export default {
       context.availableMaterials.push("Frei geformte Ware")
       context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
       context.availableMaterials.push("Mittelalter/Neuzeit Glas")
+      context.availableMaterials.push("Muschel")
     },
     logForm: function () {
       let router = this.$router // the corre'form'is' is not reachable inside the dp.put call back, so it gets put into a variable.
