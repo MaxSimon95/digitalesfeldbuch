@@ -6,17 +6,20 @@
         <span class="bm-burger-bars line-style help-burger" style="top: 40%"></span>
         <span class="bm-burger-bars line-style help-burger" style="top: 80%"></span>
       </div>
-      <h1>
-        {{ $route.meta.title }}
-      </h1>
+      <DynamicTitle/>
+      <!-- the following is a fake, to have vue throw update events for this component on a route change -->
+      <span>{{$route.meta.title}}</span>
     </div>
 </template>
 
 <script>
   import BackButton from './BackButton.vue'
+  import VueCookies from 'vue-cookies'
+  import DynamicTitle from "./DynamicTitle";
 export default {
   name: 'AppHeader',
   components: {
+    DynamicTitle,
     BackButton
   },
   created () {
@@ -70,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+
+  span{
+    display:none;
+  }
 
   h1{
     position: fixed;

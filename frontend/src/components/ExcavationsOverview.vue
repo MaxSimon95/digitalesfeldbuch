@@ -1,5 +1,6 @@
 <template>
   <div id="excavationsWrapper">
+    <div class="buttonContainer"><ion-button color="secondary" expand="block" @click="createExcavation()">Neue Ausgrabung</ion-button></div>
     <!-- List of Text Items -->
     <h2>Zugehörige Ausgrabungen</h2>
     <p v-if="excavations.length === 0">
@@ -30,7 +31,7 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-    <ion-button color="secondary" expand="block" @click="createExcavation()">Neue Ausgrabung</ion-button>
+
   </div>
 </template>
 
@@ -115,5 +116,9 @@ export default {
 <style scoped>
   #excavationsWrapper{
     border-top: 1px solid var(--ion-color-medium-tint);
+  }
+
+  .buttonContainer{
+    padding: 0 150px;
   }
 </style>

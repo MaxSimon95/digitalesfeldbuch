@@ -5,6 +5,7 @@
     <p v-if="sections.length === 0">
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte dokumentiert.
     </p>
+    <div class="buttonContainer"><ion-button color="secondary" expand="block" @click="createSection()">Neuer Schnitt</ion-button></div>
     <ion-list>
       <ion-item-sliding v-for="item in even(sections)" v-bind:key="item._id" lines="inset">
 
@@ -28,7 +29,7 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-    <ion-button color="secondary" expand="block" @click="createSection()">Neuer Schnitt</ion-button>
+
   </div>
 
 </template>
@@ -75,7 +76,14 @@ export default {
     selectSection: function (item) {
       VueCookies.set('currentSection', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'SectionOverview'})
+      switch(VueCookies.get('actionForSectionSelection'))
+      {
+        case 'goToFinds': this.$router.push({ name: 'FindsOverview'}); break;
+        case 'goToStructures': this.$router.push({ name: 'StructuresOverview'}); break;
+        case 'goToProbes': this.$router.push({ name: 'ProbesOverview'}); break;
+        default:  this.$router.push({ name: 'SectionOverview'}); break;
+      }
+
     }, // TODO
 
     createSection: function () {
@@ -98,6 +106,9 @@ export default {
   created () {
     this.getSections()
   },
+  beforeDestroy(){
+    VueCookies.set('actionForSectionSelection','standard')
+  },
   data: function () {
       return {
           sections: []
@@ -113,5 +124,7 @@ export default {
 </style>
 
 <style scoped>
-
+  .buttonContainer{
+    padding: 0 150px;
+  }
 </style>
