@@ -8,7 +8,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">Befundnummer (SE)</ion-label>
+      <ion-label position="stacked">Kurzansprache</ion-label>
       <ion-input v-on:ionInput="structurename=$event.target.value" :value=structurename ></ion-input>
     </ion-item>
 

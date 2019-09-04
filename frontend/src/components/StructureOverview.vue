@@ -56,6 +56,7 @@ export default {
   data: function () {
     return {
       structurenumber: '',
+      structurename:'',
       sectionnumber: '',
       description: '',
       extension: '',
@@ -82,6 +83,7 @@ export default {
     context._id = VueCookies.get('currentStructure')._id
     structuresdb.get(context._id).then(function (result) {
       context.structurenumber = result.structurenumber
+      context.structurename = result.structurename
       context.sectionnumber = result.sectionnumber
       context.description = result.description
       context.extension = result.extension

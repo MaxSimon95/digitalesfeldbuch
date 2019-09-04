@@ -150,7 +150,7 @@ export default new Router({
           name: 'SectionsOverview',
           component: SectionsOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Schnitte'
           }
         },
         {
@@ -158,7 +158,7 @@ export default new Router({
           name: 'SectionOverview',
           component: SectionOverview,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Schnitt',
             showBackButton: true
           }
         },
@@ -167,7 +167,7 @@ export default new Router({
           name: 'CreateSection',
           component: SectionCreation,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Schnitt anlegen',
             showBackButton: true
           }
         },
@@ -176,7 +176,7 @@ export default new Router({
           name: 'ModifySection',
           component: SectionModification,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Schnitt bearbeiten',
             showBackButton: true
           }
         },
@@ -185,7 +185,7 @@ export default new Router({
           name: 'FindsOverview',
           component: FindsOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Funde'
           }
         },
         {
@@ -193,7 +193,7 @@ export default new Router({
           name: 'FindOverview',
           component: FindOverview,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Fund',
             showBackButton: true
           }
         },
@@ -202,7 +202,7 @@ export default new Router({
           name: 'FindModification',
           component: FindModification,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Fund bearbeiten',
             showBackButton: true
           }
         },
@@ -211,7 +211,7 @@ export default new Router({
           name: 'FindCreation',
           component: FindCreation,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Fund anlegen',
             showBackButton: true
           }
         },
@@ -220,7 +220,7 @@ export default new Router({
           name: 'StructuresOverview',
           component: StructuresOverview,
           meta: {
-            title: 'Ausgrabung'
+            title: 'Befunde (SE)'
           }
         },
         {
@@ -228,7 +228,7 @@ export default new Router({
           name: 'StructureOverview',
           component: StructureOverview,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Befund (SE)',
             showBackButton: true
           }
         },
@@ -237,7 +237,7 @@ export default new Router({
           name: 'StructureModification',
           component: StructureModification,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Befund bearbeiten',
             showBackButton: true
           }
         },
@@ -246,7 +246,7 @@ export default new Router({
           name: 'StructureCreation',
           component: StructureCreation,
           meta: {
-            title: 'Ausgrabung',
+            title: 'Befund anlegen',
             showBackButton: true
           }
         }
