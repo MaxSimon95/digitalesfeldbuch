@@ -1,9 +1,10 @@
 <template>
   <div>
     <h1>Übersicht der Funde</h1>
-    <h2 @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
+    <h2 v-if="currentSectionName === ''" @click="changeSection"> <ion-button>Zugehörigen Schnitt wählen</ion-button></h2>
+    <h2 v-else @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
     <p v-if="finds.length === 0">
-      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Funde dokumentiert.
+      <ion-icon name="information-circle"></ion-icon> Es wurde kein Schnitt ausgewählt oder es wurden bisher noch keine Funde für den Schnitt dokumentiert.
     </p>
     <!-- List of Text Items -->
     <div class="buttonContainer"><ion-button color="secondary"  expand="block" @click="createFind()">Neuer Fund</ion-button></div>
@@ -103,7 +104,7 @@ export default {
           //console.log(item.doc.sectionnumber.trim())
           //console.log(VueCookies.get('currentSection').title.trim())
           //console.log(VueCookies.get('currentSection').title.trim()==item.doc.sectionnumber.trim())
-          if (item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim()) context.finds.push(item.doc)
+          if ((VueCookies.get('currentSection')!= null)&&(item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim())) context.finds.push(item.doc)
           if (item.doc.sectionnumber.trim() === '') context.sectionlessFinds.push(item.doc)
         }
       }).catch(function (err) {
@@ -136,7 +137,9 @@ export default {
     deleteFind: function (item) { } // TODO: change campaign
   },
   created () {
-    this.currentSectionName = VueCookies.get('currentSection').title
+    if(VueCookies.get('currentSection')==null) this.currentSectionName=''
+     else this.currentSectionName = VueCookies.get('currentSection').title
+   // console.log(VueCookies.get('currentSection'))
     this.getFinds()
   },
   data: function () {

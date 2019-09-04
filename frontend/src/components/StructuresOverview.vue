@@ -1,9 +1,10 @@
 <template>
   <div>
     <h1>Übersicht der Befunde</h1>
-    <h2 @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
+    <h2 v-if="currentSectionName === ''"@click="changeSection"> <ion-button>Zugehörigen Schnitt wählen</ion-button></h2>
+    <h2 v-else @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
     <p v-if="structures.length === 0">
-      <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Befunde dokumentiert.
+      <ion-icon name="information-circle"></ion-icon> Es wurde kein Schnitt gewählt oder es wurden bisher noch keine Befunde dokumentiert.
     </p>
     <div class="buttonContainer"><ion-button color="secondary"  expand="block" @click="createStructure()">Neuer Befund</ion-button></div>
     <!-- List of Text Items -->
@@ -99,7 +100,7 @@ export default {
       }).then(function (result) {
         for (let item of result.rows) {
           //if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.structures.push(item.doc)
-          if (item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim()) context.structures.push(item.doc)
+          if ((VueCookies.get('currentSection')!= null)&&(item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim())) context.structures.push(item.doc)
           if (item.doc.sectionnumber.trim() === '') context.sectionlessStructures.push(item.doc)
         }
       }).catch(function (err) {
@@ -131,8 +132,10 @@ export default {
     deleteStructure: function (item) { } // TODO: change campaign
   },
   beforeMount () {
+    if(VueCookies.get('currentSection')==null) this.currentSectionName=''
+    else this.currentSectionName = VueCookies.get('currentSection').title
     this.getStructures()
-    this.currentSectionName = VueCookies.get('currentSection').title
+    //this.currentSectionName = VueCookies.get('currentSection').title
   },
   data: function () {
     return {
