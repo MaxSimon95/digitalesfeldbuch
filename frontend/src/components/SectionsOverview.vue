@@ -75,7 +75,14 @@ export default {
     selectSection: function (item) {
       VueCookies.set('currentSection', item)
       // eslint-disable-next-line standard/object-curly-even-spacing
-      this.$router.push({ name: 'SectionOverview'})
+      switch(VueCookies.get('actionForSectionSelection'))
+      {
+        case 'goToFinds': this.$router.push({ name: 'FindsOverview'}); break;
+        case 'goToStructures': this.$router.push({ name: 'StructuresOverview'}); break;
+        case 'goToProbes': this.$router.push({ name: 'ProbesOverview'}); break;
+        default:  this.$router.push({ name: 'SectionOverview'}); break;
+      }
+
     }, // TODO
 
     createSection: function () {
@@ -97,6 +104,9 @@ export default {
   },
   created () {
     this.getSections()
+  },
+  beforeDestroy(){
+    VueCookies.set('actionForSectionSelection','standard')
   },
   data: function () {
       return {

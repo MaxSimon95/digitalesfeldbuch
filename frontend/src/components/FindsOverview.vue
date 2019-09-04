@@ -1,10 +1,13 @@
 <template>
   <div>
     <h1>Übersicht der Funde</h1>
+    <h2 @click="changeSection">Ausgewählter Schnitt: {{this.currentSectionName}} <ion-button>Ändern</ion-button></h2>
     <p v-if="finds.length === 0">
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Funde dokumentiert.
     </p>
     <!-- List of Text Items -->
+    <div v-else>
+      <h3>Komplette Liste:</h3>
     <ion-list>
       <ion-item-sliding v-for="item in even(finds)" v-bind:key="item._id" lines="inset">
 
@@ -27,8 +30,10 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
+    </div>
     <ion-button color="secondary" expand="block" @click="createFind()">Neuer Fund</ion-button>
   </div>
+
 </template>
 
 <script>
@@ -38,6 +43,10 @@ import {path} from '../adress.js'
 export default {
   name: 'FindsOverview',
   methods: {
+    changeSection: function(){
+      VueCookies.set('actionForSectionSelection','goToFinds')
+      this.$router.push({ name: 'SectionsOverview'});
+    },
     getFinds: function () {
       var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
       var findsdb = new PouchDB('finds_database')
@@ -64,7 +73,11 @@ export default {
         attachments: true
       }).then(function (result) {
         for (let item of result.rows) {
-          if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.finds.push(item.doc)
+          //if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.finds.push(item.doc)
+          console.log(item.doc.sectionnumber.trim())
+          console.log(VueCookies.get('currentSection').title.trim())
+          console.log(VueCookies.get('currentSection').title.trim()==item.doc.sectionnumber.trim())
+          if (item.doc.sectionnumber.trim() === VueCookies.get('currentSection').title.trim()) context.finds.push(item.doc)
         }
       }).catch(function (err) {
         console.log(err)
@@ -95,12 +108,14 @@ export default {
 
     deleteFind: function (item) { } // TODO: change campaign
   },
-  beforeMount () {
+  created () {
+    this.currentSectionName = VueCookies.get('currentSection').title
     this.getFinds()
   },
   data: function () {
     return {
-      finds: []
+      finds: [],
+      currentSectionName: 'j'
     }
   }
 }
@@ -108,5 +123,17 @@ export default {
 </script>
 
 <style scoped>
+h2 a{
+  text-decoration: none;
+}
 
+  h2 ion-button{
+    position: relative;
+    top: -8px
+  }
+
+  h3{
+    text-align: left;
+    padding-left: 16px;
+  }
 </style>
