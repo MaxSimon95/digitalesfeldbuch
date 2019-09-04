@@ -6,7 +6,7 @@
       <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte dokumentiert.
     </p>
     <ion-list>
-      <ion-item-sliding v-for="item in sections" v-bind:key="item._id" lines="inset">
+      <ion-item-sliding v-for="item in even(sections)" v-bind:key="item._id" lines="inset">
 
         <ion-item-options side="start">
           <ion-item-option @click="selectSection(item)">Öffnen</ion-item-option>
@@ -87,17 +87,23 @@ export default {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'ModifySection', params: { _id: item._id }})
     }, // TODO
-
+      even: function(arr) {
+          // Set slice() to avoid to generate an infinite loop!
+          return arr.slice().sort(function(a, b) {
+              return a.title - b.title
+          })
+      },
     deleteSection: function (item) { } // TODO: change campaign
   },
   created () {
     this.getSections()
   },
   data: function () {
-    return {
-      sections: []
-    }
+      return {
+          sections: []
+      }
   }
+
 }
 
 </script>

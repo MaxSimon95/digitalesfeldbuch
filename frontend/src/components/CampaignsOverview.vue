@@ -5,7 +5,7 @@
       </p>
       <!-- List of Text Items -->
       <ion-list>
-        <ion-item-sliding v-for="item in campaigns" v-bind:key="item._id" lines="inset">
+        <ion-item-sliding v-for="item in even(campaigns)" v-bind:key="item._id" lines="inset">
 
           <ion-item-options side="start">
             <ion-item-option @click="selectCampaign(item)">Öffnen</ion-item-option>
@@ -91,8 +91,14 @@ export default {
     },
 
     synccampaigns: function(){
-        var campaignsremoteDB = new PouchDB(path + '/campaigns')
-        campaignsdb.sync(campaignsremoteDB)
+      var campaignsremoteDB = new PouchDB(path + '/campaigns')
+      campaignsdb.sync(campaignsremoteDB)
+    },
+    even: function(arr) {
+      // Set slice() to avoid to generate an infinite loop!
+      return arr.slice().sort(function (a, b) {
+        return a.title - b.title
+      })
     },
 
     deleteCampaign: function (item) { } // TODO: change campaign

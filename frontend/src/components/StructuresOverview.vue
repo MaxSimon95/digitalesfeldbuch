@@ -6,7 +6,7 @@
     </p>
     <!-- List of Text Items -->
     <ion-list>
-      <ion-item-sliding v-for="item in structures" v-bind:key="item._id" lines="inset">
+      <ion-item-sliding v-for="item in even(structures)" v-bind:key="item._id" lines="inset">
 
         <ion-item-options side="start">
           <ion-item-option @click="selectStructure(item)">Öffnen</ion-item-option>
@@ -15,7 +15,7 @@
         <ion-item detail="true" @click="selectStructure(item)" >
           <ion-label>
             <h2> {{item.structurenumber}} </h2>
-            <p> {{item.description}} </p>
+            <p> {{item.structurename}} </p>
           </ion-label>
         </ion-item>
 
@@ -68,7 +68,6 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
-      context.structures.sort()
     },
     selectStructure: function (item) {
       VueCookies.set('currentStructure', item)
@@ -85,6 +84,12 @@ export default {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'StructureModification', params: { _id: item._id }})
     },
+      even: function(arr) {
+          // Set slice() to avoid to generate an infinite loop!
+          return arr.slice().sort(function(a, b) {
+              return a.structurenumber - b.structurenumber;
+          });
+      },
 
     deleteStructure: function (item) { } // TODO: change campaign
   },

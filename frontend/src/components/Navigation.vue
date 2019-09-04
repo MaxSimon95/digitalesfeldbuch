@@ -11,6 +11,7 @@
         <router-link to="/excavation/sections">Schnitte</router-link>
         <router-link to="/excavation/structures">Befunde (SE)</router-link>
         <router-link to="/excavation/finds">Funde</router-link>
+        <!--router-link to="/constructedobjects">Baulicher Bestand</1--router-link-->
         <hr>
         <!--<router-link to="/administration">Verwaltung</router-link>-->
      <!--   <router-link to="/structures">Befunde</router-link>

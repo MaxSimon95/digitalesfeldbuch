@@ -7,6 +7,11 @@
       <ion-input v-on:ionInput="structurenumber=$event.target.value" placeholder="Geben sie hier die Befundnummer ein" ></ion-input>
     </ion-item>
 
+    <ion-item>
+      <ion-label position="stacked">Kurzansprache</ion-label>
+      <ion-input v-on:ionInput="structurename=$event.target.value" placeholder="Geben Sie hier die Kurzansprache des Befundes an"></ion-input>
+    </ion-item>
+
     <ion-item >Schnitt
       <p v-if="availableSections.length === 0">
         <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
@@ -211,6 +216,7 @@ export default {
     return {
       structurenumber: '',
       sectionnumber: '',
+      structurename: '',
       description: '',
       overlayDisplay: 'none',
       //soil: '',
@@ -308,6 +314,7 @@ export default {
         _id: this.findnumber + new Date().toISOString(),
         structurenumber: this.structurenumber,
         sectionnumber: this.sectionnumber,
+        structurename: this.structurename,
         description: this.description,
         date: new Date().toDateString(),
         excavation: this.excavation,

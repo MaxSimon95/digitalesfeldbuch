@@ -240,7 +240,8 @@ export default {
       context.availableTypes.push("Statuette")
       context.availableTypes.push("Plastik")
       context.availableTypes.push("Rohr")
-
+      context.availableTypes.push("Baumaterial")
+      context.availableTypes.sort()
     },
     getSections(){
       let context = this
@@ -299,6 +300,8 @@ export default {
       context.availableMaterials.push("Mittelalter/Neuzeit Keramik")
       context.availableMaterials.push("Mittelalter/Neuzeit Glas")
       context.availableMaterials.push("Muschel")
+      context.availableMaterials.push("Schiefer")
+      context.availableMaterials.sort()
     },
     logForm: function () {
       let router = this.$router // the corre'form'is' is not reachable inside the dp.put call back, so it gets put into a variable.

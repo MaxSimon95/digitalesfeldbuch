@@ -2,6 +2,7 @@
   <div class="contentContainer">
     <h1> Detailansicht Befund (SE)</h1>
     <p> <span class="bolder">Befundnummer: </span>{{structurenumber}}</p>
+    <p> <span class="bolder">Kurzansprache: {{structurename}}</span></p>
     <p> <span class="bolder">zugehöriger Schnitt: </span> {{sectionnumber}}</p>
     <p> <span class="bolder">Maße: </span> {{measurings}}</p>
     <p> <span class="bolder">Niveau: </span> {{niveau}}</p>

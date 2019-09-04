@@ -6,7 +6,7 @@
     </p>
     <!-- List of Text Items -->
     <ion-list>
-      <ion-item-sliding v-for="item in finds" v-bind:key="item._id" lines="inset">
+      <ion-item-sliding v-for="item in even(finds)" v-bind:key="item._id" lines="inset">
 
         <ion-item-options side="start">
           <ion-item-option @click="selectFind(item)">Öffnen</ion-item-option>
@@ -86,6 +86,12 @@ export default {
       // eslint-disable-next-line standard/object-curly-even-spacing
       this.$router.push({ name: 'FindModification', params: { _id: item._id }})
     },
+      even: function(arr) {
+          // Set slice() to avoid to generate an infinite loop!
+          return arr.slice().sort(function(a, b) {
+              return a.findnumber - b.findnumber
+          })
+      },
 
     deleteFind: function (item) { } // TODO: change campaign
   },
