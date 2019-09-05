@@ -6,19 +6,87 @@
         <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie die Bezeichnung des Schnitts ein" ></ion-input>
       </ion-item>
 
-      <!--ion-item>
-        <ion-label position="stacked"> Erhalten </ion-label>
-        <ion-checkbox slot="end" v-on:input="conserved_length = $event.trigger.value" v-bind:value="">         </ion-checkbox>
-      </ion-item-->
-
-      <!--
       <ion-item>
-        <ion-label position="stacked">Ist die Ausgrabung aktiv?</ion-label>
-        <div >
-          <ion-toggle checked></ion-toggle>
-        </div>
+        <ion-label position="stacked">Länge</ion-label>
+        <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie die Länge des Schnitts ein" ></ion-input>
       </ion-item>
-      -->
+
+      <ion-item>
+        <ion-label position="stacked"> Erhalten </ion-label>
+        <ion-checkbox slot="start" v-on:input="conserved_length = $event.target.value" v-bind:value="conserved_length"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Original </ion-label>
+        <ion-checkbox slot="start" v-on:input="original_length = $event.target.value" v-bind:value="original_length"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Sichtbar </ion-label>
+        <ion-checkbox slot="start" v-on:input="visible_length = $event.target.value" v-bind:value="visible_length"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Breite</ion-label>
+        <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie die Breite des Schnitts ein" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Erhalten </ion-label>
+        <ion-checkbox slot="start" v-on:input="conserved_width = $event.target.value" v-bind:value="conserved_width"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Original </ion-label>
+        <ion-checkbox slot="start" v-on:input="original_width = $event.target.value" v-bind:value="original_width"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Sichtbar </ion-label>
+        <ion-checkbox slot="start" v-on:input="visible_width = $event.target.value" v-bind:value="visible_width"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Höhe am</ion-label>
+        <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie die Höhe am des Schnitts ein" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Erhalten </ion-label>
+        <ion-checkbox slot="start" v-on:input="conserved_height_am = $event.target.value" v-bind:value="conserved_height_am"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Original </ion-label>
+        <ion-checkbox slot="start" v-on:input="original_height_am = $event.target.value" v-bind:value="original_height_am"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Sichtbar </ion-label>
+        <ion-checkbox slot="start" v-on:input="visible_height_am = $event.target.value" v-bind:value="visible_height_am"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Höhe fm</ion-label>
+        <ion-input v-on:ionInput="title=$event.target.value" placeholder="Geben Sie die Höhe fm des Schnitts ein" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Erhalten </ion-label>
+        <ion-checkbox slot="start" v-on:input="conserved_height_fm = $event.target.value" v-bind:value="conserved_height_fm"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Original </ion-label>
+        <ion-checkbox slot="start" v-on:input="original_height_fm = $event.target.value" v-bind:value="original_height_fm"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"> Sichtbar </ion-label>
+        <ion-checkbox slot="start" v-on:input="visible_height_fm = $event.target.value" v-bind:value="visible_height_fm"></ion-checkbox>
+      </ion-item>
+
+      <!--ion-label position="stacked"> Bauart</ion-label-->
 
       <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
       <ion-button @click="goBack()"> Abbrechen </ion-button>
@@ -30,6 +98,7 @@
 <script>
 import VueCookies from 'vue-cookies'
 import {path} from '../adress.js'
+import * as $event from "webpack/lib/LibraryTemplatePlugin";
 
 var PouchDB = require('pouchdb-browser').default // doesn'T work without '.default' despite documentation, solution found in some github issuetracker
 var constructedOjectDB = new PouchDB('constructedobject_database') // creates new database or opens existing one
