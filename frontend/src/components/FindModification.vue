@@ -51,6 +51,12 @@
         </p>
         <ion-select interface="popover" v-on:ionChange="affiliatedMaterial=$event.target.value">
 
+          <ion-select-option v-for="item in lastUsedMaterials" v-bind:key="'A'+item" lines="inset" v-bind:value="item" >
+            <ion-text>
+              Zuletzt: {{item}}
+            </ion-text>
+          </ion-select-option>
+
           <ion-select-option v-if="item !== affiliatedMaterial" v-for="item in availableMaterials" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
             <ion-text>
               {{item}}
@@ -65,11 +71,17 @@
       </ion-item>
 
       <ion-item >
-        Fundart
+        Typ
         <p v-if="availableTypes.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Typen hinterlegt.
         </p>
-        <ion-select interface="popover" v-on:ionChange="type=$event.target.value">
+        <ion-select v-else interface="popover" v-on:ionChange="type=$event.target.value">
+
+          <ion-select-option v-for="item in lastUsedTypes" v-bind:key="'lut'+item" lines="inset" v-bind:value="item">
+            <ion-text>
+              Zuletzt: {{item}}
+            </ion-text>
+          </ion-select-option>
 
           <ion-select-option v-for="item in availableTypes" v-if="item !== type" v-bind:key="item" lines="inset" v-bind:value="item" selected="false">
             <ion-text>
@@ -147,6 +159,8 @@ export default {
       type: '',
       availableMaterials: [],
       availableTypes: [],
+      lastUsedMaterials: [],
+      lastUsedTypes: [],
       availableStructures: [],
       affiliatedMaterial: '',
       tachymeterid: '',
@@ -242,6 +256,12 @@ export default {
       context.availableTypes.push("Rohr")
       context.availableTypes.push("Baumaterial")
       context.availableTypes.sort()
+
+
+      if (VueCookies.get("lastUsedType1") != null) context.lastUsedTypes.push(VueCookies.get("lastUsedType1"))
+      if (VueCookies.get("lastUsedType2") != null) context.lastUsedTypes.push(VueCookies.get("lastUsedType2"))
+      if (VueCookies.get("lastUsedType3") != null) context.lastUsedTypes.push(VueCookies.get("lastUsedType3"))
+
     },
     getSections(){
       let context = this
@@ -302,8 +322,45 @@ export default {
       context.availableMaterials.push("Muschel")
       context.availableMaterials.push("Schiefer")
       context.availableMaterials.sort()
+
+
+      if(VueCookies.get("lastUsedMaterial1")!=null)context.lastUsedMaterials.push(VueCookies.get("lastUsedMaterial1"))
+      if(VueCookies.get("lastUsedMaterial2")!=null)context.lastUsedMaterials.push(VueCookies.get("lastUsedMaterial2"))
+      if(VueCookies.get("lastUsedMaterial3")!=null)context.lastUsedMaterials.push(VueCookies.get("lastUsedMaterial3"))
+
+      console.log(context.lastUsedMaterials)
     },
     logForm: function () {
+      // update last used materials and types
+      if(
+        (
+          (this.affiliatedMaterial!==VueCookies.get("lastUsedMaterial1"))
+          &&(this.affiliatedMaterial!==VueCookies.get("lastUsedMaterial2"))
+        )&&(this.affiliatedMaterial!==VueCookies.get("lastUsedMaterial3"))
+      )
+      {
+
+        if(VueCookies.get("lastUsedMaterial2")!=null)
+          VueCookies.set("lastUsedMaterial3",VueCookies.get("lastUsedMaterial2"))
+        if(VueCookies.get("lastUsedMaterial1")!=null)
+          VueCookies.set("lastUsedMaterial2",VueCookies.get("lastUsedMaterial1"))
+        VueCookies.set("lastUsedMaterial1", this.affiliatedMaterial)
+      }
+
+      if (
+        (
+          (this.type !== VueCookies.get("lastUsedType1"))
+          && (this.type !== VueCookies.get("lastUsedType2"))
+        ) && (this.type !== VueCookies.get("lastUsedType3"))
+        && (this.type !== '')
+      ) {
+
+        if (VueCookies.get("lastUsedType2") != null)
+          VueCookies.set("lastUsedType3", VueCookies.get("lastUsedType2"))
+        if (VueCookies.get("lastUsedType1") != null)
+          VueCookies.set("lastUsedType2", VueCookies.get("lastUsedType1"))
+        VueCookies.set("lastUsedType1", this.type)
+      }
       let router = this.$router // the corre'form'is' is not reachable inside the dp.put call back, so it gets put into a variable.
       // eslint-disable-next-line standard/object-curly-even-spacing
       let find = {
