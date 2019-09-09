@@ -11,7 +11,7 @@
         <p v-if="availableSections.length === 0">
           <ion-icon name="information-circle"></ion-icon> Es wurden bisher noch keine Schnitte angelegt.
         </p>
-        <ion-select v-else interface="popover" v-on:ionChange="sectionnumber=$event.target.value">
+        <ion-select v-else interface="popover" v-on:ionChange="selectSection($event.target.value)">
 
           <ion-select-option v-if="item.title !== sectionnumber" v-for="item in availableSections" v-bind:key="item._id" lines="inset" v-bind:value="item.sectionnumber" selected="false">
             <ion-text>
@@ -169,6 +169,7 @@ export default {
       date: '',
       excavationId: '',
       availableSections: [],
+      sectionHasBeenSelected: false,
       // eslint-disable-next-line vue/no-reserved-keys
       _id: 0,
       // eslint-disable-next-line vue/no-reserved-keys
@@ -214,6 +215,13 @@ export default {
     this._rev = context._rev
   },
   methods: {
+    selectSection(section_value){
+      this.sectionHasBeenSelected = true
+      this.sectionnumber = section_value
+      this.availableStructures = []
+      this.getStructures()
+
+    },/*
     getStructures(){
       let context = this
       db_structures.allDocs({
@@ -222,6 +230,38 @@ export default {
       }).then(function (result) {
         for (let item of result.rows) {
           if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+
+        }
+      })
+    },*/
+    getStructures() {
+      let context = this
+      db_structures.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then(function (result) {
+        for (let item of result.rows) {
+
+          if(context.sectionHasBeenSelected)
+          {
+            //console.log("Section has been selected")
+            if (item.doc.sectionnumber.trim() === context.sectionnumber.trim())
+            {
+             // console.log("Section HIT")
+              context.availableStructures.push(item.doc)
+            }
+            else {
+              //console.log("Section MISS")
+            }
+            //console.log(item.doc.sectionnumber)
+            //console.log(context.sectionnumber)
+
+          }
+          else {
+            //console.log("Section has NOT been selected")
+            if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+          }
+
 
         }
       })

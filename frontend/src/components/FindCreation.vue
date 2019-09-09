@@ -4,22 +4,16 @@
     <form>
       <ion-item>
         <ion-label position="stacked">Fundnummer</ion-label>
-        <ion-input v-on:ionInput="findnumber=$event.target.value"
-                   placeholder="Geben sie hier die Fundnummer ein"></ion-input>
+        <ion-input v-on:ionInput="findnumber=$event.target.value" placeholder="Geben sie hier die Fundnummer ein"></ion-input>
       </ion-item>
-
-      <!-- <ion-item>
-        <ion-label position="stacked">Befund</ion-label>
-        <ion-input v-on:ionInput="structurenumber=$event.target.value" type="number" placeholder="Wählen Sie hier den zugehörigen Befund aus" ></ion-input>
-      </ion-item> -->
 
       <ion-item>Schnitt
         <p v-if="availableSections.length === 0">
           <ion-icon name="information-circle"></ion-icon>
           Es wurden bisher noch keine Schnitte angelegt.
         </p>
-        <ion-select v-else interface="popover" placeholder="zugehöriger Schnitt"
-                    v-on:ionChange="sectionnumber=$event.target.value">
+        <ion-select v-else interface="popover" placeholder="zugehöriger Schnitt" v-on:ionChange="selectSection($event.target.value)">
+                    <!-- v-on:ionChange="sectionnumber=$event.target.value"> -->
 
           <ion-select-option v-for="item in availableSections" v-bind:key="item._id" lines="inset"
                              v-bind:value="item.sectionnumber">
@@ -37,6 +31,7 @@
         </p>
         <ion-select v-else interface="popover" placeholder="zugehöriger Befund"
                     v-on:ionChange="structurenumber=$event.target.value">
+
 
           <ion-select-option v-for="item in availableStructures" v-bind:key="item._id" lines="inset"
                              v-bind:value="item.structurenumber">
@@ -165,7 +160,8 @@
         affiliatedMaterial: '',
         availableTypes: [],
         availableStructures: [],
-        availableSections: []
+        availableSections: [],
+        sectionHasBeenSelected: false
       }
     },
     beforeMount() {
@@ -175,6 +171,13 @@
       this.getSections()
     },
     methods: {
+      selectSection(section_value){
+        this.sectionHasBeenSelected = true
+        this.sectionnumber = section_value
+        this.availableStructures = []
+        this.getStructures()
+
+      },
       getStructures() {
         let context = this
         db_structures.allDocs({
@@ -182,7 +185,27 @@
           attachments: true
         }).then(function (result) {
           for (let item of result.rows) {
-            if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+
+            if(context.sectionHasBeenSelected)
+            {
+              //console.log("Section has been selected")
+              if (item.doc.sectionnumber.trim() === context.sectionnumber.trim())
+              {
+               // console.log("Section HIT")
+                context.availableStructures.push(item.doc)
+              }
+              else {
+                //console.log("Section MISS")
+              }
+              //console.log(item.doc.sectionnumber)
+              //console.log(context.sectionnumber)
+
+            }
+            else {
+              //console.log("Section has NOT been selected")
+              if (item.doc.excavationId === VueCookies.get('currentExcavation')._id) context.availableStructures.push(item.doc)
+            }
+
 
           }
         })
