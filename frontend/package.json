@@ -14,14 +14,19 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@babylonjs/core": "^4.0.3",
+    "@babylonjs/loaders": "^4.0.3",
     "@ionic/core": "^4.3.0",
     "@ionic/vue": "0.0.4",
+    "babylonjs": "^4.0.3",
     "chroma-js": "^2.0.4",
     "cordova-android": "^8.0.0",
     "munsell": "^0.2.0",
     "pouchdb": "^7.1.1",
     "pouchdb-browser": "^7.0.0",
     "vue": "^2.5.2",
+    "vue-3d-model": "^1.1.1",
+    "vue-babylonjs": "^1.0.0-beta.7",
     "vue-burger-menu": "^2.0.1",
     "vue-cookies": "^1.5.13",
     "vue-router": "^3.0.6"
@@ -57,7 +62,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.4",
+    "file-loader": "^1.1.11",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",

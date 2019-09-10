@@ -26,6 +26,7 @@ import SectionOverview from '@/components/SectionOverview'
 import FindOverview from '@/components/FindOverview'
 import StructureOverview from '@/components/StructureOverview'
 import ConstructedObjectCreation from '@/components/ConstructedObjectCreation'
+import Viewer3D from '@/components/Viewer3D'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/viewer3d',
+      name: 'Viewer3D',
+      component: Viewer3D
     },
     {
       path: '/home',

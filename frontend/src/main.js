@@ -11,6 +11,11 @@ Vue.config.productionTip = false
 Vue.use(IonicVue)
 Vue.use(VueCookies)
 VueCookies.config('7d')
+//Vue.use(require('vue-babylonjs'));
+import vb from 'vue-babylonjs';
+Vue.use(vb);
+import { plugin, Scene, Box, Cannon } from 'vue-babylonjs';
+Vue.use(plugin, { components: { Scene, Box, Physics: Cannon } });
 // set global cookie
 VueCookies.set('theme', 'default')
 VueCookies.set('hover-time', '1s')
