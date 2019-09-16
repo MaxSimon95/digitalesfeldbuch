@@ -1,12 +1,12 @@
 <template>
     <div class="contentWrap">
-      <h1>3D Viewer</h1>
       <ObjViewer objSource=""/>
 
     </div>
 </template>
 
 <script>
+
   import ObjViewer from "./ObjViewer";
     export default {
       components: {ObjViewer},
@@ -16,6 +16,6 @@
 
 <style scoped>
 .contentWrap{
-  padding: 20px
+  padding: 20px 0
 }
 </style>

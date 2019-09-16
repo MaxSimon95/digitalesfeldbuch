@@ -76,6 +76,7 @@
               this.$router.push({name: 'Home'});
               break;
             default:
+              this.$router.push({name: 'Home'});
               break;
           }
         }

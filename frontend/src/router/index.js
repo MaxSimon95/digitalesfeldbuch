@@ -45,7 +45,10 @@ export default new Router({
     {
       path: '/viewer3d',
       name: 'Viewer3D',
-      component: Viewer3D
+      component: Viewer3D,
+      meta: {
+        title: '3D Viewer'
+      }
     },
     {
       path: '/home',
