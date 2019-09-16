@@ -13,6 +13,7 @@
         <router-link to="/excavation/finds">Funde</router-link>
         <router-link to="/viewer3d">3D Viewer</router-link>
         <!--router-link to="/constructedobjects">Baulicher Bestand</1--router-link-->
+        <router-link to="/constructedobjects">Baulicher Bestand</router-link>
         <hr>
         <!--<router-link to="/administration">Verwaltung</router-link>-->
      <!--   <router-link to="/structures">Befunde</router-link>
