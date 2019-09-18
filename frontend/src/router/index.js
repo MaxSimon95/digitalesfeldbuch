@@ -26,6 +26,8 @@ import SectionOverview from '@/components/SectionOverview'
 import FindOverview from '@/components/FindOverview'
 import StructureOverview from '@/components/StructureOverview'
 import ConstructedObjectCreation from '@/components/ConstructedObjectCreation'
+import ConstructedObjectsOverview from '@/components/ConstructedObjectsOverview'
+import ConstructedObjectOverview from '@/components/ConstructedObjectOverview'
 import Viewer3D from '@/components/Viewer3D'
 
 Vue.use(Router)
@@ -57,10 +59,28 @@ export default new Router({
     },
     {
       path: '/constructedobjects',
+      name: 'ConstructedObjectsOverview',
+      component: ConstructedObjectsOverview,
+      meta: {
+        title: 'Bauliche Befunde'
+      }
+    },
+    {
+      path: '/constructedobjects/new',
       name: 'ConstructedObjectCreation',
       component: ConstructedObjectCreation,
       meta: {
-        title: 'Ausgrabung'
+        title: 'Baulicher Bestand',
+        showBackButton: true
+      }
+    },
+    {
+      path: '/constructedobjects/info',
+      name: 'ConstructedObjectOverview',
+      component: ConstructedObjectOverview,
+      meta: {
+        title: 'Baulicher Bestand',
+        showBackButton: true
       }
     },
     {

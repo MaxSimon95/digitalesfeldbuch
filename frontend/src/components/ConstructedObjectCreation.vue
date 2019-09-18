@@ -15,297 +15,314 @@
         <ion-label position="stacked">Länge</ion-label>
         <ion-input v-on:ionInput="length=$event.target.value" placeholder="Geben Sie die Länge des Bestands ein" ></ion-input>
       </ion-item>
+      <div class="hasBottomBorder">
+        <ion-list>
+            <ion-label>Erhalten</ion-label>
+            <input type="checkbox" v-model="conserved_length">
 
-      <ion-list>
-        <ion-item v-for="entry in length_checks" v-bind:key="entry.val">
-          <ion-label>{{entry.val}}</ion-label>
-          <ion-checkbox slot="start" v-on:input="entry.isChecked = $event.target.value" v-bind:value="entry.isChecked"></ion-checkbox>
-        </ion-item>
+            <ion-label>Original</ion-label>
+            <input type="checkbox" v-model="original_length">
+
+
+            <ion-label>Sichtbar</ion-label>
+            <input type="checkbox" v-model="visible_length">
+
       </ion-list>
+      </div>
 
-      <!--ion-item>
+      <ion-item>
         <ion-label position="stacked">Breite</ion-label>
         <ion-input v-on:ionInput="width=$event.target.value" placeholder="Geben Sie die Breite des Bestands ein" ></ion-input>
       </ion-item>
+      <div class="hasBottomBorder">
+      <ion-list>
 
-      <ion-item>
-        <ion-label position="stacked"> Erhalten </ion-label>
-        <ion-checkbox slot="start" v-on:input="conserved_width = $event.target.value" v-bind:value=conserved_width></ion-checkbox>
-      </ion-item>
+          <ion-label>Erhalten</ion-label>
+          <input type="checkbox" v-model="conserved_width">
 
-      <ion-item>
-        <ion-label position="stacked"> Original </ion-label>
-        <ion-checkbox slot="start" v-on:input="original_width = $event.target.value" v-bind:value=original_width></ion-checkbox>
-      </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked"> Sichtbar </ion-label>
-        <ion-checkbox slot="start" v-on:input="visible_width = $event.target.value" v-bind:value=visible_width></ion-checkbox>
-      </ion-item>
+
+          <ion-label>Original</ion-label>
+          <input type="checkbox" v-model="original_width">
+
+
+
+          <ion-label>Sichtbar</ion-label>
+          <input type="checkbox" v-model="visible_width">
+
+      </ion-list>
+      </div>
 
       <ion-item>
         <ion-label position="stacked">Höhe am</ion-label>
         <ion-input v-on:ionInput="height_am=$event.target.value" placeholder="Geben Sie die Höhe am des Bestands ein" ></ion-input>
       </ion-item>
+      <div class="hasBottomBorder">
+      <ion-list>
 
-      <ion-item>
-        <ion-label position="stacked"> Erhalten </ion-label>
-        <ion-checkbox slot="start" v-on:input="conserved_height_am = $event.target.value" v-bind:value="conserved_height_am"></ion-checkbox>
-      </ion-item>
+          <ion-label>Erhalten</ion-label>
+          <input type="checkbox" v-model="conserved_height_am">
 
-      <ion-item>
-        <ion-label position="stacked"> Original </ion-label>
-        <ion-checkbox slot="start" v-on:input="original_height_am = $event.target.value" v-bind:value="original_height_am"></ion-checkbox>
-      </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked"> Sichtbar </ion-label>
-        <ion-checkbox slot="start" v-on:input="visible_height_am = $event.target.value" v-bind:value="visible_height_am"></ion-checkbox>
-      </ion-item>
+
+          <ion-label>Original</ion-label>
+          <input type="checkbox" v-model="original_height_am">
+
+
+
+          <ion-label>Sichtbar</ion-label>
+          <input type="checkbox" v-model="visible_height_am">
+
+      </ion-list>
+      </div>
 
       <ion-item>
         <ion-label position="stacked">Höhe fm</ion-label>
         <ion-input v-on:ionInput="height_fm=$event.target.value" placeholder="Geben Sie die Höhe fm des Bestands ein" ></ion-input>
       </ion-item>
+<div class="hasBottomBorder">
+      <ion-list>
 
-      <ion-item>
-        <ion-label position="stacked"> Erhalten </ion-label>
-        <ion-checkbox slot="start" v-on:input="conserved_height_fm = $event.target.value" v-bind:value="conserved_height_fm"></ion-checkbox>
-      </ion-item>
+          <ion-label>Erhalten</ion-label>
+          <input type="checkbox" v-model="conserved_height_fm">
 
-      <ion-item>
-        <ion-label position="stacked"> Original </ion-label>
-        <ion-checkbox slot="start" v-on:input="original_height_fm = $event.target.value" v-bind:value="original_height_fm"></ion-checkbox>
-      </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked"> Sichtbar </ion-label>
-        <ion-checkbox slot="start" v-on:input="visible_height_fm = $event.target.value" v-bind:value="visible_height_fm"></ion-checkbox>
-      </ion-item>
+
+          <ion-label>Original</ion-label>
+          <input type="checkbox" v-model="original_height_fm">
+
+
+
+          <ion-label>Sichtbar</ion-label>
+          <input type="checkbox" v-model="visible_height_fm">
+
+
+      </ion-list>
+</div>
+
 
       <ion-item>
         <ion-label position="stacked">Orientierung</ion-label>
         <ion-input v-on:ionInput="orientation=$event.target.value" placeholder="Geben Sie die Orientierung des Bestands ein" ></ion-input>
       </ion-item>
-
-      <ion-item>
-        <ion-label>Bauart:</ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked"> Schalenmauer </ion-label>
-        <ion-checkbox slot="start" v-on:input="bauart_schalenmauer = $event.target.value" v-bind:value="bauart_schalenmauer"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked"> durchgemauert </ion-label>
-        <ion-checkbox slot="start" v-on:input="bauart_durchgemauert = $event.target.value" v-bind:value="bauart_durchgemauert"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked"> Gussmauerwerk </ion-label>
-        <ion-checkbox slot="start" v-on:input="bauart_gussmauerwerk = $event.target.value" v-bind:value="bauart_gussmauerwerk"></ion-checkbox>
-      </ion-item>
+      <div class="hasBottomBorder"> </div>
 
 
-      <ion-item>
-        <ion-label position="stacked"> nicht erkennbar </ion-label>
-        <ion-checkbox slot="start" v-on:input="bauart_nicht_erkennbar = $event.target.value" v-bind:value="bauart_nicht_erkennbar"></ion-checkbox>
-      </ion-item>
 
-      <ion-item>
-        <ion-label>Mauwerwerk:</ion-label>
-      </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Quader</ion-label>
-        <ion-checkbox slot="start" v-on:input="mauerwerk_quader = $event.target.value" v-bind:value="mauerwerk_quader"></ion-checkbox>
-      </ion-item>
+      <div class="hasBottomBorder">
+        <ion-label position="stacked">Bauart:</ion-label>
+        <ion-list>
 
-      <ion-item>
-        <ion-label position="stacked">Bruchstein</ion-label>
-        <ion-checkbox slot="start" v-on:input="mauerwerk_bruchstein = $event.target.value" v-bind:value="mauerwerk_bruchstein"></ion-checkbox>
-      </ion-item>
+        <ion-label>Schalenmauer</ion-label>
+        <input type="checkbox" v-model="bauart_schalenmauer">
 
-      <ion-item>
-        <ion-label position="stacked">Rollstein</ion-label>
-        <ion-checkbox slot="start" v-on:input="mauerwerk_rollstein = $event.target.value" v-bind:value="mauerwerk_rollstein"></ion-checkbox>
-      </ion-item>
+        <ion-label>Durchgemäuert</ion-label>
+        <input type="checkbox" v-model="bauart_durchgemauert">
 
-      <ion-item>
-        <ion-label position="stacked">Ziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="mauerwerk_brick = $event.target.value" v-bind:value="mauerwerk_brick"></ion-checkbox>
-      </ion-item>
+        <ion-label>Gussmauerwerk</ion-label>
+        <input type="checkbox" v-model="bauart_gussmauerwerk">
 
-      <ion-item>
-        <ion-label position="stacked">Mischmauerwerk</ion-label>
-        <ion-checkbox slot="start" v-on:input="mauerwerk_mischmauerwerk = $event.target.value" v-bind:value="mauerwerk_mischmauerwerk"></ion-checkbox>
-      </ion-item>
 
-      <ion-item>
-        <ion-label>Struktur:</ion-label>
-      </ion-item>
+        <ion-label>Nicht erkennbar</ion-label>
+        <input type="checkbox" v-model="bauart_nicht_erkennbar">
+        </ion-list>
+      </div>
+      <div class="hasBottomBorder">
 
-      <ion-item>
-        <ion-label position="stacked">lagenhaft</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_lagenhaft = $event.target.value" v-bind:value="struktur_lagenhaft"></ion-checkbox>
-      </ion-item>
+        <ion-label position="stacked">Mauerwerk:</ion-label>
+        <ion-list>
+        <ion-label>Quader</ion-label>
+        <input type="checkbox" v-model="mauerwerk_quader">
 
-      <ion-item>
-        <ion-label position="stacked">Kompartimente/Ausgleichslagen</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_kompartimente = $event.target.value" v-bind:value="struktur_kompartimente"></ion-checkbox>
-      </ion-item>
+        <ion-label>Bruchstein</ion-label>
+        <input type="checkbox" v-model="mauerwerk_bruchstein">
 
-      <ion-item>
-        <ion-label position="stacked">ausgezwickelt</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_ausgezwickelt = $event.target.value" v-bind:value="struktur_ausgezwickelt"></ion-checkbox>
-      </ion-item>
+        <ion-label>Rollstein</ion-label>
+        <input type="checkbox" v-model="mauerwerk_rollstein">
 
-      <ion-item>
-        <ion-label position="stacked">Zwickel</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_Zwickel = $event.target.value" v-bind:value="struktur_Zwickel"></ion-checkbox>
-      </ion-item>
+        <ion-label>Ziegel</ion-label>
+        <input type="checkbox" v-model="mauerwerk_brick">
 
-      <ion-item>
-        <ion-label position="stacked">Netz</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_Netz = $event.target.value" v-bind:value="struktur_Netz"></ion-checkbox>
-      </ion-item>
+        <ion-label>Mischmauerwerk</ion-label>
+        <input type="checkbox" v-model="mauerwerk_mischmauerwerk">
+        </ion-list>
+      </div>
 
-      <ion-item>
-        <ion-label position="stacked">keine</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_keine = $event.target.value" v-bind:value="struktur_keine"></ion-checkbox>
-      </ion-item>
+      <div class="hasBottomBorder">
+        <ion-label position="stacked">Struktur:</ion-label>
+      <ion-list>
 
-      <ion-item>
-        <ion-label position="stacked">nicht erkennbar</ion-label>
-        <ion-checkbox slot="start" v-on:input="struktur_nicht_erkennbar = $event.target.value" v-bind:value="struktur_nicht_erkennbar"></ion-checkbox>
-      </ion-item>
+        <ion-label>Lagenhaft</ion-label>
+        <input type="checkbox" v-model="struktur_lagenhaft">
+
+        <ion-label>Kompartimente</ion-label>
+        <input type="checkbox" v-model="struktur_kompartimente">
+
+        <ion-label>Ausgezwickelt</ion-label>
+        <input type="checkbox" v-model="struktur_ausgezwickelt">
+
+        <ion-label>Zwickel</ion-label>
+        <input type="checkbox" v-model="struktur_Zwickel">
+
+        <ion-label>Netz</ion-label>
+        <input type="checkbox" v-model="struktur_Netz">
+
+        <ion-label>Keine Struktur</ion-label>
+        <input type="checkbox" v-model="struktur_keine">
+
+        <ion-label>Nicht erkennbar</ion-label>
+        <input type="checkbox" v-model="struktur_nicht_erkennbar">
+      </ion-list>
+      </div>
 
       <ion-item>
         <ion-label position="stacked">Beschreibung</ion-label>
         <ion-textarea placeholder="Geben Sie hier die Lagen, Lagenhöhe, Mauerschale, Mauerkern und weitere Details an" rows="14" v-on:ionInput="description=$event.target.value"></ion-textarea>
       </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Bauschließen - Form</ion-label>
-        <ion-input v-on:ionInput="bauschliessen_Form=$event.target.value" placeholder="" ></ion-input>
-        <ion-checkbox slot="start" v-on:input="bauschliessen_Form_check = $event.target.value" v-bind:value="bauschliessen_Form_check"></ion-checkbox>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label position="stacked">Bauschließen - Form:</ion-label>
+        <input type="checkbox" v-model="bauschliessen_Form_check">
+      <div v-if="bauschliessen_Form_check">
+        <ion-label position="stacked">Beschreibung</ion-label>
+        <ion-input v-on:ionInput="bauschliessen_Form=$event.target.value" placeholder="Hier können Sie die Bauschließen-Form näher beschreiben" ></ion-input>
 
-      <ion-item>
+      </div>
+
+      </div>
+
+      <div class="hasNoBottomBorder">
         <ion-label position="stacked">Gerüstlöcher</ion-label>
-        <ion-input v-on:ionInput="geruestloecher=$event.target.value" placeholder="" ></ion-input>
-        <ion-checkbox slot="start" v-on:input="geruestloecher_check = $event.target.value" v-bind:value="geruestloecher_check"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="geruestloecher_check">
+        <div v-if="geruestloecher_check">
+        <ion-label position="stacked">Beschreibung</ion-label>
+        <ion-input v-on:ionInput="geruestloecher=$event.target.value" placeholder="Hier können Sie die Gerüstlöcher näher beschreiben" ></ion-input>
+        </div>
+      </div>
 
-      <ion-item>
+      <div class="hasBottomBorder">
         <ion-label position="stacked">Balkenlöcher</ion-label>
-        <ion-input v-on:ionInput="balkenloecher=$event.target.value" placeholder="" ></ion-input>
-        <ion-checkbox slot="start" v-on:input="balkenloecher_check = $event.target.value" v-bind:value="balkenloecher_check"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="balkenloecher_check">
+        <div v-if="balkenloecher_check">
+          <ion-label position="stacked">Beschreibung</ion-label>
+        <ion-input v-on:ionInput="balkenloecher=$event.target.value" placeholder="Hier können Sie die Balkenlöcher näher beschreiben" ></ion-input>
+        </div>
+      </div>
 
       <ion-item>
         <ion-label position="stacked">Lage</ion-label>
-        <ion-input v-on:ionInput="location=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="location=$event.target.value" placeholder="Geben Sie hier die Lage an" ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Maße</ion-label>
-        <ion-input v-on:ionInput="measurements=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="measurements=$event.target.value" placeholder="Geben Sie hier die Maße an" ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Architekturelemente/Stilmerkmale</ion-label>
-        <ion-textarea placeholder="Geben sie hier auffällige Architekturelemente oder Stilmekrmale an" rows="4" v-on:ionInput="characteristics_style=$event.target.value"></ion-textarea>
+        <ion-textarea placeholder="Geben sie hier auffällige Architekturelemente oder Stilmerkmale an" rows="4" v-on:ionInput="characteristics_style=$event.target.value"></ion-textarea>
       </ion-item>
 
 
-      <ion-item>
-        <ion-label>Material:</ion-label>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label position="stacked">Material:</ion-label>
+      </div>
 
-      <ion-item>
-        <ion-label position="stacked">Stein</ion-label>
-        <ion-checkbox slot="start" v-on:input="material_stone = $event.target.value" v-bind:value="material_stone"></ion-checkbox>
-      </ion-item>
+      <!-- <div class="hasNoBottomBorder">
+        <ion-label position="stacked">Gerüstlöcher</ion-label>
+        <input type="checkbox" v-model="geruestloecher_check">
+        <div v-if="geruestloecher_check">
+        <ion-label position="stacked">Beschreibung</ion-label>
+        <ion-input v-on:ionInput="geruestloecher=$event.target.value" placeholder="Hier können Sie die Gerüstlöcher näher beschreiben" ></ion-input>
+        </div>
+      </div>-->
 
-      <ion-item>
-        <ion-label position="stacked">Ziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="material_brick = $event.target.value" v-bind:value="material_brick"></ion-checkbox>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label>Stein</ion-label>
+        <input type="checkbox" v-model="material_stone">
+      </div>
 
-      <ion-item>
-        <ion-label position="stacked">Mischmauerwerk</ion-label>
-        <ion-checkbox slot="start" v-on:input="material_mixed = $event.target.value" v-bind:value="material_mixed"></ion-checkbox>
-        <ion-input v-on:ionInput="material_percentage=$event.target.value" placeholder="Ziegelanteil in %" ></ion-input>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label >Ziegel</ion-label>
+        <input type="checkbox" v-model="material_brick">
+      </div>
 
-      <ion-item>
-        <ion-label position="stacked">Lehmziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="material_clay_brick = $event.target.value" v-bind:value="material_clay_brick"></ion-checkbox>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label >Mischmauerwerk</ion-label>
+        <input type="checkbox" v-model="material_mixed">
+        <div v-if="material_mixed">
+        <ion-input v-on:ionInput="material_percentage=$event.target.value" placeholder="Geben Sie Hier den Ziegelanteil in % an" ></ion-input>
+        </div>
+      </div>
 
-      <ion-item>
+      <div class="hasBottomBorder">
+        <ion-label >Lehmziegel</ion-label>
+        <input type="checkbox" v-model="material_clay_brick">
+      </div>
+
+      <ion-item v-if="material_stone">
         <ion-label position="stacked">Steingröße</ion-label>
         <ion-input v-on:ionInput="material_stone_size=$event.target.value" placeholder="" ></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item v-if="material_stone">
         <ion-label position="stacked">Steinmaterial</ion-label>
         <ion-input v-on:ionInput="material_stone_material=$event.target.value" placeholder="" ></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item v-if="material_stone">
         <ion-label position="stacked">Steinbearbeitung</ion-label>
         <ion-input v-on:ionInput="material_stone_editing=$event.target.value" placeholder="" ></ion-input>
       </ion-item>
 
-      <ion-item>
+      <div class="hasBottomBorder" v-if="material_stone">
         <ion-label position="stacked">Spolien</ion-label>
         <ion-input v-on:ionInput="material_spolien=$event.target.value" placeholder="" ></ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
+      <ion-item v-if="material_brick || material_clay_brick || material_mixed">
         <ion-label>Ziegelart und Ziegelgröße (Originalmaße):</ion-label>
       </ion-item>
 
-      <ion-item>
+      <div v-if="material_brick || material_clay_brick || material_mixed" class="hasNoBottomBorder">
         <ion-label position="stacked">Mauerziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="wall_brick_check = $event.target.value" v-bind:value="material_clay_brick"></ion-checkbox>
-        <ion-input v-on:ionInput="wall_brick=$event.target.value" placeholder="in cm" ></ion-input>
-      </ion-item>
+        <input type="checkbox" v-model="wall_brick_check">
+        <ion-input v-if="wall_brick_check" v-on:ionInput="wall_brick=$event.target.value" placeholder="Hier Ziegelgröße in cm angeben" ></ion-input>
+      </div>
 
-      <ion-item>
+      <div v-if="material_brick || material_clay_brick || material_mixed" class="hasNoBottomBorder">
         <ion-label position="stacked">Gewölbeziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="gewoelbebrick_check = $event.target.value" v-bind:value="gewoelbebrick_check"></ion-checkbox>
-        <ion-input v-on:ionInput="gewoelbebrick=$event.target.value" placeholder="in cm" ></ion-input>
-      </ion-item>
+        <input type="checkbox" v-model="gewoelbebrick_check">
+        <ion-input v-if="gewoelbebrick_check" v-on:ionInput="gewoelbebrick=$event.target.value" placeholder="Hier Ziegelgröße in cm angeben" ></ion-input>
+      </div>
 
-      <ion-item>
+      <div v-if="material_brick || material_clay_brick || material_mixed" class="hasNoBottomBorder">
         <ion-label position="stacked">Dachziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="roof_brick_check = $event.target.value" v-bind:value="roof_brick_check"></ion-checkbox>
-        <ion-input v-on:ionInput="roof_brick=$event.target.value" placeholder="in cm" ></ion-input>
-      </ion-item>
+        <input type="checkbox" v-model="roof_brick_check">
+        <ion-input v-if="roof_brick_check" v-on:ionInput="roof_brick=$event.target.value" placeholder="Hier Ziegelgröße in cm angeben" ></ion-input>
+      </div>
 
-      <ion-item>
+      <div v-if="material_brick || material_clay_brick || material_mixed" class="hasNoBottomBorder">
         <ion-label position="stacked">Fortifikationsziegel</ion-label>
-        <ion-checkbox slot="start" v-on:input="fortification_brick_check = $event.target.value" v-bind:value="fortification_brick_check"></ion-checkbox>
-        <ion-input v-on:ionInput="fortification_brick=$event.target.value" placeholder="in cm" ></ion-input>
-      </ion-item>
+        <input type="checkbox" v-model="fortification_brick_check">
+        <ion-input v-if="fortification_brick_check" v-on:ionInput="fortification_brick=$event.target.value" placeholder="Hier Ziegelgröße in cm angeben" ></ion-input>
+      </div>
 
-      <div class="munsellWrapperOuter">
+      <div v-if="material_brick || material_clay_brick || material_mixed" class="munsellWrapperOuter">
         <div class="munsellWrapperInner">
 
           <ion-label position="stacked">Ziegelfarbe (Munsell-Format, z.B. 10YR 5/4)</ion-label>
           <div>
-            <div class="munselInputDiv" id="hueInputDiv">
+            <div class="munselInputDiv" id="hueInputDiv1">
               <ion-input v-on:ionInput="brick_hue=$event.target.value" placeholder="10YR"></ion-input>
             </div>
-            <div class="munselInputDiv" id="valueInputDiv">
+            <div class="munselInputDiv" id="valueInputDiv1">
               <ion-input v-on:ionInput="brick_value=$event.target.value" placeholder="5"></ion-input>
             </div>
             /
-            <div class="munselInputDiv" id="chromaInputDiv">
+            <div class="munselInputDiv" id="chromaInputDiv1">
               <ion-input v-on:ionInput="brick_chroma=$event.target.value" placeholder="4"></ion-input>
             </div>
           </div>
@@ -316,58 +333,55 @@
         <ion-label>Herstellungsmerkmale:</ion-label>
       </ion-item>
 
-      <ion-item>
-         <ion-input v-on:ionInput="brick_stamps=$event.target.value" placeholder="Zeichen (erhaben, vertieft, Stempel)" ></ion-input>
-        <ion-checkbox slot="start" v-on:input="brick_stamps_check = $event.target.value" v-bind:value="brick_stamps_check"></ion-checkbox>
-      </ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label position="stacked">Zeichen (erhaben, vertieft, Stempel)</ion-label>
+        <input type="checkbox" v-model="brick_stamps_check">
+         <ion-input v-if="brick_stamps_check" v-on:ionInput="brick_stamps=$event.target.value" placeholder="Hier Zeichen beschreiben" ></ion-input>
 
-      <ion-item>
-        <ion-input v-on:ionInput="brick_animal_footprints=$event.target.value" placeholder="Wischzeichen, Tierspuren, usw." ></ion-input>
-        <ion-checkbox slot="start" v-on:input="brick_animal_footprints_check = $event.target.value" v-bind:value="brick_animal_footprints_check"></ion-checkbox>
-      </ion-item>
+      </div>
 
-      <ion-item>
+      <div class="hasNoBottomBorder">
+        <ion-label position="stacked">Tierspuren (Wischzeichen, Pfotenabdrücke, usw.)</ion-label>
+        <input type="checkbox" v-model="brick_animal_footprints_check">
+        <ion-input v-if="brick_animal_footprints_check" v-on:ionInput="brick_animal_footprints=$event.target.value" placeholder="Hier Tierspuren beschreiben" ></ion-input>
+      </div>
+
+      <div class="hasBottomBorder">
         <ion-label position="stacked">Fingerstriche</ion-label>
-        <ion-checkbox slot="start" v-on:input="brick_fingerstrokes = $event.target.value" v-bind:value="brick_fingerstrokes"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="brick_fingerstrokes">
+      </div>
 
       <ion-item>
         <ion-label>Bindung:</ion-label>
       </ion-item>
 
-      <ion-item>
+<div class="hasNoBottomBorder">
         <ion-label position="stacked">Feucht</ion-label>
-        <ion-checkbox slot="start" v-on:input="moist = $event.target.value" v-bind:value="moist"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="moist">
 
-      <ion-item>
+
         <ion-label position="stacked">Trocken</ion-label>
-        <ion-checkbox slot="start" v-on:input="dry = $event.target.value" v-bind:value="dry"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="dry">
 
-      <ion-item>
         <ion-label position="stacked">Mörtelbindung</ion-label>
-        <ion-checkbox slot="start" v-on:input="moertelbindung = $event.target.value" v-bind:value="moertelbindung"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="moertelbindung">
 
-      <ion-item>
         <ion-label position="stacked">Lehmbindung</ion-label>
-        <ion-checkbox slot="start" v-on:input="lehmbindung = $event.target.value" v-bind:value="lehmbindung"></ion-checkbox>
-      </ion-item>
-
-      <div class="munsellWrapperOuter">
+        <input type="checkbox" v-model="lehmbindung">
+</div>
+      <div v-if="moist || dry || moertelbindung || lehmbindung" class="munsellWrapperOuter hasBottomBorder">
         <div class="munsellWrapperInner">
 
-          <ion-label position="stacked">Farbe (Munsell-Format, z.B. 10YR 5/4)</ion-label>
+          <ion-label position="stacked">Farbe der Bindung (Munsell-Format, z.B. 10YR 5/4)</ion-label>
           <div>
-            <div class="munselInputDiv" id="hueInputDiv">
+            <div class="munselInputDiv" id="hueInputDiv2">
               <ion-input v-on:ionInput="bindung_hue=$event.target.value" placeholder="10YR"></ion-input>
             </div>
-            <div class="munselInputDiv" id="valueInputDiv">
+            <div class="munselInputDiv" id="valueInputDiv2">
               <ion-input v-on:ionInput="bindung_value=$event.target.value" placeholder="5"></ion-input>
             </div>
             /
-            <div class="munselInputDiv" id="chromaInputDiv">
+            <div class="munselInputDiv" id="chromaInputDiv2">
               <ion-input v-on:ionInput="bindung_chroma=$event.target.value" placeholder="4"></ion-input>
             </div>
           </div>
@@ -378,68 +392,58 @@
         <ion-label>Zusammensetzung:</ion-label>
       </ion-item>
 
-      <ion-item>
+      <div class="hasNoBottomBorder">
         <ion-label position="stacked">Sandig</ion-label>
-        <ion-checkbox slot="start" v-on:input="sandy = $event.target.value" v-bind:value="sandy"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="sandy">
+      </div>
 
-      <ion-item>
+      <div class="hasNoBottomBorder">
         <ion-label position="stacked">Kalkig</ion-label>
-        <ion-checkbox slot="start" v-on:input="kalkig = $event.target.value" v-bind:value="kalkig"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="kalkig">
+      </div>
 
-      <ion-item>
-        <ion-input v-on:ionInput="contents_other_check=$event.target.value" placeholder="Sonstige Zusammensetzung" ></ion-input>
-        <ion-checkbox slot="start" v-on:input="contents_other_check = $event.target.value" v-bind:value="contents_other_check"></ion-checkbox>
-      </ion-item>
+      <div class="hasBottomBorder">
+        <ion-label position="stacked">Sonstige Zusammensetzung</ion-label>
+        <input type="checkbox" v-model="contents_other_check">
+        <ion-input v-if="contents_other_check" v-on:ionInput="contents_other_check=$event.target.value" placeholder="Sonstige Zusammensetzung hier beschreiben" ></ion-input>
+      </div>
 
       <ion-item>
         <ion-label>Korngröße:</ion-label>
       </ion-item>
-
-      <ion-item>
+      <div class="hasBottomBorder">
         <ion-label position="stacked">Grob (über 0,5 cm)</ion-label>
-        <ion-checkbox slot="start" v-on:input="coarse = $event.target.value" v-bind:value="coarse"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="coarse">
 
-      <ion-item>
+
         <ion-label position="stacked">Mittel (bis 0,5 cm)</ion-label>
-        <ion-checkbox slot="start" v-on:input="medium = $event.target.value" v-bind:value="medium"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="medium">
 
-      <ion-item>
         <ion-label position="stacked">Fein (unter 0,3 cm)</ion-label>
-        <ion-checkbox slot="start" v-on:input="fine = $event.target.value" v-bind:value="fine"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="fine">
 
+      </div>
       <ion-item>
         <ion-label>Konsistenz:</ion-label>
       </ion-item>
 
-      <ion-item>
+      <div class="hasBottomBorder">
         <ion-label position="stacked">Sehr fest</ion-label>
-        <ion-checkbox slot="start" v-on:input="very_compact = $event.target.value" v-bind:value="very_compact"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="very_compact">
 
-      <ion-item>
         <ion-label position="stacked">Fest</ion-label>
-        <ion-checkbox slot="start" v-on:input="compact = $event.target.value" v-bind:value="compact"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="compact">
 
-      <ion-item>
+
         <ion-label position="stacked">Locker</ion-label>
-        <ion-checkbox slot="start" v-on:input="loose = $event.target.value" v-bind:value="loose"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="loose">
 
-      <ion-item>
         <ion-label position="stacked">Sehr locker</ion-label>
-        <ion-checkbox slot="start" v-on:input="very_loosey = $event.target.value" v-bind:value="very_loose"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="very_loose">
 
-      <ion-item>
         <ion-label position="stacked">Bröselig</ion-label>
-        <ion-checkbox slot="start" v-on:input="crumbly = $event.target.value" v-bind:value="crumbly"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="crumbly">
+      </div>
 
       <ion-item>
         <ion-label>Zuschlagstoffe (in cm):</ion-label>
@@ -447,91 +451,80 @@
 
       <ion-item>
         <ion-label position="stacked">Kiesel</ion-label>
-        <ion-input v-on:ionInput="kiesel=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="kiesel=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Kalkspatzen</ion-label>
-        <ion-input v-on:ionInput="kalkspatzen=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="kalkspatzen=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Ziegelsplitt</ion-label>
-        <ion-input v-on:ionInput="ziegelsplit=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="ziegelsplit=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Holzkohle</ion-label>
-        <ion-input v-on:ionInput="holzkohle=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="holzkohle=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Stroh</ion-label>
-        <ion-input v-on:ionInput="stroh=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="stroh=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Sonstiges</ion-label>
-        <ion-input v-on:ionInput="zuschlagstoffe_other=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="zuschlagstoffe_other=$event.target.value" placeholder="Hier Angaben in cm tätigen." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Fugenbild:</ion-label>
       </ion-item>
 
-      <ion-item>
+      <div class="hasNoBottomBorder">
         <ion-label position="stacked">Verstichen</ion-label>
-        <ion-checkbox slot="start" v-on:input="verstrichen = $event.target.value" v-bind:value="verstrichen"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="verstrichen">
 
-      <ion-item>
+
         <ion-label position="stacked">Herausgequollen</ion-label>
-        <ion-checkbox slot="start" v-on:input="herausgequollen = $event.target.value" v-bind:value="herausgequollen"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="herausgequollen">
 
-      <ion-item>
         <ion-label position="stacked">Kellenstrich</ion-label>
-        <ion-checkbox slot="start" v-on:input="kellenstrich = $event.target.value" v-bind:value="kellenstrich"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="kellenstrich">
 
-      <ion-item>
         <ion-label position="stacked">Sonstiges</ion-label>
-        <ion-checkbox slot="start" v-on:input="fugenbild_other = $event.target.value" v-bind:value="fugenbild_other"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="fugenbild_other">
+      </div>
 
       <ion-item>
         <ion-label position="stacked">Fugendimension</ion-label>
-        <ion-input v-on:ionInput="fugendimension=$event.target.value" placeholder="" ></ion-input>
+        <ion-input v-on:ionInput="fugendimension=$event.target.value" placeholder="Hier die Fugendimension angeben." ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Verputz (Sofern nicht separate SE):</ion-label>
       </ion-item>
 
-      <ion-item>
+      <div class="hasNoBottomBorder">
         <ion-label position="stacked">Geglättet (Kelle)</ion-label>
-        <ion-checkbox slot="start" v-on:input="geglaettet = $event.target.value" v-bind:value="geglaettet"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="geglaettet">
 
-      <ion-item>
       <ion-label position="stacked">Überrieben</ion-label>
-      <ion-checkbox slot="start" v-on:input="ueberrieben = $event.target.value" v-bind:value="ueberrieben"></ion-checkbox>
-    </ion-item>
+        <input type="checkbox" v-model="ueberrieben">
 
-      <ion-item>
       <ion-label position="stacked">Riesel</ion-label>
-      <ion-checkbox slot="start" v-on:input="riesel = $event.target.value" v-bind:value="riesel"></ion-checkbox>
-    </ion-item>
+        <input type="checkbox" v-model="riesel">
 
-      <ion-item>
         <ion-label position="stacked">Geschlämmt</ion-label>
-        <ion-checkbox slot="start" v-on:input="geschlaemmt = $event.target.value" v-bind:value="geschlaemmt"></ion-checkbox>
-      </ion-item>
+        <input type="checkbox" v-model="geschlaemmt">
+      </div>
 
       <div class="munsellWrapperOuter">
         <div class="munsellWrapperInner">
 
-          <ion-label position="stacked">Farbe (Munsell-Format, z.B. 10YR 5/4)</ion-label>
+          <ion-label position="stacked">Farbe Verputz (Munsell-Format, z.B. 10YR 5/4)</ion-label>
           <div>
             <div class="munselInputDiv" id="hueInputDiv">
               <ion-input v-on:ionInput="verputz_hue=$event.target.value" placeholder="10YR"></ion-input>
@@ -575,7 +568,7 @@
       <ion-item>
         <ion-label position="stacked">Verhältnisse zu anderen Bauteilen</ion-label>
         <ion-textarea placeholder="" rows="4" v-on:ionInput="verhaeltnisse=$event.target.value"></ion-textarea>
-      </ion-item-->
+      </ion-item>
 
       <ion-button color="secondary" @click="logForm()"> Speichern </ion-button>  <!--type="submit"-->
       <ion-button @click="goBack()"> Abbrechen </ion-button>
@@ -615,14 +608,9 @@ export default {
       objectnumber: '',
       title: '',
       length: '',
-      length_checks: [
-        { val: 'Erhalten', isChecked: false },
-        { val: 'Original', isChecked: false },
-        { val: 'Sichtbar', isChecked: false }
-      ],
-      //conserved_length: true,
-      //original_length: true,
-      //visible_length: true,
+      conserved_length: true,
+      original_length: true,
+      visible_length: true,
       width: '',
       conserved_width: false,
       original_width: false,
@@ -738,6 +726,18 @@ export default {
 
   },
   methods: {
+    length_check: function (isEntryChecked,targetValue)
+{
+  console.log("Bingo bongo bango: " + isEntryChecked )
+  console.log(targetValue )
+  console.log(targetValue.value.aria_checked )
+  console.log(targetValue.class )
+},
+
+  goBack: function () {
+    // eslint-disable-next-line standard/object-curly-even-spacing
+    this.$router.push({name: 'ConstructedObjectsOverview'})
+  },
     logForm: function () {
       let router = this.$router // the correct 'this' is not reachable inside the dp.put call back, so it gets put into a variable.
       // eslint-disable-next-line standard/object-curly-even-spacing
@@ -746,10 +746,10 @@ export default {
         objectnumber: this.objectnumber,
         title: this.title,
         length: this.length,
-        length_checks: this.length_checks,
-        //conserved_length: this.conserved_length,
-        //original_length: this.original_length,
-        //visible_length: this.visible_length,
+        //length_checks: this.length_checks,
+        conserved_length: this.conserved_length,
+        original_length: this.original_length,
+        visible_length: this.visible_length,
         width: this.width,
         conserved_width: this.conserved_width,
         original_width: this.original_width,
@@ -850,9 +850,9 @@ export default {
         verputz_chroma: this.verputz_chroma,
         strength: this.strength,
         extension: this.extension,
-        //hue: this.hue,
-        //value: this.value,
-        //chroma: this.chroma,
+        brick_hue: this.brick_hue,
+        brick_value: this.brick_value,
+        brick_chroma: this.brick_chroma,
         zusammensetzung: this.zusammensetzung,
         korngroese: this.korngroese,
         consistency: this.consistency,
@@ -864,7 +864,8 @@ export default {
       constructedOjectDB.put(constructedobject, function callback (err, result) {
         if (!err) {
           // eslint-disable-next-line standard/object-curly-even-spacing
-          router.push({ name: 'ConstructedObjectsOverview'})
+          //router.push({ name: 'ConstructedObjectsOverview'})
+          router.push({ name: 'Home'})
         }
       })
     }
@@ -877,6 +878,7 @@ export default {
   .munsellWrapperOuter{
     text-align: left;
     padding-left: 16px;
+    margin-top:15px;
   }
 
   .munsellWrapperInner{
@@ -890,6 +892,30 @@ export default {
 
   #valueInputDiv, #chromaInputDiv{
     text-align: center;
+  }
+
+  .hasBottomBorder{
+    border-bottom: solid 1px grey;
+    text-align: left;
+    padding-left: 16px;
+    padding-bottom: 12px
+  }
+
+  .hasNoBottomBorder{
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  input[type=checkbox]{
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-left: 8px;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    padding: 10px;
   }
 
 </style>

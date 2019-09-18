@@ -72,6 +72,9 @@
             case "ProbeOverview":
               this.$router.push({name: 'ProbesOverview'});
               break;
+            case "ConstructedObjectCreation":
+              this.$router.push({name: 'ConstructedObjectsOverview'});
+              break;
             case "404Page":
               this.$router.push({name: 'Home'});
               break;
