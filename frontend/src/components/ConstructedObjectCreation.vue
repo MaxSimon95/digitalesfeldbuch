@@ -114,38 +114,44 @@
         <ion-label position="stacked">Bauart:</ion-label>
         <ion-list>
 
+          <span class="noLineBreak">
         <ion-label>Schalenmauer</ion-label>
         <input type="checkbox" v-model="bauart_schalenmauer">
 
+          </span><span class="noLineBreak">
         <ion-label>Durchgemäuert</ion-label>
         <input type="checkbox" v-model="bauart_durchgemauert">
-
+</span><span class="noLineBreak">
         <ion-label>Gussmauerwerk</ion-label>
         <input type="checkbox" v-model="bauart_gussmauerwerk">
-
+</span><span class="noLineBreak">
 
         <ion-label>Nicht erkennbar</ion-label>
         <input type="checkbox" v-model="bauart_nicht_erkennbar">
+          </span>
         </ion-list>
       </div>
       <div class="hasBottomBorder">
 
         <ion-label position="stacked">Mauerwerk:</ion-label>
         <ion-list>
+          <span class="noLineBreak">
         <ion-label>Quader</ion-label>
         <input type="checkbox" v-model="mauerwerk_quader">
+          </span><span class="noLineBreak">
 
         <ion-label>Bruchstein</ion-label>
         <input type="checkbox" v-model="mauerwerk_bruchstein">
-
+</span><span class="noLineBreak">
         <ion-label>Rollstein</ion-label>
         <input type="checkbox" v-model="mauerwerk_rollstein">
-
+</span><span class="noLineBreak">
         <ion-label>Ziegel</ion-label>
         <input type="checkbox" v-model="mauerwerk_brick">
-
+</span><span class="noLineBreak">
         <ion-label>Mischmauerwerk</ion-label>
         <input type="checkbox" v-model="mauerwerk_mischmauerwerk">
+          </span>
         </ion-list>
       </div>
 
@@ -153,26 +159,40 @@
         <ion-label position="stacked">Struktur:</ion-label>
       <ion-list>
 
+        <span class="noLineBreak">
         <ion-label>Lagenhaft</ion-label>
         <input type="checkbox" v-model="struktur_lagenhaft">
+          </span>
 
+        <span class="noLineBreak">
         <ion-label>Kompartimente</ion-label>
         <input type="checkbox" v-model="struktur_kompartimente">
+          </span>
 
+          <span class="noLineBreak">
         <ion-label>Ausgezwickelt</ion-label>
         <input type="checkbox" v-model="struktur_ausgezwickelt">
+            </span>
 
+            <span class="noLineBreak">
         <ion-label>Zwickel</ion-label>
         <input type="checkbox" v-model="struktur_Zwickel">
+              </span>
 
+              <span class="noLineBreak">
         <ion-label>Netz</ion-label>
         <input type="checkbox" v-model="struktur_Netz">
+                </span>
 
+                <span class="noLineBreak">
         <ion-label>Keine Struktur</ion-label>
         <input type="checkbox" v-model="struktur_keine">
+                  </span>
 
+                  <span class="noLineBreak">
         <ion-label>Nicht erkennbar</ion-label>
         <input type="checkbox" v-model="struktur_nicht_erkennbar">
+                    </span>
       </ion-list>
       </div>
 
@@ -356,18 +376,20 @@
       </ion-item>
 
 <div class="hasNoBottomBorder">
+<span class="noLineBreak">
         <ion-label position="stacked">Feucht</ion-label>
         <input type="checkbox" v-model="moist">
-
+</span><span class="noLineBreak">
 
         <ion-label position="stacked">Trocken</ion-label>
         <input type="checkbox" v-model="dry">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Mörtelbindung</ion-label>
         <input type="checkbox" v-model="moertelbindung">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Lehmbindung</ion-label>
         <input type="checkbox" v-model="lehmbindung">
+  </span>
 </div>
       <div v-if="moist || dry || moertelbindung || lehmbindung" class="munsellWrapperOuter hasBottomBorder">
         <div class="munsellWrapperInner">
@@ -412,15 +434,17 @@
         <ion-label>Korngröße:</ion-label>
       </ion-item>
       <div class="hasBottomBorder">
+        <span class="noLineBreak">
         <ion-label position="stacked">Grob (über 0,5 cm)</ion-label>
         <input type="checkbox" v-model="coarse">
-
+</span><span class="noLineBreak">
 
         <ion-label position="stacked">Mittel (bis 0,5 cm)</ion-label>
         <input type="checkbox" v-model="medium">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Fein (unter 0,3 cm)</ion-label>
         <input type="checkbox" v-model="fine">
+        </span>
 
       </div>
       <ion-item>
@@ -428,21 +452,23 @@
       </ion-item>
 
       <div class="hasBottomBorder">
+        <span class="noLineBreak">
         <ion-label position="stacked">Sehr fest</ion-label>
         <input type="checkbox" v-model="very_compact">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Fest</ion-label>
         <input type="checkbox" v-model="compact">
 
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Locker</ion-label>
         <input type="checkbox" v-model="loose">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Sehr locker</ion-label>
         <input type="checkbox" v-model="very_loose">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Bröselig</ion-label>
         <input type="checkbox" v-model="crumbly">
+        </span>
       </div>
 
       <ion-item>
@@ -484,18 +510,20 @@
       </ion-item>
 
       <div class="hasNoBottomBorder">
+        <span class="noLineBreak">
         <ion-label position="stacked">Verstichen</ion-label>
         <input type="checkbox" v-model="verstrichen">
-
+</span><span class="noLineBreak">
 
         <ion-label position="stacked">Herausgequollen</ion-label>
         <input type="checkbox" v-model="herausgequollen">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Kellenstrich</ion-label>
         <input type="checkbox" v-model="kellenstrich">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Sonstiges</ion-label>
         <input type="checkbox" v-model="fugenbild_other">
+        </span>
       </div>
 
       <ion-item>
@@ -508,17 +536,19 @@
       </ion-item>
 
       <div class="hasNoBottomBorder">
+        <span class="noLineBreak">
         <ion-label position="stacked">Geglättet (Kelle)</ion-label>
         <input type="checkbox" v-model="geglaettet">
-
+</span><span class="noLineBreak">
       <ion-label position="stacked">Überrieben</ion-label>
         <input type="checkbox" v-model="ueberrieben">
-
+</span><span class="noLineBreak">
       <ion-label position="stacked">Riesel</ion-label>
         <input type="checkbox" v-model="riesel">
-
+</span><span class="noLineBreak">
         <ion-label position="stacked">Geschlämmt</ion-label>
         <input type="checkbox" v-model="geschlaemmt">
+        </span>
       </div>
 
       <div class="munsellWrapperOuter">
@@ -918,4 +948,7 @@ export default {
     padding: 10px;
   }
 
+  span.noLineBreak{
+    white-space:nowrap;
+  }
 </style>

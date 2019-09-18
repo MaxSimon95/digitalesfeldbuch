@@ -24,6 +24,12 @@
       Schnitt
     </div>
     </router-link>
+    <router-link to="/constructedObjects">
+      <div class="tileWrapper">
+        <div class="tileDiv" id="constructedObjectsTile"><img src="../assets/logo_constructedObject.png"></div>
+        Baulicher Bestand
+      </div>
+    </router-link>
     <router-link to="/excavation/structures">
       <div class="tileWrapper">
       <div class="tileDiv" id="structuresTile" v-if="excavationIsSet"><img src="../assets/logo_structure.png"></div>
@@ -45,6 +51,13 @@
       Probe
       </div>
     </router-link>
+    <router-link to="/viewer3d">
+      <div class="tileWrapper">
+        <div class="tileDiv" id="viewer3dTile"><img src="../assets/logo_3d.png"></div>
+        3D Viewer
+      </div>
+    </router-link>
+
 
   </div>
 </template>
@@ -127,7 +140,7 @@
     background-color: #898078;
   }
 
-  .tileDiv#probesTile
+  .tileDiv#probesTile, .tileDiv#constructedObjectsTile
   {
     background-color: #C3A894;
   }
