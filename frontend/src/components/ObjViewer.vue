@@ -3,7 +3,7 @@
     <Scene v-model="myScene">
       <Camera type="touch"></Camera>
 
-      <PointLight specular="#ffffff" :position="[0,5,-7.4]"></PointLight>
+      <PointLight specular="#ffffff" :position="[0,0,-25.4]"></PointLight>
 
       <!--<Entity :position="[0, -1.5, -8]">-->
       <Entity :position="entityPosition">
@@ -17,7 +17,7 @@
         <!--<Asset src="http://www.babylonjs-playground.com/scenes/StanfordBunny.obj" :scaling="[50.5, 50.5, 50.5]" :position="[-1, -7.25, -0.5]" :rotation="[0, Math.PI, 0]"></Asset>
 
 
-         <!--<template v-for="x in [0, 4, -4]">
+         <template v-for="x in [0, 4, -4]">
            <template v-for="y in [0, 4, -4]">
              <Box v-for="z in [0, 4, -4]" :position="[x, y, z]" :key="`${x},${y},${z}`"></Box>
            </template>
@@ -52,6 +52,14 @@
 
     </div>
 
+    <ion-item>
+      {{dynamicText1}}
+
+    </ion-item>
+    <ion-item>
+      {{dynamicText2}}
+
+    </ion-item>
 
     <!--<p v-if="objVisible" :key="objVisible"> {{Imported3DObject}}</p> -->
 
@@ -65,8 +73,9 @@
   //import '../pep.js'
   import VueCookies from 'vue-cookies'
   import {Scene, Asset, Box, Entity, Camera, HemisphericLight, Animation} from 'vue-babylonjs'
-  import Imported3DObject from 'file-loader!../assets/obj/Trachyt5.obj'
-  import fake3DObject from 'file-loader!../assets/obj/amphoratest.obj'
+  import Imported3DObject from 'file-loader!../assets/obj/Platteneu.obj'
+  import fake3DObject from 'file-loader!../assets/obj/Trachyt5.obj'
+  import originalObject from 'file-loader!../assets/obj/Platteneu.obj'
   console.log("mudamudamuda")
   console.log(Imported3DObject)
 
@@ -80,10 +89,13 @@
       return {
         Imported3DObject,
         fake3DObject,
+        originalObject,
         myScene: null,
         myEntity: null,
         myBox: null,
         objVisible: false,
+        dynamicText1: "Angezeigter Schnitt: 2016/28",
+        dynamicText2: "Zugehörige Ausgrabung: Xanten 2017",
 
         assetPosition: [0, 0, 0],
         assetRotation:[-0.8, 135, 0],
@@ -91,9 +103,9 @@
         assetRotationY: 135,
         assetRotationZ: 0,
         entityPosition: [0, 0, 0],
-        assetPositionX: 1.4,
-        assetPositionY: -0.6,
-        assetPositionZ: -9,
+        assetPositionX: 1.4,//platte: 1.4,
+        assetPositionY: -0.7,//platte:-0.6,
+        assetPositionZ: -3.9//platte:-9,
       }
     },
     //mixins: [Entity],
@@ -184,9 +196,11 @@
       },
       nextObj () {
         this.Imported3DObject = this.fake3DObject//URL.createObjectURL(event.target.files[0])
+        this.dynamicText1 = "Angezeigter Befund: SE05002 (Platte aus Trachyt)"
       },
       lastObj () {
-        this.Imported3DObject = this.fake3DObject//URL.createObjectURL(event.target.files[0])
+        this.Imported3DObject = this.originalObject//URL.createObjectURL(event.target.files[0])
+        this.dynamicText1 = "Angezeigter Schnitt: 2016/28"
       },
       processFile(event) {
         console.log(event.target.files[0])
